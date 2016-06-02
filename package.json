@@ -1,0 +1,46 @@
+{
+  "name": "asset-pipe-js-reader",
+  "version": "1.0.0",
+  "author": {
+    "name": "Trygve Lie",
+    "email": "post@trygve-lie.com"
+  },
+  "description": "Javascript asset feed reader",
+  "main": "./lib/reader.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:asset-pipe/asset-pipe-js-reader.git"
+  },
+  "keywords": [
+    "assets",
+    "javascript"
+  ],
+  "contributors": [
+    {
+      "name": "Trygve Lie",
+      "email": "post@trygve-lie.com"
+    }
+  ],
+  "engines": {
+    "node" : "6.x"
+  },
+  "bugs": {
+    "url": "https://github.com/asset-pipe/asset-pipe-js-reader/issues"
+  },
+  "scripts": {
+    "start": "node ./test/reader.js"
+  },
+  "licenses": ["MIT"],
+  "dependencies": {
+    "readable-stream": "2.1.2",
+    "request": "2.72.0",
+    "JSONStream": "1.1.1",
+    "browser-pack": "6.0.1",
+    "merge-stream": "1.0.0",
+    "deps-sort": "2.0.0",
+    "pump": "1.0.1"
+  },
+  "devDependencies": {
+    "uglify-js": "2.6.2"
+  }
+}
