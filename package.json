@@ -32,7 +32,7 @@
   },
   "licenses": ["MIT"],
   "dependencies": {
-    "readable-stream": "2.1.2",
+    "readable-stream": "2.1.4",
     "request": "2.72.0",
     "JSONStream": "1.1.1",
     "browser-pack": "6.0.1",
