@@ -27,9 +27,6 @@
   "bugs": {
     "url": "https://github.com/asset-pipe/asset-pipe-js-reader/issues"
   },
-  "scripts": {
-    "start": "node ./test/reader.js"
-  },
   "license": "MIT",
   "dependencies": {
     "lodash.isundefined": "3.0.1",
@@ -40,5 +37,11 @@
     "merge-stream": "1.0.0",
     "deps-sort": "2.0.0",
     "pump": "1.0.1"
+  },
+  "devDependencies": {
+    "tap": "8.0.1"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
   }
 }
