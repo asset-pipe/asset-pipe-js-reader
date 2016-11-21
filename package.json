@@ -31,7 +31,7 @@
   "dependencies": {
     "lodash.isundefined": "3.0.1",
     "readable-stream": "2.2.2",
-    "request": "2.78.0",
+    "request": "2.79.0",
     "JSONStream": "1.2.1",
     "browser-pack": "6.0.1",
     "merge-stream": "1.0.0",
