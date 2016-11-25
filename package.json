@@ -34,7 +34,7 @@
     "request": "2.79.0",
     "JSONStream": "1.2.1",
     "browser-pack": "6.0.2",
-    "merge-stream": "1.0.0",
+    "merge-stream": "1.0.1",
     "deps-sort": "2.0.0",
     "pump": "1.0.1"
   },
