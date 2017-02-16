@@ -43,5 +43,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "tap test/*.js"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
