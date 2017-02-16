@@ -21,27 +21,27 @@
       "email": "post@trygve-lie.com"
     }
   ],
-  "engines": {
-    "node" : "6.x"
-  },
   "bugs": {
     "url": "https://github.com/asset-pipe/asset-pipe-js-reader/issues"
   },
   "license": "MIT",
   "dependencies": {
-    "lodash.isundefined": "3.0.1",
-    "readable-stream": "2.2.2",
-    "request": "2.79.0",
     "JSONStream": "1.2.1",
     "browser-pack": "6.0.2",
-    "merge-stream": "1.0.1",
     "deps-sort": "2.0.0",
-    "pump": "1.0.2"
+    "lodash.isundefined": "3.0.1",
+    "merge-stream": "1.0.1",
+    "pump": "1.0.2",
+    "readable-stream": "2.2.2",
+    "request": "2.79.0"
   },
   "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-finn": "^1.0.1",
     "tap": "10.0.2"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "tap test/*.js"
   }
 }
