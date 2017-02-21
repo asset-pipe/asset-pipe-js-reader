@@ -32,7 +32,7 @@
     "lodash.isundefined": "3.0.1",
     "merge-stream": "1.0.1",
     "pump": "1.0.2",
-    "readable-stream": "2.2.2",
+    "readable-stream": "2.2.3",
     "request": "2.79.0"
   },
   "devDependencies": {
