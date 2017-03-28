@@ -46,7 +46,7 @@ const feedA = fs.createReadStream('./feed/a.json');
 const feedB = fs.createReadStream('./feed/b.json');
 
 const reader = new Reader([feedA, feedB]);
-reader.pipe('./build/browser.bundle.js');
+reader.pipe(fs.createWriteStream('./build/browser.bundle.js'));
 ```
 
 
