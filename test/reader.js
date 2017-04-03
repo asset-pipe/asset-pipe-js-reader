@@ -9,7 +9,7 @@ tap.test('foo() - bar', (t) => {
     const feedB = fs.createReadStream('./test/mock/feed.b.json');
 
     const reader = new Reader([feedA, feedB]);
-    reader.pipe(fs.createWriteStream('./browser.bundle.js'));
+//    reader.pipe(fs.createWriteStream('./browser.bundle.js'));
 
     t.equal(true, true);
     t.end();
