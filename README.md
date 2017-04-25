@@ -30,7 +30,7 @@ Each such object is emitted on a stream for each dependency. This is the asset f
 ## Installation
 
 ```bash
-$ npm install asset-pipe-js-writer
+$ npm install asset-pipe-js-reader
 ```
 
 
