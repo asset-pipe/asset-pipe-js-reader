@@ -31,7 +31,6 @@
     "deps-sort": "2.0.0",
     "lodash.isundefined": "3.0.1",
     "merge-stream": "1.0.1",
-    "pump": "1.0.2",
     "readable-stream": "2.2.9"
   },
   "devDependencies": {
