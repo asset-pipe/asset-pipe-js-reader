@@ -76,8 +76,8 @@ Returns a `Transform stream`.
 This module emit the following events:
 
  - `error` -  When an error occured in the pipeline. Emits with: `error`.
- - `file found` - When a file we want to read is found.
- - `file not saved` -  When a file we want to read is not found. Emits with: `error`.
+ - `file found` - When a file we want to read is found. Emits with: `file`.
+ - `file not saved` -  When a file we want to read is not found. Emits with: `file`.
  - `pipeline ready` - When the pipeline is ready to start bundling asset feeds.
  - `pipeline empty` - When the pipeline is empty. Iow; it could not load any of the files its supposed to read so there it nothing to produce.
 
