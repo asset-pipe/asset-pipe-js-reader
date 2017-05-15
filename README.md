@@ -1,5 +1,7 @@
 # asset-pipe-js-reader
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/asset-pipe/asset-pipe-js-reader.svg)](https://greenkeeper.io/)
+
 This is an internal module intended for use by other modules in the [asset-pipe project][asset-pipe].
 
 This module can take one or multiple asset feed stream(s), as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produced an executable javascript bundle for the browser.
