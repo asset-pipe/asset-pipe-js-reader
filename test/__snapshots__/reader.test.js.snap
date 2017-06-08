@@ -29,8 +29,7 @@ exports[`should concat files 1`] = `
     return n[o].exports;
   }
   var i = typeof require == \\"function\\" && require;
-  for (var o = 0; o < r.length; o++)
-    s(r[o]);
+  for (var o = 0; o < r.length; o++) s(r[o]);
   return s;
 })(
   {
@@ -71,7 +70,8 @@ exports[`should concat files 1`] = `
         }), (exports.trackPage = trackPage), (exports.trackEvent = trackEvent), (exports.trackEventLater = trackEventLater), (exports.setPageContext = setPageContext), (exports.getApi = getApi), (exports._getBeacons = _getBeacons);
       },
       {
-        \\"../types\\": \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
+        \\"../types\\":
+          \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
       }
     ],
     \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\": [
@@ -288,9 +288,12 @@ exports[`should concat files 1`] = `
         });
       },
       {
-        \\"./mobile-modal-wrapper\\": \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
-        \\"@finn-no/frontpage-search\\": \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./mobile-modal-wrapper\\":
+          \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
+        \\"@finn-no/frontpage-search\\":
+          \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703\\": [
@@ -298,8 +301,7 @@ exports[`should concat files 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var n = 0, t = Array(e.length); n < e.length; n++)
-              t[n] = e[n];
+            for (var n = 0, t = Array(e.length); n < e.length; n++) t[n] = e[n];
             return t;
           }
           return Array.from(e);
@@ -482,7 +484,9 @@ exports[`should concat files 1`] = `
           ],
             t = n
               .map(function(n) {
-                var t = _slicedToArray(n, 2), r = t[0], o = t[1];
+                var t = _slicedToArray(n, 2),
+                  r = t[0],
+                  o = t[1];
                 return (
                   \\"https://images.finncdn.no/dynamic/\\" + r + \\"/\\" + e + \\" \\" + o
                 );
@@ -491,7 +495,8 @@ exports[`should concat files 1`] = `
           return {
             src: \\"https://images.finncdn.no/dynamic/\\" + n[0][0] + \\"/\\" + e,
             srcset: t,
-            sizes: \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
+            sizes:
+              \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
           };
         }
         function trackRendered(e, n) {
@@ -545,11 +550,8 @@ exports[`should concat files 1`] = `
             }), n &&
               t.trackingCode &&
               tracking.trackEventLater({
-                analyticsName: \\"recommend.m-\\" +
-                  n +
-                  \\"-\\" +
-                  t.trackingCode +
-                  \\".click\\"
+                analyticsName:
+                  \\"recommend.m-\\" + n + \\"-\\" + t.trackingCode + \\".click\\"
               }), t.trackingCode &&
               tracking.trackEventLater({
                 ecType: \\"AD\\",
@@ -583,7 +585,10 @@ exports[`should concat files 1`] = `
         }
         var _slicedToArray = (function() {
           function e(e, n) {
-            var t = [], r = !0, o = !1, i = void 0;
+            var t = [],
+              r = !0,
+              o = !1,
+              i = void 0;
             try {
               for (
                 var a, c = e[Symbol.iterator]();
@@ -629,10 +634,14 @@ exports[`should concat files 1`] = `
         });
       },
       {
-        \\"./recommendation-fetcher\\": \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./recommendation-fetcher\\":
+          \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\": [
@@ -720,14 +729,18 @@ exports[`should concat files 1`] = `
               (r.selectionStart = r.value.length), /samsungbrowser/i.test(
               navigator.userAgent
             ) &&
-              (r.blur(), window.setTimeout(function() {
-                r.focus();
-              })), t;
+              (
+                r.blur(),
+                window.setTimeout(function() {
+                  r.focus();
+                })
+              ), t;
           }
           function a() {
             s.hide();
           }
-          var s = void 0, i = e.elements.q;
+          var s = void 0,
+            i = e.elements.q;
           i.addEventListener(\\"touchstart\\", function(e) {
             /iPhone|iPad|iPod/.test(navigator.userAgent) &&
               e.preventDefault(), i.addEventListener(\\"touchend\\", n), i.addEventListener(\\"touchmove\\", r);
@@ -737,9 +750,12 @@ exports[`should concat files 1`] = `
         };
       },
       {
-        \\"./fullscreen-decorator.js\\": \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
-        \\"./modal-overlay.js\\": \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"./fullscreen-decorator.js\\":
+          \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
+        \\"./modal-overlay.js\\":
+          \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16: [
@@ -747,8 +763,7 @@ exports[`should concat files 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, n = Array(e.length); t < e.length; t++)
-              n[t] = e[t];
+            for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
             return n;
           }
           return Array.from(e);
@@ -837,15 +852,19 @@ exports[`should concat files 1`] = `
               {
                 key: \\"hide\\",
                 value: function() {
-                  var e = this, t = this._containerEle.style;
+                  var e = this,
+                    t = this._containerEle.style;
                   this._options.slideDown
-                    ? ((t.transition =
-                        \\"transform \\" +
-                        this._animationDurationInMillis +
-                        \\"ms\\"), window.requestAnimationFrame(function() {
-                        (t.transform =
-                          \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
-                      }))
+                    ? (
+                        (t.transition =
+                          \\"transform \\" +
+                          this._animationDurationInMillis +
+                          \\"ms\\"),
+                        window.requestAnimationFrame(function() {
+                          (t.transform =
+                            \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
+                        })
+                      )
                     : this._teardownAsync(0);
                 }
               },
@@ -912,16 +931,25 @@ exports[`should concat files 1`] = `
               {
                 key: \\"_setPosition\\",
                 value: function() {
-                  var e = this._options.size, t = this._containerEle.style;
+                  var e = this._options.size,
+                    t = this._containerEle.style;
                   (t.cssText = \\"\\"), (t.outline = \\"none\\"), e
-                    ? ((t.top = e.top || \\"0\\"), (t.bottom =
-                        e.bottom || \\"0\\"), (t.left = e.left || \\"0\\"), (t.right =
-                        e.right || \\"0\\"), (t.maxWidth =
-                        e.maxWidth || \\"100%\\"), (t.maxHeight =
-                        e.maxHeight || \\"100%\\"), (t.height =
-                        e.height || \\"auto\\"), (t.width = e.width || \\"auto\\"))
-                    : ((t.top = \\"0\\"), (t.right = \\"0\\"), (t.bottom =
-                        \\"0\\"), (t.left = \\"0\\"));
+                    ? (
+                        (t.top = e.top || \\"0\\"),
+                        (t.bottom = e.bottom || \\"0\\"),
+                        (t.left = e.left || \\"0\\"),
+                        (t.right = e.right || \\"0\\"),
+                        (t.maxWidth = e.maxWidth || \\"100%\\"),
+                        (t.maxHeight = e.maxHeight || \\"100%\\"),
+                        (t.height = e.height || \\"auto\\"),
+                        (t.width = e.width || \\"auto\\")
+                      )
+                    : (
+                        (t.top = \\"0\\"),
+                        (t.right = \\"0\\"),
+                        (t.bottom = \\"0\\"),
+                        (t.left = \\"0\\")
+                      );
                 }
               },
               {
@@ -975,8 +1003,8 @@ exports[`should concat files 1`] = `
                   return document.activeElement === n && e
                     ? (i.focus(), !0)
                     : document.activeElement !== i || e
-                        ? void 0
-                        : (n.focus(), !0);
+                      ? void 0
+                      : (n.focus(), !0);
                 }
               },
               {
@@ -994,9 +1022,12 @@ exports[`should concat files 1`] = `
                 key: \\"_handleWindowFocusin\\",
                 value: function(e) {
                   this._containerEle.contains(e.target) ||
-                    (this._lastFocusedElement
-                      ? this._lastFocusedElement.focus()
-                      : this._focusElement(), e.stopPropagation());
+                    (
+                      this._lastFocusedElement
+                        ? this._lastFocusedElement.focus()
+                        : this._focusElement(),
+                      e.stopPropagation()
+                    );
                 }
               },
               {
@@ -1029,9 +1060,12 @@ exports[`should concat files 1`] = `
         });
       },
       {
-        \\"./last-searches.js\\": \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
-        \\"./saved-searches.js\\": \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./last-searches.js\\":
+          \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
+        \\"./saved-searches.js\\":
+          \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7: [
@@ -1039,8 +1073,7 @@ exports[`should concat files 1`] = `
         \\"use strict\\";
         function _toConsumableArray(t) {
           if (Array.isArray(t)) {
-            for (var e = 0, i = Array(t.length); e < t.length; e++)
-              i[e] = t[e];
+            for (var e = 0, i = Array(t.length); e < t.length; e++) i[e] = t[e];
             return i;
           }
           return Array.from(t);
@@ -1134,16 +1167,15 @@ exports[`should concat files 1`] = `
                 value: function(t) {
                   if (t && document.activeElement === this._inputEle) {
                     for (
-                      (this._lastEle = t), this._dropdownEle ||
-                        ((this._dropdownEle = document.createElement(
-                          \\"div\\"
-                        )), (this._dropdownEle.className =
-                          \\"suggestion-dropdown \\" +
-                          this._dropdownClass), this._dropdownEle.setAttribute(
-                          \\"role\\",
-                          \\"listbox\\"
-                        ), (this._dropdownEle.id =
-                          \\"listbox-\\" + Math.floor(268435455 * Math.random())));
+                      this._lastEle = t, this._dropdownEle ||
+                        (
+                          (this._dropdownEle = document.createElement(\\"div\\")),
+                          (this._dropdownEle.className =
+                            \\"suggestion-dropdown \\" + this._dropdownClass),
+                          this._dropdownEle.setAttribute(\\"role\\", \\"listbox\\"),
+                          (this._dropdownEle.id =
+                            \\"listbox-\\" + Math.floor(268435455 * Math.random()))
+                        );
                       this._dropdownEle.firstChild;
 
                     )
@@ -1191,28 +1223,38 @@ exports[`should concat files 1`] = `
                   this._statusEle &&
                     (this._statusEle.remove(), (this._statusEle = null)), this
                     ._dropdownEle &&
-                    (this._dropdownEle.remove(), this._inputEle.setAttribute(
-                      \\"aria-expanded\\",
-                      \\"false\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-owns\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-activedescendant\\"
-                    ), (this._dropdownEle = null), (this._timeoutId = null), (this._navItems = null), (this._navItemIndex = null), this
-                      ._selectedItem &&
-                      (this._selectedItem.classList.remove(
-                        this._selectedClass
-                      ), (this._selectedItem = null)), document.removeEventListener(
-                      \\"click\\",
-                      this._handleClick,
-                      !0
-                    ), []
-                      .concat(
-                        _toConsumableArray(document.querySelectorAll(\\"iframe\\"))
-                      )
-                      .forEach(function(t) {
-                        t.style.pointerEvents = \\"\\";
-                      }), this.onclose && this.onclose());
+                    (
+                      this._dropdownEle.remove(),
+                      this._inputEle.setAttribute(\\"aria-expanded\\", \\"false\\"),
+                      this._inputEle.removeAttribute(\\"aria-owns\\"),
+                      this._inputEle.removeAttribute(\\"aria-activedescendant\\"),
+                      (this._dropdownEle = null),
+                      (this._timeoutId = null),
+                      (this._navItems = null),
+                      (this._navItemIndex = null),
+                      this._selectedItem &&
+                        (
+                          this._selectedItem.classList.remove(
+                            this._selectedClass
+                          ),
+                          (this._selectedItem = null)
+                        ),
+                      document.removeEventListener(
+                        \\"click\\",
+                        this._handleClick,
+                        !0
+                      ),
+                      []
+                        .concat(
+                          _toConsumableArray(
+                            document.querySelectorAll(\\"iframe\\")
+                          )
+                        )
+                        .forEach(function(t) {
+                          t.style.pointerEvents = \\"\\";
+                        }),
+                      this.onclose && this.onclose()
+                    );
                 }
               },
               {
@@ -1287,11 +1329,13 @@ exports[`should concat files 1`] = `
                 key: \\"_handleClick\\",
                 value: function(t) {
                   if (
-                    !(0 !== t.button ||
+                    !(
+                      0 !== t.button ||
                       t.metaKey ||
                       t.shiftKey ||
                       t.ctrlKey ||
-                      t.altKey) &&
+                      t.altKey
+                    ) &&
                     t.target !== this._inputEle &&
                     t.target !== this._dropdownEle
                   ) {
@@ -1319,9 +1363,11 @@ exports[`should concat files 1`] = `
                       ), e.removeAttribute(\\"aria-selected\\");
                     }
                     if (
-                      ((this._navItemIndex = t), (this._selectedItem = this._navItems[
-                        t
-                      ]), !this._selectedItem)
+                      (
+                        (this._navItemIndex = t),
+                        (this._selectedItem = this._navItems[t]),
+                        !this._selectedItem
+                      )
                     )
                       return this._inputEle.removeAttribute(
                         \\"aria-activedescendant\\"
@@ -1345,16 +1391,17 @@ exports[`should concat files 1`] = `
                 key: \\"setStatus\\",
                 value: function(t) {
                   this._dropdownEle &&
-                    (this._statusEle ||
-                      ((this._statusEle = document.createElement(
-                        \\"h2\\"
-                      )), (this._statusEle.className =
-                        \\"screen-reader-only dropdown-status\\"), this._statusEle.setAttribute(
-                        \\"role\\",
-                        \\"status\\"
-                      ), this._dropdownEle.before(
-                        this._statusEle
-                      )), (this._statusEle.textContent = t));
+                    (
+                      this._statusEle ||
+                        (
+                          (this._statusEle = document.createElement(\\"h2\\")),
+                          (this._statusEle.className =
+                            \\"screen-reader-only dropdown-status\\"),
+                          this._statusEle.setAttribute(\\"role\\", \\"status\\"),
+                          this._dropdownEle.before(this._statusEle)
+                        ),
+                      (this._statusEle.textContent = t)
+                    );
                 }
               },
               {
@@ -1488,8 +1535,8 @@ exports[`should concat files 1`] = `
           \\"undefined\\" != typeof module
             ? (module.exports = t())
             : \\"function\\" == typeof define && \\"object\\" == _typeof(define.amd)
-                ? define(t)
-                : (this.domready = t());
+              ? define(t)
+              : (this.domready = t());
         })(0, function() {
           var e,
             t = [],
@@ -1501,7 +1548,7 @@ exports[`should concat files 1`] = `
               \\"DOMContentLoaded\\",
               (e = function() {
                 for (
-                  o.removeEventListener(\\"DOMContentLoaded\\", e), (d = 1);
+                  o.removeEventListener(\\"DOMContentLoaded\\", e), d = 1;
                   (e = t.shift());
 
                 )
@@ -1576,8 +1623,8 @@ exports[`should concat files 1`] = `
                 return Object.assign({}, e, { items: t, status: \\"loaded\\" });
               })
             : 401 === t.status
-                ? Object.assign({}, e, { status: \\"unauthorized\\" })
-                : Object.assign({}, e, { status: \\"errored\\" });
+              ? Object.assign({}, e, { status: \\"unauthorized\\" })
+              : Object.assign({}, e, { status: \\"errored\\" });
         }
         function notLoggedInView() {
           return el(
@@ -1627,7 +1674,8 @@ exports[`should concat files 1`] = `
           });
         }
         function listItem(e, t) {
-          var n = e.title, r = e.url;
+          var n = e.title,
+            r = e.url;
           return el(
             \\"li\\",
             null,
@@ -1644,8 +1692,10 @@ exports[`should concat files 1`] = `
         module.exports = lastSearchesBox;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1: [
@@ -1735,14 +1785,17 @@ exports[`should concat files 1`] = `
                 return t.groupingHeader === e.groupingHeader;
               })[0];
               n ||
-                ((n = {
-                  type: e.resultType,
-                  groupingHeader: e.groupingHeader,
-                  description: e.groupingHeader,
-                  groupOrder: e.groupOrder,
-                  itemOrder: e.itemOrder,
-                  results: []
-                }), t.push(n)), n.results.some(function(t) {
+                (
+                  (n = {
+                    type: e.resultType,
+                    groupingHeader: e.groupingHeader,
+                    description: e.groupingHeader,
+                    groupOrder: e.groupOrder,
+                    itemOrder: e.itemOrder,
+                    results: []
+                  }),
+                  t.push(n)
+                ), n.results.some(function(t) {
                 return (
                   t.url && e.url && t.url.toLowerCase() === e.url.toLowerCase()
                 );
@@ -1825,17 +1878,20 @@ exports[`should concat files 1`] = `
             var n = [];
             e.titleSupplement
               ? e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.titleSupplement,
-                      e.title
-                    ))
-                  : (n.push(e.titleSupplement), e.secondaryTitle &&
-                      n.push(e.secondaryTitle))
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.titleSupplement, e.title)
+                  )
+                : (
+                    n.push(e.titleSupplement),
+                    e.secondaryTitle && n.push(e.secondaryTitle)
+                  )
               : e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.title
-                    ))
-                  : e.secondaryTitle && n.push(e.secondaryTitle);
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.title)
+                  )
+                : e.secondaryTitle && n.push(e.secondaryTitle);
             var r = [e.groupingHeader, n.join(\\" \\"), e.info1, e.info2]
               .filter(function(e) {
                 return null != e;
@@ -1933,13 +1989,13 @@ exports[`should concat files 1`] = `
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-image.flex-no-shrink.bat.mvt.relative\\",
                   { style: \\"width: 100px; height: 75px; background: #fff;\\" },
-                  (0, _createElement2.default)(
-                    \\"img.blockify.centered-element\\",
-                    {
-                      src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
-                      style: \\"max-height: 100%; padding: 5px;\\"
-                    }
-                  )
+                  (
+                    0,
+                    _createElement2.default
+                  )(\\"img.blockify.centered-element\\", {
+                    src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
+                    style: \\"max-height: 100%; padding: 5px;\\"
+                  })
                 ),
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-text.plm.truncate\\",
@@ -1952,22 +2008,21 @@ exports[`should concat files 1`] = `
             );
           }
           function b(e) {
-            return (0, _createElement2.default)(
-              \\"div.dropdown-section.r-pvm\\",
-              null,
-              [
-                (0, _createElement2.default)(
-                  \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
-                  null,
-                  e.description
-                ),
-                (0, _createElement2.default)(
-                  \\"ol.man.dropdown-result-list\\",
-                  { role: \\"presentation\\" },
-                  e.results.map(x)
-                )
-              ]
-            );
+            return (
+              0,
+              _createElement2.default
+            )(\\"div.dropdown-section.r-pvm\\", null, [
+              (0, _createElement2.default)(
+                \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
+                null,
+                e.description
+              ),
+              (0, _createElement2.default)(
+                \\"ol.man.dropdown-result-list\\",
+                { role: \\"presentation\\" },
+                e.results.map(x)
+              )
+            ]);
           }
           function x(e) {
             return (0, _createElement2.default)(
@@ -2004,11 +2059,13 @@ exports[`should concat files 1`] = `
                   \\"svg:svg.valign-middle\\",
                   { width: \\"18\\", height: \\"18\\", viewBox: \\"19.5 119.5 62 62\\" },
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
+                    d:
+                      \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
                     fill: \\"none\\"
                   }),
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
+                    d:
+                      \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
                     fill: \\"#9ba8b1\\"
                   })
                 ),
@@ -2071,15 +2128,18 @@ exports[`should concat files 1`] = `
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
-              ? ((r = r.map(function(e) {
-                  return e.trim();
-                })), e.split(n).filter(Boolean).reduce(function(e, t) {
-                  return e.concat(
-                    -1 === r.indexOf(t)
-                      ? t
-                      : (0, _createElement2.default)(\\"b\\", null, t)
-                  );
-                }, []))
+              ? (
+                  (r = r.map(function(e) {
+                    return e.trim();
+                  })),
+                  e.split(n).filter(Boolean).reduce(function(e, t) {
+                    return e.concat(
+                      -1 === r.indexOf(t)
+                        ? t
+                        : (0, _createElement2.default)(\\"b\\", null, t)
+                    );
+                  }, [])
+                )
               : [e];
           }
           function T() {
@@ -2130,8 +2190,8 @@ exports[`should concat files 1`] = `
             return \\"SEARCH_ID_JOB_FULLTIME\\" === t
               ? \\"location:jobfront\\"
               : \\"SEARCH_ID_BAP_ALL\\" === t
-                  ? \\"location:bapfront\\"
-                  : \\"location:\\" + e.toLowerCase();
+                ? \\"location:bapfront\\"
+                : \\"location:\\" + e.toLowerCase();
           }
           function J() {
             var e = new URL(n);
@@ -2207,29 +2267,35 @@ exports[`should concat files 1`] = `
           ), G.addEventListener(\\"input\\", C);
           var te = void 0;
           \\"EventSource\\" in window
-            ? ((te = new _suggestionsDropdown2.default(
-                G,
-                a,
-                u,
-                X
-              )), (h = (function(e, t, n) {
-                t || (t = 250);
-                var r,
-                  a,
-                  l = function() {
-                    var l = n || this, i = +new Date(), o = arguments;
-                    r && i < r + t
-                      ? (clearTimeout(a), (a = setTimeout(function() {
-                          (r = i), e.apply(l, o);
-                        }, t)))
-                      : ((r = i), (a = setTimeout(function() {
-                          e.apply(l, o);
-                        }, t)));
-                  };
-                return (l.cancel = function() {
-                  clearTimeout(a);
-                }), l;
-              })(h, 50)))
+            ? (
+                (te = new _suggestionsDropdown2.default(G, a, u, X)),
+                (h = (function(e, t, n) {
+                  t || (t = 250);
+                  var r,
+                    a,
+                    l = function() {
+                      var l = n || this,
+                        i = +new Date(),
+                        o = arguments;
+                      r && i < r + t
+                        ? (
+                            clearTimeout(a),
+                            (a = setTimeout(function() {
+                              (r = i), e.apply(l, o);
+                            }, t))
+                          )
+                        : (
+                            (r = i),
+                            (a = setTimeout(function() {
+                              e.apply(l, o);
+                            }, t))
+                          );
+                    };
+                  return (l.cancel = function() {
+                    clearTimeout(a);
+                  }), l;
+                })(h, 50))
+              )
             : (te = new _suggestionsDropdown2.default(G, l, c, X)), U &&
             ((G.selectionStart = G.value.length), te.fetch(G.value, te.show));
         }
@@ -2245,9 +2311,12 @@ exports[`should concat files 1`] = `
         module.exports = exports.default;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        \\"@finn-no/suggestions-dropdown\\": \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        \\"@finn-no/suggestions-dropdown\\":
+          \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
       }
     ],
     f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359: [
@@ -2255,8 +2324,7 @@ exports[`should concat files 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, r = Array(e.length); t < e.length; t++)
-              r[t] = e[t];
+            for (var t = 0, r = Array(e.length); t < e.length; t++) r[t] = e[t];
             return r;
           }
           return Array.from(e);
@@ -2328,10 +2396,14 @@ exports[`should concat files 1`] = `
                 \\"The attributes argument cannot be a Node. Did you forget to pass attributes?\\"
               );
             Object.entries(t).forEach(function(e) {
-              var t = _slicedToArray(e, 2), r = t[0], n = t[1];
+              var t = _slicedToArray(e, 2),
+                r = t[0],
+                n = t[1];
               if (null !== n && !1 !== n) {
                 !0 === n && (n = \\"\\");
-                var a = o(r), i = a.namespace, u = a.localName;
+                var a = o(r),
+                  i = a.namespace,
+                  u = a.localName;
                 if (u.startsWith(\\"on\\") && \\"function\\" == typeof n)
                   return void m.addEventListener(u.slice(2), n);
                 i ? m.setAttributeNS(i, u, n) : m.setAttribute(u, n);
@@ -2371,7 +2443,10 @@ exports[`should concat files 1`] = `
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _slicedToArray = (function() {
           function e(e, t) {
-            var r = [], n = !0, o = !1, a = void 0;
+            var r = [],
+              n = !0,
+              o = !1,
+              a = void 0;
             try {
               for (
                 var i, u = e[Symbol.iterator]();
@@ -2518,7 +2593,8 @@ exports[`should concat files 1`] = `
           });
         }
         function listItem(e, t) {
-          var r = e.title, a = e.url;
+          var r = e.title,
+            a = e.url;
           return el(
             \\"li\\",
             null,
@@ -2533,7 +2609,8 @@ exports[`should concat files 1`] = `
           );
         }
         function generateUrl(e) {
-          var t = e.url, r = e.baseUrl;
+          var t = e.url,
+            r = e.baseUrl;
           return t.startsWith(\\"http\\") ? t : \\"\\" + r + t;
         }
         function notLoggedInView() {
@@ -2556,8 +2633,10 @@ exports[`should concat files 1`] = `
         (module.exports = savedSearchesBox), (module.exports.initialState = initialState), (module.exports.generateUrl = generateUrl), (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ]
   },
@@ -2600,8 +2679,7 @@ exports[`should keep ordering even if slow 1`] = `
     return n[o].exports;
   }
   var i = typeof require == \\"function\\" && require;
-  for (var o = 0; o < r.length; o++)
-    s(r[o]);
+  for (var o = 0; o < r.length; o++) s(r[o]);
   return s;
 })(
   {
@@ -2642,7 +2720,8 @@ exports[`should keep ordering even if slow 1`] = `
         }), (exports.trackPage = trackPage), (exports.trackEvent = trackEvent), (exports.trackEventLater = trackEventLater), (exports.setPageContext = setPageContext), (exports.getApi = getApi), (exports._getBeacons = _getBeacons);
       },
       {
-        \\"../types\\": \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
+        \\"../types\\":
+          \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
       }
     ],
     \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\": [
@@ -2859,9 +2938,12 @@ exports[`should keep ordering even if slow 1`] = `
         });
       },
       {
-        \\"./mobile-modal-wrapper\\": \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
-        \\"@finn-no/frontpage-search\\": \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./mobile-modal-wrapper\\":
+          \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
+        \\"@finn-no/frontpage-search\\":
+          \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703\\": [
@@ -2869,8 +2951,7 @@ exports[`should keep ordering even if slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var n = 0, t = Array(e.length); n < e.length; n++)
-              t[n] = e[n];
+            for (var n = 0, t = Array(e.length); n < e.length; n++) t[n] = e[n];
             return t;
           }
           return Array.from(e);
@@ -3053,7 +3134,9 @@ exports[`should keep ordering even if slow 1`] = `
           ],
             t = n
               .map(function(n) {
-                var t = _slicedToArray(n, 2), r = t[0], o = t[1];
+                var t = _slicedToArray(n, 2),
+                  r = t[0],
+                  o = t[1];
                 return (
                   \\"https://images.finncdn.no/dynamic/\\" + r + \\"/\\" + e + \\" \\" + o
                 );
@@ -3062,7 +3145,8 @@ exports[`should keep ordering even if slow 1`] = `
           return {
             src: \\"https://images.finncdn.no/dynamic/\\" + n[0][0] + \\"/\\" + e,
             srcset: t,
-            sizes: \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
+            sizes:
+              \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
           };
         }
         function trackRendered(e, n) {
@@ -3116,11 +3200,8 @@ exports[`should keep ordering even if slow 1`] = `
             }), n &&
               t.trackingCode &&
               tracking.trackEventLater({
-                analyticsName: \\"recommend.m-\\" +
-                  n +
-                  \\"-\\" +
-                  t.trackingCode +
-                  \\".click\\"
+                analyticsName:
+                  \\"recommend.m-\\" + n + \\"-\\" + t.trackingCode + \\".click\\"
               }), t.trackingCode &&
               tracking.trackEventLater({
                 ecType: \\"AD\\",
@@ -3154,7 +3235,10 @@ exports[`should keep ordering even if slow 1`] = `
         }
         var _slicedToArray = (function() {
           function e(e, n) {
-            var t = [], r = !0, o = !1, i = void 0;
+            var t = [],
+              r = !0,
+              o = !1,
+              i = void 0;
             try {
               for (
                 var a, c = e[Symbol.iterator]();
@@ -3200,10 +3284,14 @@ exports[`should keep ordering even if slow 1`] = `
         });
       },
       {
-        \\"./recommendation-fetcher\\": \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./recommendation-fetcher\\":
+          \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\": [
@@ -3291,14 +3379,18 @@ exports[`should keep ordering even if slow 1`] = `
               (r.selectionStart = r.value.length), /samsungbrowser/i.test(
               navigator.userAgent
             ) &&
-              (r.blur(), window.setTimeout(function() {
-                r.focus();
-              })), t;
+              (
+                r.blur(),
+                window.setTimeout(function() {
+                  r.focus();
+                })
+              ), t;
           }
           function a() {
             s.hide();
           }
-          var s = void 0, i = e.elements.q;
+          var s = void 0,
+            i = e.elements.q;
           i.addEventListener(\\"touchstart\\", function(e) {
             /iPhone|iPad|iPod/.test(navigator.userAgent) &&
               e.preventDefault(), i.addEventListener(\\"touchend\\", n), i.addEventListener(\\"touchmove\\", r);
@@ -3308,9 +3400,12 @@ exports[`should keep ordering even if slow 1`] = `
         };
       },
       {
-        \\"./fullscreen-decorator.js\\": \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
-        \\"./modal-overlay.js\\": \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"./fullscreen-decorator.js\\":
+          \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
+        \\"./modal-overlay.js\\":
+          \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16: [
@@ -3318,8 +3413,7 @@ exports[`should keep ordering even if slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, n = Array(e.length); t < e.length; t++)
-              n[t] = e[t];
+            for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
             return n;
           }
           return Array.from(e);
@@ -3408,15 +3502,19 @@ exports[`should keep ordering even if slow 1`] = `
               {
                 key: \\"hide\\",
                 value: function() {
-                  var e = this, t = this._containerEle.style;
+                  var e = this,
+                    t = this._containerEle.style;
                   this._options.slideDown
-                    ? ((t.transition =
-                        \\"transform \\" +
-                        this._animationDurationInMillis +
-                        \\"ms\\"), window.requestAnimationFrame(function() {
-                        (t.transform =
-                          \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
-                      }))
+                    ? (
+                        (t.transition =
+                          \\"transform \\" +
+                          this._animationDurationInMillis +
+                          \\"ms\\"),
+                        window.requestAnimationFrame(function() {
+                          (t.transform =
+                            \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
+                        })
+                      )
                     : this._teardownAsync(0);
                 }
               },
@@ -3483,16 +3581,25 @@ exports[`should keep ordering even if slow 1`] = `
               {
                 key: \\"_setPosition\\",
                 value: function() {
-                  var e = this._options.size, t = this._containerEle.style;
+                  var e = this._options.size,
+                    t = this._containerEle.style;
                   (t.cssText = \\"\\"), (t.outline = \\"none\\"), e
-                    ? ((t.top = e.top || \\"0\\"), (t.bottom =
-                        e.bottom || \\"0\\"), (t.left = e.left || \\"0\\"), (t.right =
-                        e.right || \\"0\\"), (t.maxWidth =
-                        e.maxWidth || \\"100%\\"), (t.maxHeight =
-                        e.maxHeight || \\"100%\\"), (t.height =
-                        e.height || \\"auto\\"), (t.width = e.width || \\"auto\\"))
-                    : ((t.top = \\"0\\"), (t.right = \\"0\\"), (t.bottom =
-                        \\"0\\"), (t.left = \\"0\\"));
+                    ? (
+                        (t.top = e.top || \\"0\\"),
+                        (t.bottom = e.bottom || \\"0\\"),
+                        (t.left = e.left || \\"0\\"),
+                        (t.right = e.right || \\"0\\"),
+                        (t.maxWidth = e.maxWidth || \\"100%\\"),
+                        (t.maxHeight = e.maxHeight || \\"100%\\"),
+                        (t.height = e.height || \\"auto\\"),
+                        (t.width = e.width || \\"auto\\")
+                      )
+                    : (
+                        (t.top = \\"0\\"),
+                        (t.right = \\"0\\"),
+                        (t.bottom = \\"0\\"),
+                        (t.left = \\"0\\")
+                      );
                 }
               },
               {
@@ -3546,8 +3653,8 @@ exports[`should keep ordering even if slow 1`] = `
                   return document.activeElement === n && e
                     ? (i.focus(), !0)
                     : document.activeElement !== i || e
-                        ? void 0
-                        : (n.focus(), !0);
+                      ? void 0
+                      : (n.focus(), !0);
                 }
               },
               {
@@ -3565,9 +3672,12 @@ exports[`should keep ordering even if slow 1`] = `
                 key: \\"_handleWindowFocusin\\",
                 value: function(e) {
                   this._containerEle.contains(e.target) ||
-                    (this._lastFocusedElement
-                      ? this._lastFocusedElement.focus()
-                      : this._focusElement(), e.stopPropagation());
+                    (
+                      this._lastFocusedElement
+                        ? this._lastFocusedElement.focus()
+                        : this._focusElement(),
+                      e.stopPropagation()
+                    );
                 }
               },
               {
@@ -3600,9 +3710,12 @@ exports[`should keep ordering even if slow 1`] = `
         });
       },
       {
-        \\"./last-searches.js\\": \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
-        \\"./saved-searches.js\\": \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./last-searches.js\\":
+          \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
+        \\"./saved-searches.js\\":
+          \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7: [
@@ -3610,8 +3723,7 @@ exports[`should keep ordering even if slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(t) {
           if (Array.isArray(t)) {
-            for (var e = 0, i = Array(t.length); e < t.length; e++)
-              i[e] = t[e];
+            for (var e = 0, i = Array(t.length); e < t.length; e++) i[e] = t[e];
             return i;
           }
           return Array.from(t);
@@ -3705,16 +3817,15 @@ exports[`should keep ordering even if slow 1`] = `
                 value: function(t) {
                   if (t && document.activeElement === this._inputEle) {
                     for (
-                      (this._lastEle = t), this._dropdownEle ||
-                        ((this._dropdownEle = document.createElement(
-                          \\"div\\"
-                        )), (this._dropdownEle.className =
-                          \\"suggestion-dropdown \\" +
-                          this._dropdownClass), this._dropdownEle.setAttribute(
-                          \\"role\\",
-                          \\"listbox\\"
-                        ), (this._dropdownEle.id =
-                          \\"listbox-\\" + Math.floor(268435455 * Math.random())));
+                      this._lastEle = t, this._dropdownEle ||
+                        (
+                          (this._dropdownEle = document.createElement(\\"div\\")),
+                          (this._dropdownEle.className =
+                            \\"suggestion-dropdown \\" + this._dropdownClass),
+                          this._dropdownEle.setAttribute(\\"role\\", \\"listbox\\"),
+                          (this._dropdownEle.id =
+                            \\"listbox-\\" + Math.floor(268435455 * Math.random()))
+                        );
                       this._dropdownEle.firstChild;
 
                     )
@@ -3762,28 +3873,38 @@ exports[`should keep ordering even if slow 1`] = `
                   this._statusEle &&
                     (this._statusEle.remove(), (this._statusEle = null)), this
                     ._dropdownEle &&
-                    (this._dropdownEle.remove(), this._inputEle.setAttribute(
-                      \\"aria-expanded\\",
-                      \\"false\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-owns\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-activedescendant\\"
-                    ), (this._dropdownEle = null), (this._timeoutId = null), (this._navItems = null), (this._navItemIndex = null), this
-                      ._selectedItem &&
-                      (this._selectedItem.classList.remove(
-                        this._selectedClass
-                      ), (this._selectedItem = null)), document.removeEventListener(
-                      \\"click\\",
-                      this._handleClick,
-                      !0
-                    ), []
-                      .concat(
-                        _toConsumableArray(document.querySelectorAll(\\"iframe\\"))
-                      )
-                      .forEach(function(t) {
-                        t.style.pointerEvents = \\"\\";
-                      }), this.onclose && this.onclose());
+                    (
+                      this._dropdownEle.remove(),
+                      this._inputEle.setAttribute(\\"aria-expanded\\", \\"false\\"),
+                      this._inputEle.removeAttribute(\\"aria-owns\\"),
+                      this._inputEle.removeAttribute(\\"aria-activedescendant\\"),
+                      (this._dropdownEle = null),
+                      (this._timeoutId = null),
+                      (this._navItems = null),
+                      (this._navItemIndex = null),
+                      this._selectedItem &&
+                        (
+                          this._selectedItem.classList.remove(
+                            this._selectedClass
+                          ),
+                          (this._selectedItem = null)
+                        ),
+                      document.removeEventListener(
+                        \\"click\\",
+                        this._handleClick,
+                        !0
+                      ),
+                      []
+                        .concat(
+                          _toConsumableArray(
+                            document.querySelectorAll(\\"iframe\\")
+                          )
+                        )
+                        .forEach(function(t) {
+                          t.style.pointerEvents = \\"\\";
+                        }),
+                      this.onclose && this.onclose()
+                    );
                 }
               },
               {
@@ -3858,11 +3979,13 @@ exports[`should keep ordering even if slow 1`] = `
                 key: \\"_handleClick\\",
                 value: function(t) {
                   if (
-                    !(0 !== t.button ||
+                    !(
+                      0 !== t.button ||
                       t.metaKey ||
                       t.shiftKey ||
                       t.ctrlKey ||
-                      t.altKey) &&
+                      t.altKey
+                    ) &&
                     t.target !== this._inputEle &&
                     t.target !== this._dropdownEle
                   ) {
@@ -3890,9 +4013,11 @@ exports[`should keep ordering even if slow 1`] = `
                       ), e.removeAttribute(\\"aria-selected\\");
                     }
                     if (
-                      ((this._navItemIndex = t), (this._selectedItem = this._navItems[
-                        t
-                      ]), !this._selectedItem)
+                      (
+                        (this._navItemIndex = t),
+                        (this._selectedItem = this._navItems[t]),
+                        !this._selectedItem
+                      )
                     )
                       return this._inputEle.removeAttribute(
                         \\"aria-activedescendant\\"
@@ -3916,16 +4041,17 @@ exports[`should keep ordering even if slow 1`] = `
                 key: \\"setStatus\\",
                 value: function(t) {
                   this._dropdownEle &&
-                    (this._statusEle ||
-                      ((this._statusEle = document.createElement(
-                        \\"h2\\"
-                      )), (this._statusEle.className =
-                        \\"screen-reader-only dropdown-status\\"), this._statusEle.setAttribute(
-                        \\"role\\",
-                        \\"status\\"
-                      ), this._dropdownEle.before(
-                        this._statusEle
-                      )), (this._statusEle.textContent = t));
+                    (
+                      this._statusEle ||
+                        (
+                          (this._statusEle = document.createElement(\\"h2\\")),
+                          (this._statusEle.className =
+                            \\"screen-reader-only dropdown-status\\"),
+                          this._statusEle.setAttribute(\\"role\\", \\"status\\"),
+                          this._dropdownEle.before(this._statusEle)
+                        ),
+                      (this._statusEle.textContent = t)
+                    );
                 }
               },
               {
@@ -4059,8 +4185,8 @@ exports[`should keep ordering even if slow 1`] = `
           \\"undefined\\" != typeof module
             ? (module.exports = t())
             : \\"function\\" == typeof define && \\"object\\" == _typeof(define.amd)
-                ? define(t)
-                : (this.domready = t());
+              ? define(t)
+              : (this.domready = t());
         })(0, function() {
           var e,
             t = [],
@@ -4072,7 +4198,7 @@ exports[`should keep ordering even if slow 1`] = `
               \\"DOMContentLoaded\\",
               (e = function() {
                 for (
-                  o.removeEventListener(\\"DOMContentLoaded\\", e), (d = 1);
+                  o.removeEventListener(\\"DOMContentLoaded\\", e), d = 1;
                   (e = t.shift());
 
                 )
@@ -4147,8 +4273,8 @@ exports[`should keep ordering even if slow 1`] = `
                 return Object.assign({}, e, { items: t, status: \\"loaded\\" });
               })
             : 401 === t.status
-                ? Object.assign({}, e, { status: \\"unauthorized\\" })
-                : Object.assign({}, e, { status: \\"errored\\" });
+              ? Object.assign({}, e, { status: \\"unauthorized\\" })
+              : Object.assign({}, e, { status: \\"errored\\" });
         }
         function notLoggedInView() {
           return el(
@@ -4198,7 +4324,8 @@ exports[`should keep ordering even if slow 1`] = `
           });
         }
         function listItem(e, t) {
-          var n = e.title, r = e.url;
+          var n = e.title,
+            r = e.url;
           return el(
             \\"li\\",
             null,
@@ -4215,8 +4342,10 @@ exports[`should keep ordering even if slow 1`] = `
         module.exports = lastSearchesBox;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1: [
@@ -4306,14 +4435,17 @@ exports[`should keep ordering even if slow 1`] = `
                 return t.groupingHeader === e.groupingHeader;
               })[0];
               n ||
-                ((n = {
-                  type: e.resultType,
-                  groupingHeader: e.groupingHeader,
-                  description: e.groupingHeader,
-                  groupOrder: e.groupOrder,
-                  itemOrder: e.itemOrder,
-                  results: []
-                }), t.push(n)), n.results.some(function(t) {
+                (
+                  (n = {
+                    type: e.resultType,
+                    groupingHeader: e.groupingHeader,
+                    description: e.groupingHeader,
+                    groupOrder: e.groupOrder,
+                    itemOrder: e.itemOrder,
+                    results: []
+                  }),
+                  t.push(n)
+                ), n.results.some(function(t) {
                 return (
                   t.url && e.url && t.url.toLowerCase() === e.url.toLowerCase()
                 );
@@ -4396,17 +4528,20 @@ exports[`should keep ordering even if slow 1`] = `
             var n = [];
             e.titleSupplement
               ? e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.titleSupplement,
-                      e.title
-                    ))
-                  : (n.push(e.titleSupplement), e.secondaryTitle &&
-                      n.push(e.secondaryTitle))
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.titleSupplement, e.title)
+                  )
+                : (
+                    n.push(e.titleSupplement),
+                    e.secondaryTitle && n.push(e.secondaryTitle)
+                  )
               : e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.title
-                    ))
-                  : e.secondaryTitle && n.push(e.secondaryTitle);
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.title)
+                  )
+                : e.secondaryTitle && n.push(e.secondaryTitle);
             var r = [e.groupingHeader, n.join(\\" \\"), e.info1, e.info2]
               .filter(function(e) {
                 return null != e;
@@ -4504,13 +4639,13 @@ exports[`should keep ordering even if slow 1`] = `
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-image.flex-no-shrink.bat.mvt.relative\\",
                   { style: \\"width: 100px; height: 75px; background: #fff;\\" },
-                  (0, _createElement2.default)(
-                    \\"img.blockify.centered-element\\",
-                    {
-                      src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
-                      style: \\"max-height: 100%; padding: 5px;\\"
-                    }
-                  )
+                  (
+                    0,
+                    _createElement2.default
+                  )(\\"img.blockify.centered-element\\", {
+                    src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
+                    style: \\"max-height: 100%; padding: 5px;\\"
+                  })
                 ),
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-text.plm.truncate\\",
@@ -4523,22 +4658,21 @@ exports[`should keep ordering even if slow 1`] = `
             );
           }
           function b(e) {
-            return (0, _createElement2.default)(
-              \\"div.dropdown-section.r-pvm\\",
-              null,
-              [
-                (0, _createElement2.default)(
-                  \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
-                  null,
-                  e.description
-                ),
-                (0, _createElement2.default)(
-                  \\"ol.man.dropdown-result-list\\",
-                  { role: \\"presentation\\" },
-                  e.results.map(x)
-                )
-              ]
-            );
+            return (
+              0,
+              _createElement2.default
+            )(\\"div.dropdown-section.r-pvm\\", null, [
+              (0, _createElement2.default)(
+                \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
+                null,
+                e.description
+              ),
+              (0, _createElement2.default)(
+                \\"ol.man.dropdown-result-list\\",
+                { role: \\"presentation\\" },
+                e.results.map(x)
+              )
+            ]);
           }
           function x(e) {
             return (0, _createElement2.default)(
@@ -4575,11 +4709,13 @@ exports[`should keep ordering even if slow 1`] = `
                   \\"svg:svg.valign-middle\\",
                   { width: \\"18\\", height: \\"18\\", viewBox: \\"19.5 119.5 62 62\\" },
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
+                    d:
+                      \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
                     fill: \\"none\\"
                   }),
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
+                    d:
+                      \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
                     fill: \\"#9ba8b1\\"
                   })
                 ),
@@ -4642,15 +4778,18 @@ exports[`should keep ordering even if slow 1`] = `
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
-              ? ((r = r.map(function(e) {
-                  return e.trim();
-                })), e.split(n).filter(Boolean).reduce(function(e, t) {
-                  return e.concat(
-                    -1 === r.indexOf(t)
-                      ? t
-                      : (0, _createElement2.default)(\\"b\\", null, t)
-                  );
-                }, []))
+              ? (
+                  (r = r.map(function(e) {
+                    return e.trim();
+                  })),
+                  e.split(n).filter(Boolean).reduce(function(e, t) {
+                    return e.concat(
+                      -1 === r.indexOf(t)
+                        ? t
+                        : (0, _createElement2.default)(\\"b\\", null, t)
+                    );
+                  }, [])
+                )
               : [e];
           }
           function T() {
@@ -4701,8 +4840,8 @@ exports[`should keep ordering even if slow 1`] = `
             return \\"SEARCH_ID_JOB_FULLTIME\\" === t
               ? \\"location:jobfront\\"
               : \\"SEARCH_ID_BAP_ALL\\" === t
-                  ? \\"location:bapfront\\"
-                  : \\"location:\\" + e.toLowerCase();
+                ? \\"location:bapfront\\"
+                : \\"location:\\" + e.toLowerCase();
           }
           function J() {
             var e = new URL(n);
@@ -4778,29 +4917,35 @@ exports[`should keep ordering even if slow 1`] = `
           ), G.addEventListener(\\"input\\", C);
           var te = void 0;
           \\"EventSource\\" in window
-            ? ((te = new _suggestionsDropdown2.default(
-                G,
-                a,
-                u,
-                X
-              )), (h = (function(e, t, n) {
-                t || (t = 250);
-                var r,
-                  a,
-                  l = function() {
-                    var l = n || this, i = +new Date(), o = arguments;
-                    r && i < r + t
-                      ? (clearTimeout(a), (a = setTimeout(function() {
-                          (r = i), e.apply(l, o);
-                        }, t)))
-                      : ((r = i), (a = setTimeout(function() {
-                          e.apply(l, o);
-                        }, t)));
-                  };
-                return (l.cancel = function() {
-                  clearTimeout(a);
-                }), l;
-              })(h, 50)))
+            ? (
+                (te = new _suggestionsDropdown2.default(G, a, u, X)),
+                (h = (function(e, t, n) {
+                  t || (t = 250);
+                  var r,
+                    a,
+                    l = function() {
+                      var l = n || this,
+                        i = +new Date(),
+                        o = arguments;
+                      r && i < r + t
+                        ? (
+                            clearTimeout(a),
+                            (a = setTimeout(function() {
+                              (r = i), e.apply(l, o);
+                            }, t))
+                          )
+                        : (
+                            (r = i),
+                            (a = setTimeout(function() {
+                              e.apply(l, o);
+                            }, t))
+                          );
+                    };
+                  return (l.cancel = function() {
+                    clearTimeout(a);
+                  }), l;
+                })(h, 50))
+              )
             : (te = new _suggestionsDropdown2.default(G, l, c, X)), U &&
             ((G.selectionStart = G.value.length), te.fetch(G.value, te.show));
         }
@@ -4816,9 +4961,12 @@ exports[`should keep ordering even if slow 1`] = `
         module.exports = exports.default;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        \\"@finn-no/suggestions-dropdown\\": \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        \\"@finn-no/suggestions-dropdown\\":
+          \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
       }
     ],
     f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359: [
@@ -4826,8 +4974,7 @@ exports[`should keep ordering even if slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, r = Array(e.length); t < e.length; t++)
-              r[t] = e[t];
+            for (var t = 0, r = Array(e.length); t < e.length; t++) r[t] = e[t];
             return r;
           }
           return Array.from(e);
@@ -4899,10 +5046,14 @@ exports[`should keep ordering even if slow 1`] = `
                 \\"The attributes argument cannot be a Node. Did you forget to pass attributes?\\"
               );
             Object.entries(t).forEach(function(e) {
-              var t = _slicedToArray(e, 2), r = t[0], n = t[1];
+              var t = _slicedToArray(e, 2),
+                r = t[0],
+                n = t[1];
               if (null !== n && !1 !== n) {
                 !0 === n && (n = \\"\\");
-                var a = o(r), i = a.namespace, u = a.localName;
+                var a = o(r),
+                  i = a.namespace,
+                  u = a.localName;
                 if (u.startsWith(\\"on\\") && \\"function\\" == typeof n)
                   return void m.addEventListener(u.slice(2), n);
                 i ? m.setAttributeNS(i, u, n) : m.setAttribute(u, n);
@@ -4942,7 +5093,10 @@ exports[`should keep ordering even if slow 1`] = `
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _slicedToArray = (function() {
           function e(e, t) {
-            var r = [], n = !0, o = !1, a = void 0;
+            var r = [],
+              n = !0,
+              o = !1,
+              a = void 0;
             try {
               for (
                 var i, u = e[Symbol.iterator]();
@@ -5089,7 +5243,8 @@ exports[`should keep ordering even if slow 1`] = `
           });
         }
         function listItem(e, t) {
-          var r = e.title, a = e.url;
+          var r = e.title,
+            a = e.url;
           return el(
             \\"li\\",
             null,
@@ -5104,7 +5259,8 @@ exports[`should keep ordering even if slow 1`] = `
           );
         }
         function generateUrl(e) {
-          var t = e.url, r = e.baseUrl;
+          var t = e.url,
+            r = e.baseUrl;
           return t.startsWith(\\"http\\") ? t : \\"\\" + r + t;
         }
         function notLoggedInView() {
@@ -5127,8 +5283,10 @@ exports[`should keep ordering even if slow 1`] = `
         (module.exports = savedSearchesBox), (module.exports.initialState = initialState), (module.exports.generateUrl = generateUrl), (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ]
   },
@@ -5171,8 +5329,7 @@ exports[`should keep ordering if very slow 1`] = `
     return n[o].exports;
   }
   var i = typeof require == \\"function\\" && require;
-  for (var o = 0; o < r.length; o++)
-    s(r[o]);
+  for (var o = 0; o < r.length; o++) s(r[o]);
   return s;
 })(
   {
@@ -5213,7 +5370,8 @@ exports[`should keep ordering if very slow 1`] = `
         }), (exports.trackPage = trackPage), (exports.trackEvent = trackEvent), (exports.trackEventLater = trackEventLater), (exports.setPageContext = setPageContext), (exports.getApi = getApi), (exports._getBeacons = _getBeacons);
       },
       {
-        \\"../types\\": \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
+        \\"../types\\":
+          \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\"
       }
     ],
     \\"2c63de15712936e673571db81ace97c244ccca609b37e9b44b32c3c5162c1fe1\\": [
@@ -5430,9 +5588,12 @@ exports[`should keep ordering if very slow 1`] = `
         });
       },
       {
-        \\"./mobile-modal-wrapper\\": \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
-        \\"@finn-no/frontpage-search\\": \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./mobile-modal-wrapper\\":
+          \\"8afbd0f37e42beb0eca666acd32816e6f68514e657515b2cfb1c308375219bbf\\",
+        \\"@finn-no/frontpage-search\\":
+          \\"ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703\\": [
@@ -5440,8 +5601,7 @@ exports[`should keep ordering if very slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var n = 0, t = Array(e.length); n < e.length; n++)
-              t[n] = e[n];
+            for (var n = 0, t = Array(e.length); n < e.length; n++) t[n] = e[n];
             return t;
           }
           return Array.from(e);
@@ -5624,7 +5784,9 @@ exports[`should keep ordering if very slow 1`] = `
           ],
             t = n
               .map(function(n) {
-                var t = _slicedToArray(n, 2), r = t[0], o = t[1];
+                var t = _slicedToArray(n, 2),
+                  r = t[0],
+                  o = t[1];
                 return (
                   \\"https://images.finncdn.no/dynamic/\\" + r + \\"/\\" + e + \\" \\" + o
                 );
@@ -5633,7 +5795,8 @@ exports[`should keep ordering if very slow 1`] = `
           return {
             src: \\"https://images.finncdn.no/dynamic/\\" + n[0][0] + \\"/\\" + e,
             srcset: t,
-            sizes: \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
+            sizes:
+              \\"(min-width: 990px) 300px, (min-width: 768px) 33vw, (min-width: 480px) 50vw\\"
           };
         }
         function trackRendered(e, n) {
@@ -5687,11 +5850,8 @@ exports[`should keep ordering if very slow 1`] = `
             }), n &&
               t.trackingCode &&
               tracking.trackEventLater({
-                analyticsName: \\"recommend.m-\\" +
-                  n +
-                  \\"-\\" +
-                  t.trackingCode +
-                  \\".click\\"
+                analyticsName:
+                  \\"recommend.m-\\" + n + \\"-\\" + t.trackingCode + \\".click\\"
               }), t.trackingCode &&
               tracking.trackEventLater({
                 ecType: \\"AD\\",
@@ -5725,7 +5885,10 @@ exports[`should keep ordering if very slow 1`] = `
         }
         var _slicedToArray = (function() {
           function e(e, n) {
-            var t = [], r = !0, o = !1, i = void 0;
+            var t = [],
+              r = !0,
+              o = !1,
+              i = void 0;
             try {
               for (
                 var a, c = e[Symbol.iterator]();
@@ -5771,10 +5934,14 @@ exports[`should keep ordering if very slow 1`] = `
         });
       },
       {
-        \\"./recommendation-fetcher\\": \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./recommendation-fetcher\\":
+          \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\",
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     \\"5c02889a7c31a9681b6e75a2843ac101000df887b39b7667fc3a42b3a2343b37\\": [
@@ -5862,14 +6029,18 @@ exports[`should keep ordering if very slow 1`] = `
               (r.selectionStart = r.value.length), /samsungbrowser/i.test(
               navigator.userAgent
             ) &&
-              (r.blur(), window.setTimeout(function() {
-                r.focus();
-              })), t;
+              (
+                r.blur(),
+                window.setTimeout(function() {
+                  r.focus();
+                })
+              ), t;
           }
           function a() {
             s.hide();
           }
-          var s = void 0, i = e.elements.q;
+          var s = void 0,
+            i = e.elements.q;
           i.addEventListener(\\"touchstart\\", function(e) {
             /iPhone|iPad|iPod/.test(navigator.userAgent) &&
               e.preventDefault(), i.addEventListener(\\"touchend\\", n), i.addEventListener(\\"touchmove\\", r);
@@ -5879,9 +6050,12 @@ exports[`should keep ordering if very slow 1`] = `
         };
       },
       {
-        \\"./fullscreen-decorator.js\\": \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
-        \\"./modal-overlay.js\\": \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"./fullscreen-decorator.js\\":
+          \\"2e95589aefcc0dc38e28cc4631bb177b537d6ba76381974963461864710cfb16\\",
+        \\"./modal-overlay.js\\":
+          \\"a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     a3efc78270e27e60480323b6ab3bb282160affc1afc45045d6c2790464629c16: [
@@ -5889,8 +6063,7 @@ exports[`should keep ordering if very slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, n = Array(e.length); t < e.length; t++)
-              n[t] = e[t];
+            for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
             return n;
           }
           return Array.from(e);
@@ -5979,15 +6152,19 @@ exports[`should keep ordering if very slow 1`] = `
               {
                 key: \\"hide\\",
                 value: function() {
-                  var e = this, t = this._containerEle.style;
+                  var e = this,
+                    t = this._containerEle.style;
                   this._options.slideDown
-                    ? ((t.transition =
-                        \\"transform \\" +
-                        this._animationDurationInMillis +
-                        \\"ms\\"), window.requestAnimationFrame(function() {
-                        (t.transform =
-                          \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
-                      }))
+                    ? (
+                        (t.transition =
+                          \\"transform \\" +
+                          this._animationDurationInMillis +
+                          \\"ms\\"),
+                        window.requestAnimationFrame(function() {
+                          (t.transform =
+                            \\"translateY(100vh)\\"), e._teardownAsync(e._animationDurationInMillis + 50);
+                        })
+                      )
                     : this._teardownAsync(0);
                 }
               },
@@ -6054,16 +6231,25 @@ exports[`should keep ordering if very slow 1`] = `
               {
                 key: \\"_setPosition\\",
                 value: function() {
-                  var e = this._options.size, t = this._containerEle.style;
+                  var e = this._options.size,
+                    t = this._containerEle.style;
                   (t.cssText = \\"\\"), (t.outline = \\"none\\"), e
-                    ? ((t.top = e.top || \\"0\\"), (t.bottom =
-                        e.bottom || \\"0\\"), (t.left = e.left || \\"0\\"), (t.right =
-                        e.right || \\"0\\"), (t.maxWidth =
-                        e.maxWidth || \\"100%\\"), (t.maxHeight =
-                        e.maxHeight || \\"100%\\"), (t.height =
-                        e.height || \\"auto\\"), (t.width = e.width || \\"auto\\"))
-                    : ((t.top = \\"0\\"), (t.right = \\"0\\"), (t.bottom =
-                        \\"0\\"), (t.left = \\"0\\"));
+                    ? (
+                        (t.top = e.top || \\"0\\"),
+                        (t.bottom = e.bottom || \\"0\\"),
+                        (t.left = e.left || \\"0\\"),
+                        (t.right = e.right || \\"0\\"),
+                        (t.maxWidth = e.maxWidth || \\"100%\\"),
+                        (t.maxHeight = e.maxHeight || \\"100%\\"),
+                        (t.height = e.height || \\"auto\\"),
+                        (t.width = e.width || \\"auto\\")
+                      )
+                    : (
+                        (t.top = \\"0\\"),
+                        (t.right = \\"0\\"),
+                        (t.bottom = \\"0\\"),
+                        (t.left = \\"0\\")
+                      );
                 }
               },
               {
@@ -6117,8 +6303,8 @@ exports[`should keep ordering if very slow 1`] = `
                   return document.activeElement === n && e
                     ? (i.focus(), !0)
                     : document.activeElement !== i || e
-                        ? void 0
-                        : (n.focus(), !0);
+                      ? void 0
+                      : (n.focus(), !0);
                 }
               },
               {
@@ -6136,9 +6322,12 @@ exports[`should keep ordering if very slow 1`] = `
                 key: \\"_handleWindowFocusin\\",
                 value: function(e) {
                   this._containerEle.contains(e.target) ||
-                    (this._lastFocusedElement
-                      ? this._lastFocusedElement.focus()
-                      : this._focusElement(), e.stopPropagation());
+                    (
+                      this._lastFocusedElement
+                        ? this._lastFocusedElement.focus()
+                        : this._focusElement(),
+                      e.stopPropagation()
+                    );
                 }
               },
               {
@@ -6171,9 +6360,12 @@ exports[`should keep ordering if very slow 1`] = `
         });
       },
       {
-        \\"./last-searches.js\\": \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
-        \\"./saved-searches.js\\": \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
-        domready: \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
+        \\"./last-searches.js\\":
+          \\"e7fa4a93ca5560ebea60dddda8168323358a512d2273c448995d0a51650a7367\\",
+        \\"./saved-searches.js\\":
+          \\"fec1c83e08e148dc921415497cf7def04e0a8990ba15754336b7a8d36328c1f3\\",
+        domready:
+          \\"ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60\\"
       }
     ],
     c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7: [
@@ -6181,8 +6373,7 @@ exports[`should keep ordering if very slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(t) {
           if (Array.isArray(t)) {
-            for (var e = 0, i = Array(t.length); e < t.length; e++)
-              i[e] = t[e];
+            for (var e = 0, i = Array(t.length); e < t.length; e++) i[e] = t[e];
             return i;
           }
           return Array.from(t);
@@ -6276,16 +6467,15 @@ exports[`should keep ordering if very slow 1`] = `
                 value: function(t) {
                   if (t && document.activeElement === this._inputEle) {
                     for (
-                      (this._lastEle = t), this._dropdownEle ||
-                        ((this._dropdownEle = document.createElement(
-                          \\"div\\"
-                        )), (this._dropdownEle.className =
-                          \\"suggestion-dropdown \\" +
-                          this._dropdownClass), this._dropdownEle.setAttribute(
-                          \\"role\\",
-                          \\"listbox\\"
-                        ), (this._dropdownEle.id =
-                          \\"listbox-\\" + Math.floor(268435455 * Math.random())));
+                      this._lastEle = t, this._dropdownEle ||
+                        (
+                          (this._dropdownEle = document.createElement(\\"div\\")),
+                          (this._dropdownEle.className =
+                            \\"suggestion-dropdown \\" + this._dropdownClass),
+                          this._dropdownEle.setAttribute(\\"role\\", \\"listbox\\"),
+                          (this._dropdownEle.id =
+                            \\"listbox-\\" + Math.floor(268435455 * Math.random()))
+                        );
                       this._dropdownEle.firstChild;
 
                     )
@@ -6333,28 +6523,38 @@ exports[`should keep ordering if very slow 1`] = `
                   this._statusEle &&
                     (this._statusEle.remove(), (this._statusEle = null)), this
                     ._dropdownEle &&
-                    (this._dropdownEle.remove(), this._inputEle.setAttribute(
-                      \\"aria-expanded\\",
-                      \\"false\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-owns\\"
-                    ), this._inputEle.removeAttribute(
-                      \\"aria-activedescendant\\"
-                    ), (this._dropdownEle = null), (this._timeoutId = null), (this._navItems = null), (this._navItemIndex = null), this
-                      ._selectedItem &&
-                      (this._selectedItem.classList.remove(
-                        this._selectedClass
-                      ), (this._selectedItem = null)), document.removeEventListener(
-                      \\"click\\",
-                      this._handleClick,
-                      !0
-                    ), []
-                      .concat(
-                        _toConsumableArray(document.querySelectorAll(\\"iframe\\"))
-                      )
-                      .forEach(function(t) {
-                        t.style.pointerEvents = \\"\\";
-                      }), this.onclose && this.onclose());
+                    (
+                      this._dropdownEle.remove(),
+                      this._inputEle.setAttribute(\\"aria-expanded\\", \\"false\\"),
+                      this._inputEle.removeAttribute(\\"aria-owns\\"),
+                      this._inputEle.removeAttribute(\\"aria-activedescendant\\"),
+                      (this._dropdownEle = null),
+                      (this._timeoutId = null),
+                      (this._navItems = null),
+                      (this._navItemIndex = null),
+                      this._selectedItem &&
+                        (
+                          this._selectedItem.classList.remove(
+                            this._selectedClass
+                          ),
+                          (this._selectedItem = null)
+                        ),
+                      document.removeEventListener(
+                        \\"click\\",
+                        this._handleClick,
+                        !0
+                      ),
+                      []
+                        .concat(
+                          _toConsumableArray(
+                            document.querySelectorAll(\\"iframe\\")
+                          )
+                        )
+                        .forEach(function(t) {
+                          t.style.pointerEvents = \\"\\";
+                        }),
+                      this.onclose && this.onclose()
+                    );
                 }
               },
               {
@@ -6429,11 +6629,13 @@ exports[`should keep ordering if very slow 1`] = `
                 key: \\"_handleClick\\",
                 value: function(t) {
                   if (
-                    !(0 !== t.button ||
+                    !(
+                      0 !== t.button ||
                       t.metaKey ||
                       t.shiftKey ||
                       t.ctrlKey ||
-                      t.altKey) &&
+                      t.altKey
+                    ) &&
                     t.target !== this._inputEle &&
                     t.target !== this._dropdownEle
                   ) {
@@ -6461,9 +6663,11 @@ exports[`should keep ordering if very slow 1`] = `
                       ), e.removeAttribute(\\"aria-selected\\");
                     }
                     if (
-                      ((this._navItemIndex = t), (this._selectedItem = this._navItems[
-                        t
-                      ]), !this._selectedItem)
+                      (
+                        (this._navItemIndex = t),
+                        (this._selectedItem = this._navItems[t]),
+                        !this._selectedItem
+                      )
                     )
                       return this._inputEle.removeAttribute(
                         \\"aria-activedescendant\\"
@@ -6487,16 +6691,17 @@ exports[`should keep ordering if very slow 1`] = `
                 key: \\"setStatus\\",
                 value: function(t) {
                   this._dropdownEle &&
-                    (this._statusEle ||
-                      ((this._statusEle = document.createElement(
-                        \\"h2\\"
-                      )), (this._statusEle.className =
-                        \\"screen-reader-only dropdown-status\\"), this._statusEle.setAttribute(
-                        \\"role\\",
-                        \\"status\\"
-                      ), this._dropdownEle.before(
-                        this._statusEle
-                      )), (this._statusEle.textContent = t));
+                    (
+                      this._statusEle ||
+                        (
+                          (this._statusEle = document.createElement(\\"h2\\")),
+                          (this._statusEle.className =
+                            \\"screen-reader-only dropdown-status\\"),
+                          this._statusEle.setAttribute(\\"role\\", \\"status\\"),
+                          this._dropdownEle.before(this._statusEle)
+                        ),
+                      (this._statusEle.textContent = t)
+                    );
                 }
               },
               {
@@ -6630,8 +6835,8 @@ exports[`should keep ordering if very slow 1`] = `
           \\"undefined\\" != typeof module
             ? (module.exports = t())
             : \\"function\\" == typeof define && \\"object\\" == _typeof(define.amd)
-                ? define(t)
-                : (this.domready = t());
+              ? define(t)
+              : (this.domready = t());
         })(0, function() {
           var e,
             t = [],
@@ -6643,7 +6848,7 @@ exports[`should keep ordering if very slow 1`] = `
               \\"DOMContentLoaded\\",
               (e = function() {
                 for (
-                  o.removeEventListener(\\"DOMContentLoaded\\", e), (d = 1);
+                  o.removeEventListener(\\"DOMContentLoaded\\", e), d = 1;
                   (e = t.shift());
 
                 )
@@ -6718,8 +6923,8 @@ exports[`should keep ordering if very slow 1`] = `
                 return Object.assign({}, e, { items: t, status: \\"loaded\\" });
               })
             : 401 === t.status
-                ? Object.assign({}, e, { status: \\"unauthorized\\" })
-                : Object.assign({}, e, { status: \\"errored\\" });
+              ? Object.assign({}, e, { status: \\"unauthorized\\" })
+              : Object.assign({}, e, { status: \\"errored\\" });
         }
         function notLoggedInView() {
           return el(
@@ -6769,7 +6974,8 @@ exports[`should keep ordering if very slow 1`] = `
           });
         }
         function listItem(e, t) {
-          var n = e.title, r = e.url;
+          var n = e.title,
+            r = e.url;
           return el(
             \\"li\\",
             null,
@@ -6786,8 +6992,10 @@ exports[`should keep ordering if very slow 1`] = `
         module.exports = lastSearchesBox;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ],
     ee8eb3b630addd0b697619aa405a83f47760d26a7047606c48130e0a336f2aa1: [
@@ -6877,14 +7085,17 @@ exports[`should keep ordering if very slow 1`] = `
                 return t.groupingHeader === e.groupingHeader;
               })[0];
               n ||
-                ((n = {
-                  type: e.resultType,
-                  groupingHeader: e.groupingHeader,
-                  description: e.groupingHeader,
-                  groupOrder: e.groupOrder,
-                  itemOrder: e.itemOrder,
-                  results: []
-                }), t.push(n)), n.results.some(function(t) {
+                (
+                  (n = {
+                    type: e.resultType,
+                    groupingHeader: e.groupingHeader,
+                    description: e.groupingHeader,
+                    groupOrder: e.groupOrder,
+                    itemOrder: e.itemOrder,
+                    results: []
+                  }),
+                  t.push(n)
+                ), n.results.some(function(t) {
                 return (
                   t.url && e.url && t.url.toLowerCase() === e.url.toLowerCase()
                 );
@@ -6967,17 +7178,20 @@ exports[`should keep ordering if very slow 1`] = `
             var n = [];
             e.titleSupplement
               ? e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.titleSupplement,
-                      e.title
-                    ))
-                  : (n.push(e.titleSupplement), e.secondaryTitle &&
-                      n.push(e.secondaryTitle))
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.titleSupplement, e.title)
+                  )
+                : (
+                    n.push(e.titleSupplement),
+                    e.secondaryTitle && n.push(e.secondaryTitle)
+                  )
               : e.title
-                  ? (e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"), n.push(
-                      e.title
-                    ))
-                  : e.secondaryTitle && n.push(e.secondaryTitle);
+                ? (
+                    e.secondaryTitle && n.push(e.secondaryTitle, \\"–\\"),
+                    n.push(e.title)
+                  )
+                : e.secondaryTitle && n.push(e.secondaryTitle);
             var r = [e.groupingHeader, n.join(\\" \\"), e.info1, e.info2]
               .filter(function(e) {
                 return null != e;
@@ -7075,13 +7289,13 @@ exports[`should keep ordering if very slow 1`] = `
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-image.flex-no-shrink.bat.mvt.relative\\",
                   { style: \\"width: 100px; height: 75px; background: #fff;\\" },
-                  (0, _createElement2.default)(
-                    \\"img.blockify.centered-element\\",
-                    {
-                      src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
-                      style: \\"max-height: 100%; padding: 5px;\\"
-                    }
-                  )
+                  (
+                    0,
+                    _createElement2.default
+                  )(\\"img.blockify.centered-element\\", {
+                    src: e.imgUrl.replace(\\"640w\\", \\"240w\\"),
+                    style: \\"max-height: 100%; padding: 5px;\\"
+                  })
                 ),
                 (0, _createElement2.default)(
                   \\"div.autocomplete-result-text.plm.truncate\\",
@@ -7094,22 +7308,21 @@ exports[`should keep ordering if very slow 1`] = `
             );
           }
           function b(e) {
-            return (0, _createElement2.default)(
-              \\"div.dropdown-section.r-pvm\\",
-              null,
-              [
-                (0, _createElement2.default)(
-                  \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
-                  null,
-                  e.description
-                ),
-                (0, _createElement2.default)(
-                  \\"ol.man.dropdown-result-list\\",
-                  { role: \\"presentation\\" },
-                  e.results.map(x)
-                )
-              ]
-            );
+            return (
+              0,
+              _createElement2.default
+            )(\\"div.dropdown-section.r-pvm\\", null, [
+              (0, _createElement2.default)(
+                \\"h2.man.dropdown-heading.phs.truncate.licorice\\",
+                null,
+                e.description
+              ),
+              (0, _createElement2.default)(
+                \\"ol.man.dropdown-result-list\\",
+                { role: \\"presentation\\" },
+                e.results.map(x)
+              )
+            ]);
           }
           function x(e) {
             return (0, _createElement2.default)(
@@ -7146,11 +7359,13 @@ exports[`should keep ordering if very slow 1`] = `
                   \\"svg:svg.valign-middle\\",
                   { width: \\"18\\", height: \\"18\\", viewBox: \\"19.5 119.5 62 62\\" },
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
+                    d:
+                      \\"M65.8 146.083c0-10.823-8.778-19.6-19.616-19.6-10.83 0-19.614 8.776-19.614 19.6 0 10.84 8.784 19.616 19.614 19.616 10.837 0 19.615-8.778 19.615-19.617z\\",
                     fill: \\"none\\"
                   }),
                   (0, _createElement2.default)(\\"svg:path\\", {
-                    d: \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
+                    d:
+                      \\"M80.982 175.818l-13.92-13.924c3.336-4.393 5.316-9.867 5.316-15.812 0-14.457-11.725-26.177-26.195-26.177-14.457 0-26.184 11.72-26.184 26.177 0 14.472 11.726 26.196 26.183 26.196 5.93 0 11.408-1.983 15.794-5.307L75.9 180.894l5.082-5.075zM26.57 146.083c0-10.823 8.784-19.6 19.614-19.6 10.835 0 19.615 8.776 19.615 19.6 0 10.84-8.778 19.616-19.616 19.616-10.83 0-19.614-8.778-19.614-19.617z\\",
                     fill: \\"#9ba8b1\\"
                   })
                 ),
@@ -7213,15 +7428,18 @@ exports[`should keep ordering if very slow 1`] = `
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
-              ? ((r = r.map(function(e) {
-                  return e.trim();
-                })), e.split(n).filter(Boolean).reduce(function(e, t) {
-                  return e.concat(
-                    -1 === r.indexOf(t)
-                      ? t
-                      : (0, _createElement2.default)(\\"b\\", null, t)
-                  );
-                }, []))
+              ? (
+                  (r = r.map(function(e) {
+                    return e.trim();
+                  })),
+                  e.split(n).filter(Boolean).reduce(function(e, t) {
+                    return e.concat(
+                      -1 === r.indexOf(t)
+                        ? t
+                        : (0, _createElement2.default)(\\"b\\", null, t)
+                    );
+                  }, [])
+                )
               : [e];
           }
           function T() {
@@ -7272,8 +7490,8 @@ exports[`should keep ordering if very slow 1`] = `
             return \\"SEARCH_ID_JOB_FULLTIME\\" === t
               ? \\"location:jobfront\\"
               : \\"SEARCH_ID_BAP_ALL\\" === t
-                  ? \\"location:bapfront\\"
-                  : \\"location:\\" + e.toLowerCase();
+                ? \\"location:bapfront\\"
+                : \\"location:\\" + e.toLowerCase();
           }
           function J() {
             var e = new URL(n);
@@ -7349,29 +7567,35 @@ exports[`should keep ordering if very slow 1`] = `
           ), G.addEventListener(\\"input\\", C);
           var te = void 0;
           \\"EventSource\\" in window
-            ? ((te = new _suggestionsDropdown2.default(
-                G,
-                a,
-                u,
-                X
-              )), (h = (function(e, t, n) {
-                t || (t = 250);
-                var r,
-                  a,
-                  l = function() {
-                    var l = n || this, i = +new Date(), o = arguments;
-                    r && i < r + t
-                      ? (clearTimeout(a), (a = setTimeout(function() {
-                          (r = i), e.apply(l, o);
-                        }, t)))
-                      : ((r = i), (a = setTimeout(function() {
-                          e.apply(l, o);
-                        }, t)));
-                  };
-                return (l.cancel = function() {
-                  clearTimeout(a);
-                }), l;
-              })(h, 50)))
+            ? (
+                (te = new _suggestionsDropdown2.default(G, a, u, X)),
+                (h = (function(e, t, n) {
+                  t || (t = 250);
+                  var r,
+                    a,
+                    l = function() {
+                      var l = n || this,
+                        i = +new Date(),
+                        o = arguments;
+                      r && i < r + t
+                        ? (
+                            clearTimeout(a),
+                            (a = setTimeout(function() {
+                              (r = i), e.apply(l, o);
+                            }, t))
+                          )
+                        : (
+                            (r = i),
+                            (a = setTimeout(function() {
+                              e.apply(l, o);
+                            }, t))
+                          );
+                    };
+                  return (l.cancel = function() {
+                    clearTimeout(a);
+                  }), l;
+                })(h, 50))
+              )
             : (te = new _suggestionsDropdown2.default(G, l, c, X)), U &&
             ((G.selectionStart = G.value.length), te.fetch(G.value, te.show));
         }
@@ -7387,9 +7611,12 @@ exports[`should keep ordering if very slow 1`] = `
         module.exports = exports.default;
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
-        \\"@finn-no/suggestions-dropdown\\": \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\",
+        \\"@finn-no/suggestions-dropdown\\":
+          \\"c7319995dec6fde9f8ad84ed170f814c324d57d368e8630465d81e255c35b2b7\\"
       }
     ],
     f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359: [
@@ -7397,8 +7624,7 @@ exports[`should keep ordering if very slow 1`] = `
         \\"use strict\\";
         function _toConsumableArray(e) {
           if (Array.isArray(e)) {
-            for (var t = 0, r = Array(e.length); t < e.length; t++)
-              r[t] = e[t];
+            for (var t = 0, r = Array(e.length); t < e.length; t++) r[t] = e[t];
             return r;
           }
           return Array.from(e);
@@ -7470,10 +7696,14 @@ exports[`should keep ordering if very slow 1`] = `
                 \\"The attributes argument cannot be a Node. Did you forget to pass attributes?\\"
               );
             Object.entries(t).forEach(function(e) {
-              var t = _slicedToArray(e, 2), r = t[0], n = t[1];
+              var t = _slicedToArray(e, 2),
+                r = t[0],
+                n = t[1];
               if (null !== n && !1 !== n) {
                 !0 === n && (n = \\"\\");
-                var a = o(r), i = a.namespace, u = a.localName;
+                var a = o(r),
+                  i = a.namespace,
+                  u = a.localName;
                 if (u.startsWith(\\"on\\") && \\"function\\" == typeof n)
                   return void m.addEventListener(u.slice(2), n);
                 i ? m.setAttributeNS(i, u, n) : m.setAttribute(u, n);
@@ -7513,7 +7743,10 @@ exports[`should keep ordering if very slow 1`] = `
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _slicedToArray = (function() {
           function e(e, t) {
-            var r = [], n = !0, o = !1, a = void 0;
+            var r = [],
+              n = !0,
+              o = !1,
+              a = void 0;
             try {
               for (
                 var i, u = e[Symbol.iterator]();
@@ -7660,7 +7893,8 @@ exports[`should keep ordering if very slow 1`] = `
           });
         }
         function listItem(e, t) {
-          var r = e.title, a = e.url;
+          var r = e.title,
+            a = e.url;
           return el(
             \\"li\\",
             null,
@@ -7675,7 +7909,8 @@ exports[`should keep ordering if very slow 1`] = `
           );
         }
         function generateUrl(e) {
-          var t = e.url, r = e.baseUrl;
+          var t = e.url,
+            r = e.baseUrl;
           return t.startsWith(\\"http\\") ? t : \\"\\" + r + t;
         }
         function notLoggedInView() {
@@ -7698,8 +7933,10 @@ exports[`should keep ordering if very slow 1`] = `
         (module.exports = savedSearchesBox), (module.exports.initialState = initialState), (module.exports.generateUrl = generateUrl), (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"@finn-no/analytics\\": \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
-        \\"@finn-no/create-element\\": \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
+        \\"@finn-no/analytics\\":
+          \\"007db4c921a89b977f33de49cc8779ea1ac92bfd03213a8f09412c4f7a1aaf9e\\",
+        \\"@finn-no/create-element\\":
+          \\"f4d45264e33c9fd1a5dd99391826bc4b62579dec8c6c99d67f260defdf9b8359\\"
       }
     ]
   },
