@@ -34,7 +34,7 @@
   "devDependencies": {
     "asset-pipe-sink-fs": "^1.0.0-beta.8",
     "ava": "^0.19.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.0",
     "eslint-config-finn": "^1.0.1",
     "get-stream": "^3.0.0",
     "prettier": "^1.4.4"
