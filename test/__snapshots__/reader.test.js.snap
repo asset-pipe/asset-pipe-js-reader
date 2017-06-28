@@ -117,18 +117,18 @@ exports[`should concat files 1`] = `
               : (e.__proto__ = t));
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var o = 0; o < t.length; o++) {
-              var n = t[o];
-              (n.enumerable =
-                n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
-                (n.writable = !0), Object.defineProperty(e, n.key, n);
+            function e(e, t) {
+              for (var o = 0; o < t.length; o++) {
+                var n = t[o];
+                (n.enumerable =
+                  n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
+                  (n.writable = !0), Object.defineProperty(e, n.key, n);
+              }
             }
-          }
-          return function(t, o, n) {
-            return o && e(t.prototype, o), n && e(t, n), t;
-          };
-        })(),
+            return function(t, o, n) {
+              return o && e(t.prototype, o), n && e(t, n), t;
+            };
+          })(),
           _get = function e(t, o, n) {
             null === t && (t = Function.prototype);
             var r = Object.getOwnPropertyDescriptor(t, o);
@@ -307,9 +307,10 @@ exports[`should concat files 1`] = `
           return Array.from(e);
         }
         function marketRecommendationBox(e) {
-          var n = arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {},
+          var n =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {},
             t = el(\\"div\\");
           e.appendChild(t), fetchRecommendations(n.market)
             .then(function(e) {
@@ -476,12 +477,12 @@ exports[`should concat files 1`] = `
         }
         function buildSrcSetInfo(e) {
           var n = [
-            [\\"480x360c\\", \\"480w\\"],
-            [\\"240x180c\\", \\"240w\\"],
-            [\\"320x240c\\", \\"320w\\"],
-            [\\"640x480c\\", \\"640w\\"],
-            [\\"960x720c\\", \\"960w\\"]
-          ],
+              [\\"480x360c\\", \\"480w\\"],
+              [\\"240x180c\\", \\"240w\\"],
+              [\\"320x240c\\", \\"320w\\"],
+              [\\"640x480c\\", \\"640w\\"],
+              [\\"960x720c\\", \\"960w\\"]
+            ],
             t = n
               .map(function(n) {
                 var t = _slicedToArray(n, 2),
@@ -584,37 +585,37 @@ exports[`should concat files 1`] = `
           };
         }
         var _slicedToArray = (function() {
-          function e(e, n) {
-            var t = [],
-              r = !0,
-              o = !1,
-              i = void 0;
-            try {
-              for (
-                var a, c = e[Symbol.iterator]();
-                !(r = (a = c.next()).done) &&
-                (t.push(a.value), !n || t.length !== n);
-                r = !0
-              );
-            } catch (e) {
-              (o = !0), (i = e);
-            } finally {
+            function e(e, n) {
+              var t = [],
+                r = !0,
+                o = !1,
+                i = void 0;
               try {
-                !r && c.return && c.return();
+                for (
+                  var a, c = e[Symbol.iterator]();
+                  !(r = (a = c.next()).done) &&
+                  (t.push(a.value), !n || t.length !== n);
+                  r = !0
+                );
+              } catch (e) {
+                (o = !0), (i = e);
               } finally {
-                if (o) throw i;
+                try {
+                  !r && c.return && c.return();
+                } finally {
+                  if (o) throw i;
+                }
               }
+              return t;
             }
-            return t;
-          }
-          return function(n, t) {
-            if (Array.isArray(n)) return n;
-            if (Symbol.iterator in Object(n)) return e(n, t);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
+            return function(n, t) {
+              if (Array.isArray(n)) return n;
+              if (Symbol.iterator in Object(n)) return e(n, t);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
           el = require(\\"@finn-no/create-element\\"),
           tracking = require(\\"@finn-no/analytics\\"),
           domready = require(\\"domready\\"),
@@ -714,10 +715,10 @@ exports[`should concat files 1`] = `
             var r = t.elements.q;
             r.style.cssText = \\"-webkit-flex: 1; -ms-flex: 1; flex: 1;\\";
             var o = el(
-              \\"button.blank.prn\\",
-              { type: \\"button\\", onclick: a },
-              \\"Avbryt\\"
-            ),
+                \\"button.blank.prn\\",
+                { type: \\"button\\", onclick: a },
+                \\"Avbryt\\"
+              ),
               l = t.querySelector(\\"[data-dropdown-insertion]\\");
             return (l.className = \\"r-phl scroll-container\\"), (l.style.top =
               \\"60px\\"), (l.style.webkitTransform =
@@ -773,23 +774,24 @@ exports[`should concat files 1`] = `
             throw new TypeError(\\"Cannot call a class as a function\\");
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var i = t[n];
-              (i.enumerable =
-                i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
-                (i.writable = !0), Object.defineProperty(e, i.key, i);
+            function e(e, t) {
+              for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                (i.enumerable =
+                  i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
+                  (i.writable = !0), Object.defineProperty(e, i.key, i);
+              }
             }
-          }
-          return function(t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
-          };
-        })(),
+            return function(t, n, i) {
+              return n && e(t.prototype, n), i && e(t, i), t;
+            };
+          })(),
           ModalOverlay = (function() {
             function e(t, n) {
-              var i = arguments.length > 2 && void 0 !== arguments[2]
-                ? arguments[2]
-                : {};
+              var i =
+                arguments.length > 2 && void 0 !== arguments[2]
+                  ? arguments[2]
+                  : {};
               if ((_classCallCheck(this, e), !t))
                 throw Error(\\"A title has to be provided\\");
               (this._title = t), (this._content = n), (this._options = i), (this._dismissCallback = null), i.onDismiss &&
@@ -1014,7 +1016,7 @@ exports[`should concat files 1`] = `
                   return 27 === e.keyCode
                     ? ((t = !0), this.dismiss(\\"cancel\\"))
                     : 9 === e.keyCode &&
-                        (t = this._handleTabbing(e.shiftKey)), t &&
+                      (t = this._handleTabbing(e.shiftKey)), t &&
                     (e.stopPropagation(), e.preventDefault()), t;
                 }
               },
@@ -1084,23 +1086,24 @@ exports[`should concat files 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _createClass = (function() {
-          function t(t, e) {
-            for (var i = 0; i < e.length; i++) {
-              var s = e[i];
-              (s.enumerable =
-                s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
-                (s.writable = !0), Object.defineProperty(t, s.key, s);
+            function t(t, e) {
+              for (var i = 0; i < e.length; i++) {
+                var s = e[i];
+                (s.enumerable =
+                  s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
+                  (s.writable = !0), Object.defineProperty(t, s.key, s);
+              }
             }
-          }
-          return function(e, i, s) {
-            return i && t(e.prototype, i), s && t(e, s), e;
-          };
-        })(),
+            return function(e, i, s) {
+              return i && t(e.prototype, i), s && t(e, s), e;
+            };
+          })(),
           SuggestionsDropdown = (function() {
             function t(e, i, s) {
-              var n = arguments.length > 3 && void 0 !== arguments[3]
-                ? arguments[3]
-                : {},
+              var n =
+                  arguments.length > 3 && void 0 !== arguments[3]
+                    ? arguments[3]
+                    : {},
                 l = n.contentGetter,
                 o = n.onsubmit,
                 a = n.onshow,
@@ -1427,9 +1430,10 @@ exports[`should concat files 1`] = `
                 key: \\"_selectPrevious\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? this._navItems.length - 1
-                      : this._navItemIndex - 1;
+                    var t =
+                      null == this._navItemIndex
+                        ? this._navItems.length - 1
+                        : this._navItemIndex - 1;
                     this._selectItem(t);
                   }
                 }
@@ -1438,9 +1442,8 @@ exports[`should concat files 1`] = `
                 key: \\"_selectNext\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? 0
-                      : this._navItemIndex + 1;
+                    var t =
+                      null == this._navItemIndex ? 0 : this._navItemIndex + 1;
                     this._selectItem(t);
                   }
                 }
@@ -1518,19 +1521,19 @@ exports[`should concat files 1`] = `
     ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60: [
       function(require, module, exports) {
         \\"use strict\\";
-        var _typeof = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
+        var _typeof =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e &&
                 \\"function\\" == typeof Symbol &&
                 e.constructor === Symbol &&
                 e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
         !(function(e, t) {
           \\"undefined\\" != typeof module
             ? (module.exports = t())
@@ -2116,15 +2119,15 @@ exports[`should concat files 1`] = `
           }
           function D(e) {
             var t =
-              \\"(^|\\\\\\\\s)(\\" +
-              Z.trim()
-                .split(/\\\\s+/)
-                .sort(function(e, t) {
-                  return t.length - e.length;
-                })
-                .map(I)
-                .join(\\"|\\") +
-              \\")\\",
+                \\"(^|\\\\\\\\s)(\\" +
+                Z.trim()
+                  .split(/\\\\s+/)
+                  .sort(function(e, t) {
+                    return t.length - e.length;
+                  })
+                  .map(I)
+                  .join(\\"|\\") +
+                \\")\\",
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
@@ -2427,65 +2430,66 @@ exports[`should concat files 1`] = `
               return m.appendChild(r(e));
             }), m.normalize(), m;
         }
-        var _typeof2 = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
-                \\"function\\" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
-        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
-        var _slicedToArray = (function() {
-          function e(e, t) {
-            var r = [],
-              n = !0,
-              o = !1,
-              a = void 0;
-            try {
-              for (
-                var i, u = e[Symbol.iterator]();
-                !(n = (i = u.next()).done) &&
-                (r.push(i.value), !t || r.length !== t);
-                n = !0
-              );
-            } catch (e) {
-              (o = !0), (a = e);
-            } finally {
-              try {
-                !n && u.return && u.return();
-              } finally {
-                if (o) throw a;
-              }
-            }
-            return r;
-          }
-          return function(t, r) {
-            if (Array.isArray(t)) return t;
-            if (Symbol.iterator in Object(t)) return e(t, r);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
-          _typeof = \\"function\\" == typeof Symbol &&
-            \\"symbol\\" === _typeof2(Symbol.iterator)
+        var _typeof2 =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
             ? function(e) {
-                return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                return typeof e;
               }
             : function(e) {
                 return e &&
+                \\"function\\" == typeof Symbol &&
+                e.constructor === Symbol &&
+                e !== Symbol.prototype
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
+        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
+        var _slicedToArray = (function() {
+            function e(e, t) {
+              var r = [],
+                n = !0,
+                o = !1,
+                a = void 0;
+              try {
+                for (
+                  var i, u = e[Symbol.iterator]();
+                  !(n = (i = u.next()).done) &&
+                  (r.push(i.value), !t || r.length !== t);
+                  n = !0
+                );
+              } catch (e) {
+                (o = !0), (a = e);
+              } finally {
+                try {
+                  !n && u.return && u.return();
+                } finally {
+                  if (o) throw a;
+                }
+              }
+              return r;
+            }
+            return function(t, r) {
+              if (Array.isArray(t)) return t;
+              if (Symbol.iterator in Object(t)) return e(t, r);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
+          _typeof =
+            \\"function\\" == typeof Symbol &&
+            \\"symbol\\" === _typeof2(Symbol.iterator)
+              ? function(e) {
+                  return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                }
+              : function(e) {
+                  return e &&
                   \\"function\\" == typeof Symbol &&
                   e.constructor === Symbol &&
                   e !== Symbol.prototype
-                  ? \\"symbol\\"
-                  : void 0 === e ? \\"undefined\\" : _typeof2(e);
-              };
+                    ? \\"symbol\\"
+                    : void 0 === e ? \\"undefined\\" : _typeof2(e);
+                };
         (exports.default = createElement), (module.exports = exports.default);
       },
       {}
@@ -2498,9 +2502,10 @@ exports[`should concat files 1`] = `
             maxItemsToShow: 5,
             items: [],
             status: \\"loading\\",
-            baseUrl: arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : \\"/\\"
+            baseUrl:
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : \\"/\\"
           };
         }
         function savedSearchesBox(e, t) {
@@ -2745,9 +2750,10 @@ exports[`should keep bundle what it can if error 1`] = `
           return Array.from(e);
         }
         function marketRecommendationBox(e) {
-          var n = arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {},
+          var n =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {},
             t = el(\\"div\\");
           e.appendChild(t), fetchRecommendations(n.market)
             .then(function(e) {
@@ -2914,12 +2920,12 @@ exports[`should keep bundle what it can if error 1`] = `
         }
         function buildSrcSetInfo(e) {
           var n = [
-            [\\"480x360c\\", \\"480w\\"],
-            [\\"240x180c\\", \\"240w\\"],
-            [\\"320x240c\\", \\"320w\\"],
-            [\\"640x480c\\", \\"640w\\"],
-            [\\"960x720c\\", \\"960w\\"]
-          ],
+              [\\"480x360c\\", \\"480w\\"],
+              [\\"240x180c\\", \\"240w\\"],
+              [\\"320x240c\\", \\"320w\\"],
+              [\\"640x480c\\", \\"640w\\"],
+              [\\"960x720c\\", \\"960w\\"]
+            ],
             t = n
               .map(function(n) {
                 var t = _slicedToArray(n, 2),
@@ -3022,37 +3028,37 @@ exports[`should keep bundle what it can if error 1`] = `
           };
         }
         var _slicedToArray = (function() {
-          function e(e, n) {
-            var t = [],
-              r = !0,
-              o = !1,
-              i = void 0;
-            try {
-              for (
-                var a, c = e[Symbol.iterator]();
-                !(r = (a = c.next()).done) &&
-                (t.push(a.value), !n || t.length !== n);
-                r = !0
-              );
-            } catch (e) {
-              (o = !0), (i = e);
-            } finally {
+            function e(e, n) {
+              var t = [],
+                r = !0,
+                o = !1,
+                i = void 0;
               try {
-                !r && c.return && c.return();
+                for (
+                  var a, c = e[Symbol.iterator]();
+                  !(r = (a = c.next()).done) &&
+                  (t.push(a.value), !n || t.length !== n);
+                  r = !0
+                );
+              } catch (e) {
+                (o = !0), (i = e);
               } finally {
-                if (o) throw i;
+                try {
+                  !r && c.return && c.return();
+                } finally {
+                  if (o) throw i;
+                }
               }
+              return t;
             }
-            return t;
-          }
-          return function(n, t) {
-            if (Array.isArray(n)) return n;
-            if (Symbol.iterator in Object(n)) return e(n, t);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
+            return function(n, t) {
+              if (Array.isArray(n)) return n;
+              if (Symbol.iterator in Object(n)) return e(n, t);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
           el = require(\\"@finn-no/create-element\\"),
           tracking = require(\\"@finn-no/analytics\\"),
           domready = require(\\"domready\\"),
@@ -3142,19 +3148,19 @@ exports[`should keep bundle what it can if error 1`] = `
     ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60: [
       function(require, module, exports) {
         \\"use strict\\";
-        var _typeof = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
+        var _typeof =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e &&
                 \\"function\\" == typeof Symbol &&
                 e.constructor === Symbol &&
                 e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
         !(function(e, t) {
           \\"undefined\\" != typeof module
             ? (module.exports = t())
@@ -3430,65 +3436,66 @@ exports[`should keep bundle what it can if error 1`] = `
               return m.appendChild(r(e));
             }), m.normalize(), m;
         }
-        var _typeof2 = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
-                \\"function\\" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
-        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
-        var _slicedToArray = (function() {
-          function e(e, t) {
-            var r = [],
-              n = !0,
-              o = !1,
-              a = void 0;
-            try {
-              for (
-                var i, u = e[Symbol.iterator]();
-                !(n = (i = u.next()).done) &&
-                (r.push(i.value), !t || r.length !== t);
-                n = !0
-              );
-            } catch (e) {
-              (o = !0), (a = e);
-            } finally {
-              try {
-                !n && u.return && u.return();
-              } finally {
-                if (o) throw a;
-              }
-            }
-            return r;
-          }
-          return function(t, r) {
-            if (Array.isArray(t)) return t;
-            if (Symbol.iterator in Object(t)) return e(t, r);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
-          _typeof = \\"function\\" == typeof Symbol &&
-            \\"symbol\\" === _typeof2(Symbol.iterator)
+        var _typeof2 =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
             ? function(e) {
-                return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                return typeof e;
               }
             : function(e) {
                 return e &&
+                \\"function\\" == typeof Symbol &&
+                e.constructor === Symbol &&
+                e !== Symbol.prototype
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
+        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
+        var _slicedToArray = (function() {
+            function e(e, t) {
+              var r = [],
+                n = !0,
+                o = !1,
+                a = void 0;
+              try {
+                for (
+                  var i, u = e[Symbol.iterator]();
+                  !(n = (i = u.next()).done) &&
+                  (r.push(i.value), !t || r.length !== t);
+                  n = !0
+                );
+              } catch (e) {
+                (o = !0), (a = e);
+              } finally {
+                try {
+                  !n && u.return && u.return();
+                } finally {
+                  if (o) throw a;
+                }
+              }
+              return r;
+            }
+            return function(t, r) {
+              if (Array.isArray(t)) return t;
+              if (Symbol.iterator in Object(t)) return e(t, r);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
+          _typeof =
+            \\"function\\" == typeof Symbol &&
+            \\"symbol\\" === _typeof2(Symbol.iterator)
+              ? function(e) {
+                  return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                }
+              : function(e) {
+                  return e &&
                   \\"function\\" == typeof Symbol &&
                   e.constructor === Symbol &&
                   e !== Symbol.prototype
-                  ? \\"symbol\\"
-                  : void 0 === e ? \\"undefined\\" : _typeof2(e);
-              };
+                    ? \\"symbol\\"
+                    : void 0 === e ? \\"undefined\\" : _typeof2(e);
+                };
         (exports.default = createElement), (module.exports = exports.default);
       },
       {}
@@ -3501,9 +3508,10 @@ exports[`should keep bundle what it can if error 1`] = `
             maxItemsToShow: 5,
             items: [],
             status: \\"loading\\",
-            baseUrl: arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : \\"/\\"
+            baseUrl:
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : \\"/\\"
           };
         }
         function savedSearchesBox(e, t) {
@@ -3769,18 +3777,18 @@ exports[`should keep ordering even if slow 1`] = `
               : (e.__proto__ = t));
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var o = 0; o < t.length; o++) {
-              var n = t[o];
-              (n.enumerable =
-                n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
-                (n.writable = !0), Object.defineProperty(e, n.key, n);
+            function e(e, t) {
+              for (var o = 0; o < t.length; o++) {
+                var n = t[o];
+                (n.enumerable =
+                  n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
+                  (n.writable = !0), Object.defineProperty(e, n.key, n);
+              }
             }
-          }
-          return function(t, o, n) {
-            return o && e(t.prototype, o), n && e(t, n), t;
-          };
-        })(),
+            return function(t, o, n) {
+              return o && e(t.prototype, o), n && e(t, n), t;
+            };
+          })(),
           _get = function e(t, o, n) {
             null === t && (t = Function.prototype);
             var r = Object.getOwnPropertyDescriptor(t, o);
@@ -3959,9 +3967,10 @@ exports[`should keep ordering even if slow 1`] = `
           return Array.from(e);
         }
         function marketRecommendationBox(e) {
-          var n = arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {},
+          var n =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {},
             t = el(\\"div\\");
           e.appendChild(t), fetchRecommendations(n.market)
             .then(function(e) {
@@ -4128,12 +4137,12 @@ exports[`should keep ordering even if slow 1`] = `
         }
         function buildSrcSetInfo(e) {
           var n = [
-            [\\"480x360c\\", \\"480w\\"],
-            [\\"240x180c\\", \\"240w\\"],
-            [\\"320x240c\\", \\"320w\\"],
-            [\\"640x480c\\", \\"640w\\"],
-            [\\"960x720c\\", \\"960w\\"]
-          ],
+              [\\"480x360c\\", \\"480w\\"],
+              [\\"240x180c\\", \\"240w\\"],
+              [\\"320x240c\\", \\"320w\\"],
+              [\\"640x480c\\", \\"640w\\"],
+              [\\"960x720c\\", \\"960w\\"]
+            ],
             t = n
               .map(function(n) {
                 var t = _slicedToArray(n, 2),
@@ -4236,37 +4245,37 @@ exports[`should keep ordering even if slow 1`] = `
           };
         }
         var _slicedToArray = (function() {
-          function e(e, n) {
-            var t = [],
-              r = !0,
-              o = !1,
-              i = void 0;
-            try {
-              for (
-                var a, c = e[Symbol.iterator]();
-                !(r = (a = c.next()).done) &&
-                (t.push(a.value), !n || t.length !== n);
-                r = !0
-              );
-            } catch (e) {
-              (o = !0), (i = e);
-            } finally {
+            function e(e, n) {
+              var t = [],
+                r = !0,
+                o = !1,
+                i = void 0;
               try {
-                !r && c.return && c.return();
+                for (
+                  var a, c = e[Symbol.iterator]();
+                  !(r = (a = c.next()).done) &&
+                  (t.push(a.value), !n || t.length !== n);
+                  r = !0
+                );
+              } catch (e) {
+                (o = !0), (i = e);
               } finally {
-                if (o) throw i;
+                try {
+                  !r && c.return && c.return();
+                } finally {
+                  if (o) throw i;
+                }
               }
+              return t;
             }
-            return t;
-          }
-          return function(n, t) {
-            if (Array.isArray(n)) return n;
-            if (Symbol.iterator in Object(n)) return e(n, t);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
+            return function(n, t) {
+              if (Array.isArray(n)) return n;
+              if (Symbol.iterator in Object(n)) return e(n, t);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
           el = require(\\"@finn-no/create-element\\"),
           tracking = require(\\"@finn-no/analytics\\"),
           domready = require(\\"domready\\"),
@@ -4366,10 +4375,10 @@ exports[`should keep ordering even if slow 1`] = `
             var r = t.elements.q;
             r.style.cssText = \\"-webkit-flex: 1; -ms-flex: 1; flex: 1;\\";
             var o = el(
-              \\"button.blank.prn\\",
-              { type: \\"button\\", onclick: a },
-              \\"Avbryt\\"
-            ),
+                \\"button.blank.prn\\",
+                { type: \\"button\\", onclick: a },
+                \\"Avbryt\\"
+              ),
               l = t.querySelector(\\"[data-dropdown-insertion]\\");
             return (l.className = \\"r-phl scroll-container\\"), (l.style.top =
               \\"60px\\"), (l.style.webkitTransform =
@@ -4425,23 +4434,24 @@ exports[`should keep ordering even if slow 1`] = `
             throw new TypeError(\\"Cannot call a class as a function\\");
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var i = t[n];
-              (i.enumerable =
-                i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
-                (i.writable = !0), Object.defineProperty(e, i.key, i);
+            function e(e, t) {
+              for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                (i.enumerable =
+                  i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
+                  (i.writable = !0), Object.defineProperty(e, i.key, i);
+              }
             }
-          }
-          return function(t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
-          };
-        })(),
+            return function(t, n, i) {
+              return n && e(t.prototype, n), i && e(t, i), t;
+            };
+          })(),
           ModalOverlay = (function() {
             function e(t, n) {
-              var i = arguments.length > 2 && void 0 !== arguments[2]
-                ? arguments[2]
-                : {};
+              var i =
+                arguments.length > 2 && void 0 !== arguments[2]
+                  ? arguments[2]
+                  : {};
               if ((_classCallCheck(this, e), !t))
                 throw Error(\\"A title has to be provided\\");
               (this._title = t), (this._content = n), (this._options = i), (this._dismissCallback = null), i.onDismiss &&
@@ -4666,7 +4676,7 @@ exports[`should keep ordering even if slow 1`] = `
                   return 27 === e.keyCode
                     ? ((t = !0), this.dismiss(\\"cancel\\"))
                     : 9 === e.keyCode &&
-                        (t = this._handleTabbing(e.shiftKey)), t &&
+                      (t = this._handleTabbing(e.shiftKey)), t &&
                     (e.stopPropagation(), e.preventDefault()), t;
                 }
               },
@@ -4736,23 +4746,24 @@ exports[`should keep ordering even if slow 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _createClass = (function() {
-          function t(t, e) {
-            for (var i = 0; i < e.length; i++) {
-              var s = e[i];
-              (s.enumerable =
-                s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
-                (s.writable = !0), Object.defineProperty(t, s.key, s);
+            function t(t, e) {
+              for (var i = 0; i < e.length; i++) {
+                var s = e[i];
+                (s.enumerable =
+                  s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
+                  (s.writable = !0), Object.defineProperty(t, s.key, s);
+              }
             }
-          }
-          return function(e, i, s) {
-            return i && t(e.prototype, i), s && t(e, s), e;
-          };
-        })(),
+            return function(e, i, s) {
+              return i && t(e.prototype, i), s && t(e, s), e;
+            };
+          })(),
           SuggestionsDropdown = (function() {
             function t(e, i, s) {
-              var n = arguments.length > 3 && void 0 !== arguments[3]
-                ? arguments[3]
-                : {},
+              var n =
+                  arguments.length > 3 && void 0 !== arguments[3]
+                    ? arguments[3]
+                    : {},
                 l = n.contentGetter,
                 o = n.onsubmit,
                 a = n.onshow,
@@ -5079,9 +5090,10 @@ exports[`should keep ordering even if slow 1`] = `
                 key: \\"_selectPrevious\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? this._navItems.length - 1
-                      : this._navItemIndex - 1;
+                    var t =
+                      null == this._navItemIndex
+                        ? this._navItems.length - 1
+                        : this._navItemIndex - 1;
                     this._selectItem(t);
                   }
                 }
@@ -5090,9 +5102,8 @@ exports[`should keep ordering even if slow 1`] = `
                 key: \\"_selectNext\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? 0
-                      : this._navItemIndex + 1;
+                    var t =
+                      null == this._navItemIndex ? 0 : this._navItemIndex + 1;
                     this._selectItem(t);
                   }
                 }
@@ -5170,19 +5181,19 @@ exports[`should keep ordering even if slow 1`] = `
     ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60: [
       function(require, module, exports) {
         \\"use strict\\";
-        var _typeof = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
+        var _typeof =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e &&
                 \\"function\\" == typeof Symbol &&
                 e.constructor === Symbol &&
                 e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
         !(function(e, t) {
           \\"undefined\\" != typeof module
             ? (module.exports = t())
@@ -5768,15 +5779,15 @@ exports[`should keep ordering even if slow 1`] = `
           }
           function D(e) {
             var t =
-              \\"(^|\\\\\\\\s)(\\" +
-              Z.trim()
-                .split(/\\\\s+/)
-                .sort(function(e, t) {
-                  return t.length - e.length;
-                })
-                .map(I)
-                .join(\\"|\\") +
-              \\")\\",
+                \\"(^|\\\\\\\\s)(\\" +
+                Z.trim()
+                  .split(/\\\\s+/)
+                  .sort(function(e, t) {
+                    return t.length - e.length;
+                  })
+                  .map(I)
+                  .join(\\"|\\") +
+                \\")\\",
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
@@ -6079,65 +6090,66 @@ exports[`should keep ordering even if slow 1`] = `
               return m.appendChild(r(e));
             }), m.normalize(), m;
         }
-        var _typeof2 = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
-                \\"function\\" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
-        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
-        var _slicedToArray = (function() {
-          function e(e, t) {
-            var r = [],
-              n = !0,
-              o = !1,
-              a = void 0;
-            try {
-              for (
-                var i, u = e[Symbol.iterator]();
-                !(n = (i = u.next()).done) &&
-                (r.push(i.value), !t || r.length !== t);
-                n = !0
-              );
-            } catch (e) {
-              (o = !0), (a = e);
-            } finally {
-              try {
-                !n && u.return && u.return();
-              } finally {
-                if (o) throw a;
-              }
-            }
-            return r;
-          }
-          return function(t, r) {
-            if (Array.isArray(t)) return t;
-            if (Symbol.iterator in Object(t)) return e(t, r);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
-          _typeof = \\"function\\" == typeof Symbol &&
-            \\"symbol\\" === _typeof2(Symbol.iterator)
+        var _typeof2 =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
             ? function(e) {
-                return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                return typeof e;
               }
             : function(e) {
                 return e &&
+                \\"function\\" == typeof Symbol &&
+                e.constructor === Symbol &&
+                e !== Symbol.prototype
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
+        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
+        var _slicedToArray = (function() {
+            function e(e, t) {
+              var r = [],
+                n = !0,
+                o = !1,
+                a = void 0;
+              try {
+                for (
+                  var i, u = e[Symbol.iterator]();
+                  !(n = (i = u.next()).done) &&
+                  (r.push(i.value), !t || r.length !== t);
+                  n = !0
+                );
+              } catch (e) {
+                (o = !0), (a = e);
+              } finally {
+                try {
+                  !n && u.return && u.return();
+                } finally {
+                  if (o) throw a;
+                }
+              }
+              return r;
+            }
+            return function(t, r) {
+              if (Array.isArray(t)) return t;
+              if (Symbol.iterator in Object(t)) return e(t, r);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
+          _typeof =
+            \\"function\\" == typeof Symbol &&
+            \\"symbol\\" === _typeof2(Symbol.iterator)
+              ? function(e) {
+                  return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                }
+              : function(e) {
+                  return e &&
                   \\"function\\" == typeof Symbol &&
                   e.constructor === Symbol &&
                   e !== Symbol.prototype
-                  ? \\"symbol\\"
-                  : void 0 === e ? \\"undefined\\" : _typeof2(e);
-              };
+                    ? \\"symbol\\"
+                    : void 0 === e ? \\"undefined\\" : _typeof2(e);
+                };
         (exports.default = createElement), (module.exports = exports.default);
       },
       {}
@@ -6150,9 +6162,10 @@ exports[`should keep ordering even if slow 1`] = `
             maxItemsToShow: 5,
             items: [],
             status: \\"loading\\",
-            baseUrl: arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : \\"/\\"
+            baseUrl:
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : \\"/\\"
           };
         }
         function savedSearchesBox(e, t) {
@@ -9069,18 +9082,18 @@ exports[`should keep ordering even if slow slow 1`] = `
               : (e.__proto__ = t));
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var o = 0; o < t.length; o++) {
-              var n = t[o];
-              (n.enumerable =
-                n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
-                (n.writable = !0), Object.defineProperty(e, n.key, n);
+            function e(e, t) {
+              for (var o = 0; o < t.length; o++) {
+                var n = t[o];
+                (n.enumerable =
+                  n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
+                  (n.writable = !0), Object.defineProperty(e, n.key, n);
+              }
             }
-          }
-          return function(t, o, n) {
-            return o && e(t.prototype, o), n && e(t, n), t;
-          };
-        })(),
+            return function(t, o, n) {
+              return o && e(t.prototype, o), n && e(t, n), t;
+            };
+          })(),
           _get = function e(t, o, n) {
             null === t && (t = Function.prototype);
             var r = Object.getOwnPropertyDescriptor(t, o);
@@ -9259,9 +9272,10 @@ exports[`should keep ordering even if slow slow 1`] = `
           return Array.from(e);
         }
         function marketRecommendationBox(e) {
-          var n = arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {},
+          var n =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {},
             t = el(\\"div\\");
           e.appendChild(t), fetchRecommendations(n.market)
             .then(function(e) {
@@ -9428,12 +9442,12 @@ exports[`should keep ordering even if slow slow 1`] = `
         }
         function buildSrcSetInfo(e) {
           var n = [
-            [\\"480x360c\\", \\"480w\\"],
-            [\\"240x180c\\", \\"240w\\"],
-            [\\"320x240c\\", \\"320w\\"],
-            [\\"640x480c\\", \\"640w\\"],
-            [\\"960x720c\\", \\"960w\\"]
-          ],
+              [\\"480x360c\\", \\"480w\\"],
+              [\\"240x180c\\", \\"240w\\"],
+              [\\"320x240c\\", \\"320w\\"],
+              [\\"640x480c\\", \\"640w\\"],
+              [\\"960x720c\\", \\"960w\\"]
+            ],
             t = n
               .map(function(n) {
                 var t = _slicedToArray(n, 2),
@@ -9536,37 +9550,37 @@ exports[`should keep ordering even if slow slow 1`] = `
           };
         }
         var _slicedToArray = (function() {
-          function e(e, n) {
-            var t = [],
-              r = !0,
-              o = !1,
-              i = void 0;
-            try {
-              for (
-                var a, c = e[Symbol.iterator]();
-                !(r = (a = c.next()).done) &&
-                (t.push(a.value), !n || t.length !== n);
-                r = !0
-              );
-            } catch (e) {
-              (o = !0), (i = e);
-            } finally {
+            function e(e, n) {
+              var t = [],
+                r = !0,
+                o = !1,
+                i = void 0;
               try {
-                !r && c.return && c.return();
+                for (
+                  var a, c = e[Symbol.iterator]();
+                  !(r = (a = c.next()).done) &&
+                  (t.push(a.value), !n || t.length !== n);
+                  r = !0
+                );
+              } catch (e) {
+                (o = !0), (i = e);
               } finally {
-                if (o) throw i;
+                try {
+                  !r && c.return && c.return();
+                } finally {
+                  if (o) throw i;
+                }
               }
+              return t;
             }
-            return t;
-          }
-          return function(n, t) {
-            if (Array.isArray(n)) return n;
-            if (Symbol.iterator in Object(n)) return e(n, t);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
+            return function(n, t) {
+              if (Array.isArray(n)) return n;
+              if (Symbol.iterator in Object(n)) return e(n, t);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
           el = require(\\"@finn-no/create-element\\"),
           tracking = require(\\"@finn-no/analytics\\"),
           domready = require(\\"domready\\"),
@@ -9666,10 +9680,10 @@ exports[`should keep ordering even if slow slow 1`] = `
             var r = t.elements.q;
             r.style.cssText = \\"-webkit-flex: 1; -ms-flex: 1; flex: 1;\\";
             var o = el(
-              \\"button.blank.prn\\",
-              { type: \\"button\\", onclick: a },
-              \\"Avbryt\\"
-            ),
+                \\"button.blank.prn\\",
+                { type: \\"button\\", onclick: a },
+                \\"Avbryt\\"
+              ),
               l = t.querySelector(\\"[data-dropdown-insertion]\\");
             return (l.className = \\"r-phl scroll-container\\"), (l.style.top =
               \\"60px\\"), (l.style.webkitTransform =
@@ -9725,23 +9739,24 @@ exports[`should keep ordering even if slow slow 1`] = `
             throw new TypeError(\\"Cannot call a class as a function\\");
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var i = t[n];
-              (i.enumerable =
-                i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
-                (i.writable = !0), Object.defineProperty(e, i.key, i);
+            function e(e, t) {
+              for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                (i.enumerable =
+                  i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
+                  (i.writable = !0), Object.defineProperty(e, i.key, i);
+              }
             }
-          }
-          return function(t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
-          };
-        })(),
+            return function(t, n, i) {
+              return n && e(t.prototype, n), i && e(t, i), t;
+            };
+          })(),
           ModalOverlay = (function() {
             function e(t, n) {
-              var i = arguments.length > 2 && void 0 !== arguments[2]
-                ? arguments[2]
-                : {};
+              var i =
+                arguments.length > 2 && void 0 !== arguments[2]
+                  ? arguments[2]
+                  : {};
               if ((_classCallCheck(this, e), !t))
                 throw Error(\\"A title has to be provided\\");
               (this._title = t), (this._content = n), (this._options = i), (this._dismissCallback = null), i.onDismiss &&
@@ -9966,7 +9981,7 @@ exports[`should keep ordering even if slow slow 1`] = `
                   return 27 === e.keyCode
                     ? ((t = !0), this.dismiss(\\"cancel\\"))
                     : 9 === e.keyCode &&
-                        (t = this._handleTabbing(e.shiftKey)), t &&
+                      (t = this._handleTabbing(e.shiftKey)), t &&
                     (e.stopPropagation(), e.preventDefault()), t;
                 }
               },
@@ -10036,23 +10051,24 @@ exports[`should keep ordering even if slow slow 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _createClass = (function() {
-          function t(t, e) {
-            for (var i = 0; i < e.length; i++) {
-              var s = e[i];
-              (s.enumerable =
-                s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
-                (s.writable = !0), Object.defineProperty(t, s.key, s);
+            function t(t, e) {
+              for (var i = 0; i < e.length; i++) {
+                var s = e[i];
+                (s.enumerable =
+                  s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
+                  (s.writable = !0), Object.defineProperty(t, s.key, s);
+              }
             }
-          }
-          return function(e, i, s) {
-            return i && t(e.prototype, i), s && t(e, s), e;
-          };
-        })(),
+            return function(e, i, s) {
+              return i && t(e.prototype, i), s && t(e, s), e;
+            };
+          })(),
           SuggestionsDropdown = (function() {
             function t(e, i, s) {
-              var n = arguments.length > 3 && void 0 !== arguments[3]
-                ? arguments[3]
-                : {},
+              var n =
+                  arguments.length > 3 && void 0 !== arguments[3]
+                    ? arguments[3]
+                    : {},
                 l = n.contentGetter,
                 o = n.onsubmit,
                 a = n.onshow,
@@ -10379,9 +10395,10 @@ exports[`should keep ordering even if slow slow 1`] = `
                 key: \\"_selectPrevious\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? this._navItems.length - 1
-                      : this._navItemIndex - 1;
+                    var t =
+                      null == this._navItemIndex
+                        ? this._navItems.length - 1
+                        : this._navItemIndex - 1;
                     this._selectItem(t);
                   }
                 }
@@ -10390,9 +10407,8 @@ exports[`should keep ordering even if slow slow 1`] = `
                 key: \\"_selectNext\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? 0
-                      : this._navItemIndex + 1;
+                    var t =
+                      null == this._navItemIndex ? 0 : this._navItemIndex + 1;
                     this._selectItem(t);
                   }
                 }
@@ -10470,19 +10486,19 @@ exports[`should keep ordering even if slow slow 1`] = `
     ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60: [
       function(require, module, exports) {
         \\"use strict\\";
-        var _typeof = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
+        var _typeof =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e &&
                 \\"function\\" == typeof Symbol &&
                 e.constructor === Symbol &&
                 e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
         !(function(e, t) {
           \\"undefined\\" != typeof module
             ? (module.exports = t())
@@ -11068,15 +11084,15 @@ exports[`should keep ordering even if slow slow 1`] = `
           }
           function D(e) {
             var t =
-              \\"(^|\\\\\\\\s)(\\" +
-              Z.trim()
-                .split(/\\\\s+/)
-                .sort(function(e, t) {
-                  return t.length - e.length;
-                })
-                .map(I)
-                .join(\\"|\\") +
-              \\")\\",
+                \\"(^|\\\\\\\\s)(\\" +
+                Z.trim()
+                  .split(/\\\\s+/)
+                  .sort(function(e, t) {
+                    return t.length - e.length;
+                  })
+                  .map(I)
+                  .join(\\"|\\") +
+                \\")\\",
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
@@ -11379,65 +11395,66 @@ exports[`should keep ordering even if slow slow 1`] = `
               return m.appendChild(r(e));
             }), m.normalize(), m;
         }
-        var _typeof2 = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
-                \\"function\\" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
-        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
-        var _slicedToArray = (function() {
-          function e(e, t) {
-            var r = [],
-              n = !0,
-              o = !1,
-              a = void 0;
-            try {
-              for (
-                var i, u = e[Symbol.iterator]();
-                !(n = (i = u.next()).done) &&
-                (r.push(i.value), !t || r.length !== t);
-                n = !0
-              );
-            } catch (e) {
-              (o = !0), (a = e);
-            } finally {
-              try {
-                !n && u.return && u.return();
-              } finally {
-                if (o) throw a;
-              }
-            }
-            return r;
-          }
-          return function(t, r) {
-            if (Array.isArray(t)) return t;
-            if (Symbol.iterator in Object(t)) return e(t, r);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
-          _typeof = \\"function\\" == typeof Symbol &&
-            \\"symbol\\" === _typeof2(Symbol.iterator)
+        var _typeof2 =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
             ? function(e) {
-                return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                return typeof e;
               }
             : function(e) {
                 return e &&
+                \\"function\\" == typeof Symbol &&
+                e.constructor === Symbol &&
+                e !== Symbol.prototype
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
+        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
+        var _slicedToArray = (function() {
+            function e(e, t) {
+              var r = [],
+                n = !0,
+                o = !1,
+                a = void 0;
+              try {
+                for (
+                  var i, u = e[Symbol.iterator]();
+                  !(n = (i = u.next()).done) &&
+                  (r.push(i.value), !t || r.length !== t);
+                  n = !0
+                );
+              } catch (e) {
+                (o = !0), (a = e);
+              } finally {
+                try {
+                  !n && u.return && u.return();
+                } finally {
+                  if (o) throw a;
+                }
+              }
+              return r;
+            }
+            return function(t, r) {
+              if (Array.isArray(t)) return t;
+              if (Symbol.iterator in Object(t)) return e(t, r);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
+          _typeof =
+            \\"function\\" == typeof Symbol &&
+            \\"symbol\\" === _typeof2(Symbol.iterator)
+              ? function(e) {
+                  return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                }
+              : function(e) {
+                  return e &&
                   \\"function\\" == typeof Symbol &&
                   e.constructor === Symbol &&
                   e !== Symbol.prototype
-                  ? \\"symbol\\"
-                  : void 0 === e ? \\"undefined\\" : _typeof2(e);
-              };
+                    ? \\"symbol\\"
+                    : void 0 === e ? \\"undefined\\" : _typeof2(e);
+                };
         (exports.default = createElement), (module.exports = exports.default);
       },
       {}
@@ -11450,9 +11467,10 @@ exports[`should keep ordering even if slow slow 1`] = `
             maxItemsToShow: 5,
             items: [],
             status: \\"loading\\",
-            baseUrl: arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : \\"/\\"
+            baseUrl:
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : \\"/\\"
           };
         }
         function savedSearchesBox(e, t) {
@@ -11719,18 +11737,18 @@ exports[`should keep ordering if very slow 1`] = `
               : (e.__proto__ = t));
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var o = 0; o < t.length; o++) {
-              var n = t[o];
-              (n.enumerable =
-                n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
-                (n.writable = !0), Object.defineProperty(e, n.key, n);
+            function e(e, t) {
+              for (var o = 0; o < t.length; o++) {
+                var n = t[o];
+                (n.enumerable =
+                  n.enumerable || !1), (n.configurable = !0), \\"value\\" in n &&
+                  (n.writable = !0), Object.defineProperty(e, n.key, n);
+              }
             }
-          }
-          return function(t, o, n) {
-            return o && e(t.prototype, o), n && e(t, n), t;
-          };
-        })(),
+            return function(t, o, n) {
+              return o && e(t.prototype, o), n && e(t, n), t;
+            };
+          })(),
           _get = function e(t, o, n) {
             null === t && (t = Function.prototype);
             var r = Object.getOwnPropertyDescriptor(t, o);
@@ -11909,9 +11927,10 @@ exports[`should keep ordering if very slow 1`] = `
           return Array.from(e);
         }
         function marketRecommendationBox(e) {
-          var n = arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {},
+          var n =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {},
             t = el(\\"div\\");
           e.appendChild(t), fetchRecommendations(n.market)
             .then(function(e) {
@@ -12078,12 +12097,12 @@ exports[`should keep ordering if very slow 1`] = `
         }
         function buildSrcSetInfo(e) {
           var n = [
-            [\\"480x360c\\", \\"480w\\"],
-            [\\"240x180c\\", \\"240w\\"],
-            [\\"320x240c\\", \\"320w\\"],
-            [\\"640x480c\\", \\"640w\\"],
-            [\\"960x720c\\", \\"960w\\"]
-          ],
+              [\\"480x360c\\", \\"480w\\"],
+              [\\"240x180c\\", \\"240w\\"],
+              [\\"320x240c\\", \\"320w\\"],
+              [\\"640x480c\\", \\"640w\\"],
+              [\\"960x720c\\", \\"960w\\"]
+            ],
             t = n
               .map(function(n) {
                 var t = _slicedToArray(n, 2),
@@ -12186,37 +12205,37 @@ exports[`should keep ordering if very slow 1`] = `
           };
         }
         var _slicedToArray = (function() {
-          function e(e, n) {
-            var t = [],
-              r = !0,
-              o = !1,
-              i = void 0;
-            try {
-              for (
-                var a, c = e[Symbol.iterator]();
-                !(r = (a = c.next()).done) &&
-                (t.push(a.value), !n || t.length !== n);
-                r = !0
-              );
-            } catch (e) {
-              (o = !0), (i = e);
-            } finally {
+            function e(e, n) {
+              var t = [],
+                r = !0,
+                o = !1,
+                i = void 0;
               try {
-                !r && c.return && c.return();
+                for (
+                  var a, c = e[Symbol.iterator]();
+                  !(r = (a = c.next()).done) &&
+                  (t.push(a.value), !n || t.length !== n);
+                  r = !0
+                );
+              } catch (e) {
+                (o = !0), (i = e);
               } finally {
-                if (o) throw i;
+                try {
+                  !r && c.return && c.return();
+                } finally {
+                  if (o) throw i;
+                }
               }
+              return t;
             }
-            return t;
-          }
-          return function(n, t) {
-            if (Array.isArray(n)) return n;
-            if (Symbol.iterator in Object(n)) return e(n, t);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
+            return function(n, t) {
+              if (Array.isArray(n)) return n;
+              if (Symbol.iterator in Object(n)) return e(n, t);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
           el = require(\\"@finn-no/create-element\\"),
           tracking = require(\\"@finn-no/analytics\\"),
           domready = require(\\"domready\\"),
@@ -12316,10 +12335,10 @@ exports[`should keep ordering if very slow 1`] = `
             var r = t.elements.q;
             r.style.cssText = \\"-webkit-flex: 1; -ms-flex: 1; flex: 1;\\";
             var o = el(
-              \\"button.blank.prn\\",
-              { type: \\"button\\", onclick: a },
-              \\"Avbryt\\"
-            ),
+                \\"button.blank.prn\\",
+                { type: \\"button\\", onclick: a },
+                \\"Avbryt\\"
+              ),
               l = t.querySelector(\\"[data-dropdown-insertion]\\");
             return (l.className = \\"r-phl scroll-container\\"), (l.style.top =
               \\"60px\\"), (l.style.webkitTransform =
@@ -12375,23 +12394,24 @@ exports[`should keep ordering if very slow 1`] = `
             throw new TypeError(\\"Cannot call a class as a function\\");
         }
         var _createClass = (function() {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var i = t[n];
-              (i.enumerable =
-                i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
-                (i.writable = !0), Object.defineProperty(e, i.key, i);
+            function e(e, t) {
+              for (var n = 0; n < t.length; n++) {
+                var i = t[n];
+                (i.enumerable =
+                  i.enumerable || !1), (i.configurable = !0), \\"value\\" in i &&
+                  (i.writable = !0), Object.defineProperty(e, i.key, i);
+              }
             }
-          }
-          return function(t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
-          };
-        })(),
+            return function(t, n, i) {
+              return n && e(t.prototype, n), i && e(t, i), t;
+            };
+          })(),
           ModalOverlay = (function() {
             function e(t, n) {
-              var i = arguments.length > 2 && void 0 !== arguments[2]
-                ? arguments[2]
-                : {};
+              var i =
+                arguments.length > 2 && void 0 !== arguments[2]
+                  ? arguments[2]
+                  : {};
               if ((_classCallCheck(this, e), !t))
                 throw Error(\\"A title has to be provided\\");
               (this._title = t), (this._content = n), (this._options = i), (this._dismissCallback = null), i.onDismiss &&
@@ -12616,7 +12636,7 @@ exports[`should keep ordering if very slow 1`] = `
                   return 27 === e.keyCode
                     ? ((t = !0), this.dismiss(\\"cancel\\"))
                     : 9 === e.keyCode &&
-                        (t = this._handleTabbing(e.shiftKey)), t &&
+                      (t = this._handleTabbing(e.shiftKey)), t &&
                     (e.stopPropagation(), e.preventDefault()), t;
                 }
               },
@@ -12686,23 +12706,24 @@ exports[`should keep ordering if very slow 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
         var _createClass = (function() {
-          function t(t, e) {
-            for (var i = 0; i < e.length; i++) {
-              var s = e[i];
-              (s.enumerable =
-                s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
-                (s.writable = !0), Object.defineProperty(t, s.key, s);
+            function t(t, e) {
+              for (var i = 0; i < e.length; i++) {
+                var s = e[i];
+                (s.enumerable =
+                  s.enumerable || !1), (s.configurable = !0), \\"value\\" in s &&
+                  (s.writable = !0), Object.defineProperty(t, s.key, s);
+              }
             }
-          }
-          return function(e, i, s) {
-            return i && t(e.prototype, i), s && t(e, s), e;
-          };
-        })(),
+            return function(e, i, s) {
+              return i && t(e.prototype, i), s && t(e, s), e;
+            };
+          })(),
           SuggestionsDropdown = (function() {
             function t(e, i, s) {
-              var n = arguments.length > 3 && void 0 !== arguments[3]
-                ? arguments[3]
-                : {},
+              var n =
+                  arguments.length > 3 && void 0 !== arguments[3]
+                    ? arguments[3]
+                    : {},
                 l = n.contentGetter,
                 o = n.onsubmit,
                 a = n.onshow,
@@ -13029,9 +13050,10 @@ exports[`should keep ordering if very slow 1`] = `
                 key: \\"_selectPrevious\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? this._navItems.length - 1
-                      : this._navItemIndex - 1;
+                    var t =
+                      null == this._navItemIndex
+                        ? this._navItems.length - 1
+                        : this._navItemIndex - 1;
                     this._selectItem(t);
                   }
                 }
@@ -13040,9 +13062,8 @@ exports[`should keep ordering if very slow 1`] = `
                 key: \\"_selectNext\\",
                 value: function() {
                   if (this._navItems) {
-                    var t = null == this._navItemIndex
-                      ? 0
-                      : this._navItemIndex + 1;
+                    var t =
+                      null == this._navItemIndex ? 0 : this._navItemIndex + 1;
                     this._selectItem(t);
                   }
                 }
@@ -13120,19 +13141,19 @@ exports[`should keep ordering if very slow 1`] = `
     ca2a22e8b828a8030132aad34b0558188f6b1cd93ac6bcc039b7901b1ae0ed60: [
       function(require, module, exports) {
         \\"use strict\\";
-        var _typeof = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
+        var _typeof =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e &&
                 \\"function\\" == typeof Symbol &&
                 e.constructor === Symbol &&
                 e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
         !(function(e, t) {
           \\"undefined\\" != typeof module
             ? (module.exports = t())
@@ -13718,15 +13739,15 @@ exports[`should keep ordering if very slow 1`] = `
           }
           function D(e) {
             var t =
-              \\"(^|\\\\\\\\s)(\\" +
-              Z.trim()
-                .split(/\\\\s+/)
-                .sort(function(e, t) {
-                  return t.length - e.length;
-                })
-                .map(I)
-                .join(\\"|\\") +
-              \\")\\",
+                \\"(^|\\\\\\\\s)(\\" +
+                Z.trim()
+                  .split(/\\\\s+/)
+                  .sort(function(e, t) {
+                    return t.length - e.length;
+                  })
+                  .map(I)
+                  .join(\\"|\\") +
+                \\")\\",
               n = new RegExp(t, \\"gi\\"),
               r = e.match(n);
             return r
@@ -14029,65 +14050,66 @@ exports[`should keep ordering if very slow 1`] = `
               return m.appendChild(r(e));
             }), m.normalize(), m;
         }
-        var _typeof2 = \\"function\\" == typeof Symbol &&
-          \\"symbol\\" == typeof Symbol.iterator
-          ? function(e) {
-              return typeof e;
-            }
-          : function(e) {
-              return e &&
-                \\"function\\" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? \\"symbol\\"
-                : typeof e;
-            };
-        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
-        var _slicedToArray = (function() {
-          function e(e, t) {
-            var r = [],
-              n = !0,
-              o = !1,
-              a = void 0;
-            try {
-              for (
-                var i, u = e[Symbol.iterator]();
-                !(n = (i = u.next()).done) &&
-                (r.push(i.value), !t || r.length !== t);
-                n = !0
-              );
-            } catch (e) {
-              (o = !0), (a = e);
-            } finally {
-              try {
-                !n && u.return && u.return();
-              } finally {
-                if (o) throw a;
-              }
-            }
-            return r;
-          }
-          return function(t, r) {
-            if (Array.isArray(t)) return t;
-            if (Symbol.iterator in Object(t)) return e(t, r);
-            throw new TypeError(
-              \\"Invalid attempt to destructure non-iterable instance\\"
-            );
-          };
-        })(),
-          _typeof = \\"function\\" == typeof Symbol &&
-            \\"symbol\\" === _typeof2(Symbol.iterator)
+        var _typeof2 =
+          \\"function\\" == typeof Symbol && \\"symbol\\" == typeof Symbol.iterator
             ? function(e) {
-                return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                return typeof e;
               }
             : function(e) {
                 return e &&
+                \\"function\\" == typeof Symbol &&
+                e.constructor === Symbol &&
+                e !== Symbol.prototype
+                  ? \\"symbol\\"
+                  : typeof e;
+              };
+        Object.defineProperty(exports, \\"__esModule\\", { value: !0 });
+        var _slicedToArray = (function() {
+            function e(e, t) {
+              var r = [],
+                n = !0,
+                o = !1,
+                a = void 0;
+              try {
+                for (
+                  var i, u = e[Symbol.iterator]();
+                  !(n = (i = u.next()).done) &&
+                  (r.push(i.value), !t || r.length !== t);
+                  n = !0
+                );
+              } catch (e) {
+                (o = !0), (a = e);
+              } finally {
+                try {
+                  !n && u.return && u.return();
+                } finally {
+                  if (o) throw a;
+                }
+              }
+              return r;
+            }
+            return function(t, r) {
+              if (Array.isArray(t)) return t;
+              if (Symbol.iterator in Object(t)) return e(t, r);
+              throw new TypeError(
+                \\"Invalid attempt to destructure non-iterable instance\\"
+              );
+            };
+          })(),
+          _typeof =
+            \\"function\\" == typeof Symbol &&
+            \\"symbol\\" === _typeof2(Symbol.iterator)
+              ? function(e) {
+                  return void 0 === e ? \\"undefined\\" : _typeof2(e);
+                }
+              : function(e) {
+                  return e &&
                   \\"function\\" == typeof Symbol &&
                   e.constructor === Symbol &&
                   e !== Symbol.prototype
-                  ? \\"symbol\\"
-                  : void 0 === e ? \\"undefined\\" : _typeof2(e);
-              };
+                    ? \\"symbol\\"
+                    : void 0 === e ? \\"undefined\\" : _typeof2(e);
+                };
         (exports.default = createElement), (module.exports = exports.default);
       },
       {}
@@ -14100,9 +14122,10 @@ exports[`should keep ordering if very slow 1`] = `
             maxItemsToShow: 5,
             items: [],
             status: \\"loading\\",
-            baseUrl: arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : \\"/\\"
+            baseUrl:
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : \\"/\\"
           };
         }
         function savedSearchesBox(e, t) {
