@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "asset-pipe-sink-fs": "^1.0.0-beta.9",
-    "ava": "^0.21.0",
+    "ava": "^0.22.0",
     "eslint": "^4.1.1",
     "eslint-config-finn": "^2.0.0",
     "get-stream": "^3.0.0",
