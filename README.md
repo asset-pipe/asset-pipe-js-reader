@@ -1,4 +1,4 @@
-# asset-pipe-js-reader
+# @asset-pipe/js-reader
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/asset-pipe/asset-pipe-js-reader.svg)](https://greenkeeper.io/)
 
@@ -32,7 +32,7 @@ Each such object is emitted on a stream for each dependency. This is the asset f
 ## Installation
 
 ```bash
-$ npm install asset-pipe-js-reader
+$ npm install @asset-pipe/js-reader
 ```
 
 
@@ -41,8 +41,8 @@ $ npm install asset-pipe-js-reader
 Make an JavaScript bundle out of two asset feeds stored on a filesystem:
 
 ```js
-const Reader = require('asset-pipe-js-reader');
-const SinkFs = require('asset-pipe-sink-fs');
+const bundleJS = require('@asset-pipe/js-reader');
+const SinkFs = require('@asset-pipe/sink-fs');
 
 const sink = new SinkFs({
     path: './assets'
