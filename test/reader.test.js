@@ -1,28 +1,18 @@
 'use strict';
 
-const { test } = require('ava');
-const Reader = require('../');
-const stream = require('stream');
+const bundleJS = require('../');
 const path = require('path');
-const FileSystemSink = require('asset-pipe-sink-fs');
-const getStream = require('get-stream');
+const Sink = require('@asset-pipe/sink-fs');
 const prettier = require('prettier');
+const vm = require('vm');
 
-const FEED_A_HASH = 'c26fae70ab34dd08230cf2ec30dbc4ed70d1f6616f38f7b3101e6618c9d43ebf';
-const FEED_B_HASH = '5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703';
-const FEED_C_HASH = '5128670188c99f2817fdef2293c0157d430e6b90324ee95a55dbb676e7d64d68';
+const SIMPLE_FEED_A_HASH = 'c26fae70ab34dd08230cf2ec30dbc4ed70d1f6616f38f7b3101e6618c9d43ebf';
+const SIMPLE_FEED_B_HASH = '5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703';
+const SIMPLE_FEED_C_HASH = '5128670188c99f2817fdef2293c0157d430e6b90324ee95a55dbb676e7d64d68';
 
-function createSlowStream (sink, filePath, timeout = 1000) {
-    const myStream = new stream.PassThrough();
+const FEED_A_HASH = '9fab6ddd2a66a14b8b2ab6373fefa8987fabafb1';
+const FEED_B_HASH = '9fab6ddd2a66a14b8b2ab6373fefa8987fabafb2';
 
-    process.nextTick(() => myStream.emit('file found', filePath));
-
-    setTimeout(() => {
-        sink.reader(filePath).pipe(myStream);
-    }, timeout);
-
-    return myStream;
-}
 
 function getExecutionOrder (bundle) {
     const lines = bundle.split('\n').filter(Boolean);
@@ -33,175 +23,139 @@ function getExecutionOrder (bundle) {
     return JSON.parse(order);
 }
 
-test.beforeEach((t) => {
-    t.context.sink = new FileSystemSink({ path: path.join(__dirname, 'mock') });
+test('should concat 3 files', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('simple.a.json'));
+    const feedB = JSON.parse(await sink.get('simple.b.json'));
+    const feedC = JSON.parse(await sink.get('simple.c.json'));
+
+    const content = await bundleJS([feedA, feedB, feedC]);
+    const executionOrder = getExecutionOrder(content);
+
+    expect(executionOrder).toHaveLength(3);
+    expect(executionOrder).toEqual([
+        SIMPLE_FEED_A_HASH,
+        SIMPLE_FEED_B_HASH,
+        SIMPLE_FEED_C_HASH,
+    ]);
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
-test('should concat files', async (t) => {
-    const { sink } = t.context;
+test('should concat 2 files', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
-    const feedA = sink.reader('simple.a.json');
-    const feedB = sink.reader('simple.b.json');
-    const feedC = sink.reader('simple.c.json');
+    const feedA = JSON.parse(await sink.get('feed.a.json'));
+    const feedB = JSON.parse(await sink.get('feed.b.json'));
 
-    const reader = new Reader([feedA, feedB, feedC]);
+    const content = await bundleJS([feedA, feedB]);
 
-    const pipeline = new Promise((resolve, reject) => {
-        reader.on('pipeline empty', reject);
-        reader.on('pipeline ready', resolve);
-    });
+    const executionOrder = getExecutionOrder(content);
 
-    const [bundle] = await Promise.all([getStream(reader), pipeline]);
-
-    const executionOrder = getExecutionOrder(bundle);
-
-    t.deepEqual(executionOrder, [
-        FEED_A_HASH,
-        FEED_B_HASH,
-        FEED_C_HASH,
-    ]);
-    t.snapshot(prettier.format(bundle));
-});
-
-test('should keep ordering even if slow', async (t) => {
-    const { sink } = t.context;
-
-    const feedA = createSlowStream(sink, 'simple.a.json');
-    const feedB = sink.reader('simple.b.json');
-    const feedC = sink.reader('simple.c.json');
-
-    const reader = new Reader([feedA, feedB, feedC]);
-
-    const pipeline = new Promise((resolve, reject) => {
-        reader.on('pipeline empty', reject);
-        reader.on('pipeline ready', resolve);
-    });
-
-    const [bundle] = await Promise.all([getStream(reader), pipeline]);
-
-    const executionOrder = getExecutionOrder(bundle);
-
-    t.deepEqual(executionOrder, [
-        FEED_A_HASH,
-        FEED_B_HASH,
-        FEED_C_HASH,
-    ]);
-    t.snapshot(prettier.format(bundle));
-});
-
-test('should keep ordering even if slow slow', async t => {
-    function createStream (sink, filePath, timeout = 1000) {
-        const myStream = new stream.PassThrough();
-
-        setTimeout(() => {
-            myStream.emit('file found', filePath);
-        }, 100);
-
-        setTimeout(() => {
-            sink.reader(filePath).pipe(myStream);
-        }, timeout);
-
-        return myStream;
-    }
-
-    const sink = new FileSystemSink({ path: path.join(__dirname, 'mock') });
-    const feedA = createStream(sink, 'simple.a.json', 200);
-    const feedB = sink.reader('simple.b.json');
-    const feedC2 = createStream(sink, 'simple.c.json', 200);
-
-    sink.on('file saved', (id, file) => {
-        console.log(id, file);
-    });
-
-    const reader = new Reader([feedA, feedB, feedC2]);
-
-    const [bundle] = await Promise.all([
-        getStream(reader),
-    ]);
-
-    const executionOrder = getExecutionOrder(bundle);
-
-    t.deepEqual(executionOrder, [
-        FEED_A_HASH,
-        FEED_B_HASH,
-        FEED_C_HASH,
-    ]);
-    t.snapshot(prettier.format(bundle));
-});
-
-test('should keep bundle what it can if error', async t => {
-    function createStream (sink, filePath, timeout = 1000) {
-        const myStream = new stream.PassThrough();
-
-        setTimeout(() => {
-            myStream.emit('file found', filePath);
-        }, 100);
-
-        setTimeout(() => {
-            sink.reader(filePath).pipe(myStream);
-        }, timeout);
-
-        return myStream;
-    }
-
-    function createErrorStream (sink, filePath, timeout = 1000) {
-        const myStream = new stream.PassThrough();
-
-        setTimeout(() => {
-            myStream.emit('file not found', filePath);
-        }, 100);
-
-        setTimeout(() => {
-            sink.reader(filePath).pipe(myStream);
-        }, timeout);
-
-        return myStream;
-    }
-
-    function createReader () {
-        const sink = new FileSystemSink({ path: path.join(__dirname, 'mock') });
-        const feedA = createStream(sink, 'simple.a.json', 200);
-        const feedB = sink.reader('simple.b.json');
-        const missingFile = createErrorStream(sink, 'invalid-file.json', 200);
-
-        const reader = new Reader([feedA, feedB, missingFile]);
-        return reader;
-    }
-
-    const [bundle] = await Promise.all([getStream(createReader())]);
-
-    const executionOrder = getExecutionOrder(bundle);
-
-    t.deepEqual(executionOrder, [
-        FEED_A_HASH,
-        FEED_B_HASH,
-    ]);
-    t.snapshot(prettier.format(bundle));
+    expect(executionOrder).toHaveLength(2);
+    expect(executionOrder).toEqual([FEED_A_HASH, FEED_B_HASH]);
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 
-test('should keep ordering if very slow', async (t) => {
-    const { sink } = t.context;
+test('should concat 1 file', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
-    const feedA = createSlowStream(sink, 'simple.a.json', 500);
-    const feedB = sink.reader('simple.b.json');
-    const feedC = createSlowStream(sink, 'simple.c.json', 100);
+    const feedA = JSON.parse(await sink.get('feed.a.json'));
 
-    const reader = new Reader([feedA, feedB, feedC]);
+    const content = await bundleJS([feedA]);
 
-    const pipeline = new Promise((resolve, reject) => {
-        reader.on('pipeline empty', reject);
-        reader.on('pipeline ready', resolve);
-    });
+    const executionOrder = getExecutionOrder(content);
 
-    const [bundle] = await Promise.all([getStream(reader), pipeline]);
+    expect(executionOrder).toHaveLength(1);
+    expect(executionOrder).toEqual([FEED_A_HASH]);
+    expect(prettier.format(content)).toMatchSnapshot();
+});
 
-    const executionOrder = getExecutionOrder(bundle);
-
-    t.deepEqual(executionOrder, [
-        FEED_A_HASH,
-        FEED_B_HASH,
-        FEED_C_HASH,
+test('code reach 1 entry point', async () => {
+    const result = await bundleJS([
+        [
+            {
+                entry: true,
+                id: 'a',
+                source: 'spy(1234);',
+            },
+        ],
     ]);
-    t.snapshot(prettier.format(bundle));
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy.mock.calls).toMatchSnapshot();
+});
+
+test('code reach 3 entry point', async () => {
+    const result = await bundleJS([
+        [
+            {
+                entry: true,
+                id: 'a',
+                source: 'spy("a");',
+            },
+        ], [
+            {
+                entry: true,
+                id: 'b',
+                source: 'spy("b");',
+            },
+        ], [
+            {
+                entry: true,
+                id: 'c',
+                source: 'spy("c");',
+            },
+        ],
+    ]);
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy.mock.calls).toMatchSnapshot();
+});
+
+test('should exclude/dedupe common modules', async () => {
+    const result = await bundleJS([
+        [
+            {
+                entry: true,
+                id: 'a',
+                source: 'require("./c");spy("a");',
+                deps: { './c': 'c' },
+            },
+            {
+                id: 'c',
+                source: 'spy("c");',
+                deps: {},
+            },
+        ], [
+            {
+                entry: true,
+                id: 'b',
+                source: 'spy("b");',
+            },
+            {
+                id: 'c',
+                source: 'require("./c");spy("c");',
+                deps: { './c': 'c' },
+            },
+        ],
+    ]);
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+
+    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy.mock.calls).toMatchSnapshot();
+    expect(prettier.format(result)).toMatchSnapshot();
+});
+
+test('should error if no feed content', async () => {
+    expect(bundleJS()).rejects.toMatchSnapshot();
+    expect(bundleJS([])).rejects.toMatchSnapshot();
+    expect(bundleJS([[]])).rejects.toMatchSnapshot();
+    expect(bundleJS([[
+        {},
+    ]])).rejects.toMatchSnapshot();
 });
