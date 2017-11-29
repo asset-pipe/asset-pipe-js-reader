@@ -4,7 +4,7 @@
 
 This is an internal module intended for use by other modules in the [asset-pipe project][asset-pipe].
 
-This module can take one or multiple asset feed stream(s), as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produced an executable javascript bundle for the browser.
+This module can take one or multiple asset feeds, as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produced an executable javascript bundle for the browser.
 
 
 
@@ -48,13 +48,13 @@ const sink = new SinkFs({
     path: './assets'
 });
 
-const feedA = sink.reader('a.json');
-const feedB = sink.reader('b.json');
-
-const reader = new Reader([feedA, feedB]);
-reader.on('pipeline ready', () => {
-    reader.pipe(fs.createWriteStream('./build/browser.bundle.js'));
-});
+try {
+    const feedA = JSON.parse(await sink.get('a.json'));
+    const feedB = JSON.parse(await sink.get('b.json'));
+    const bundle = await bundleJS([feedA, feedB]);
+} catch (e) {
+    // handle errors
+}
 ```
 
 
@@ -63,26 +63,13 @@ reader.on('pipeline ready', () => {
 
 This module have the following API:
 
-### constructor(streams)
+### function(feeds)
 
 Supported arguments are:
 
- * `streams` - Array - An Array of file reader streams. Must be from one of the asset pipe sinks.
+ * `feeds` - Array - An Array of feeds.
 
-Returns a `Transform stream`.
-
-
-
-## Events:
-
-This module emit the following events:
-
- - `error` -  When an error occured in the pipeline. Emits with: `error`.
- - `file found` - When a file we want to read is found. Emits with: `file`.
- - `file not saved` -  When a file we want to read is not found. Emits with: `file`.
- - `pipeline ready` - When the pipeline is ready to start bundling asset feeds.
- - `pipeline empty` - When the pipeline is empty. Iow; it could not load any of the files its supposed to read so there it nothing to produce.
-
+Returns a `string` of JavaScript code.
 
 
 ## License
