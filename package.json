@@ -33,6 +33,7 @@
     "@asset-pipe/sink-fs": "^1.1.0",
     "eslint": "^4.1.1",
     "eslint-config-finn": "^3.0.0",
+    "eslint-plugin-import": "^2.8.0",
     "jest": "^21.2.1",
     "prettier": "1.8.2"
   },

@@ -1,6 +1,8 @@
 {
   "root": true,
+  "plugins": ["import"],
   "extends": [
+    "plugin:import/recommended",
     "finn",
     "finn/node"
   ],
@@ -10,7 +12,28 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "env": {
-    "jest": true
-  }
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": "test/**/*",
+      "env": {
+        "jest": true
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    }
+  ]
 }
