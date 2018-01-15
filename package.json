@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "browser-pack": "6.0.2",
+    "browser-pack": "6.0.3",
     "get-stream": "^3.0.0"
   },
   "devDependencies": {
