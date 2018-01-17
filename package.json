@@ -11,7 +11,10 @@
     "type": "git",
     "url": "https://github.com/asset-pipe/asset-pipe-js-reader"
   },
-  "keywords": ["assets", "javascript"],
+  "keywords": [
+    "assets",
+    "javascript"
+  ],
   "contributors": [
     {
       "name": "Trygve Lie",
@@ -27,7 +30,7 @@
     "get-stream": "^3.0.0"
   },
   "devDependencies": {
-    "@asset-pipe/sink-fs": "^1.1.0",
+    "@asset-pipe/sink-fs": "^1.1.2",
     "@commitlint/cli": "^6.0.2",
     "@commitlint/config-conventional": "^6.0.2",
     "commitizen": "^2.9.6",
@@ -60,10 +63,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "jest": {
     "clearMocks": true,
-    "coveragePathIgnorePatterns": ["mock"],
+    "coveragePathIgnorePatterns": [
+      "mock"
+    ],
     "testEnvironment": "node",
     "coverageThreshold": {
       "global": {
@@ -95,8 +102,14 @@
     ]
   },
   "lint-staged": {
-    "*.js": ["eslint --fix --config ./.eslintrc", "git add"],
-    "{*.json,*.md,.eslintrc}": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix --config ./.eslintrc",
+      "git add"
+    ],
+    "{*.json,*.md,.eslintrc}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
@@ -104,6 +117,8 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
