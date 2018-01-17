@@ -6,19 +6,24 @@ const Sink = require('@asset-pipe/sink-fs');
 const prettier = require('prettier');
 const vm = require('vm');
 
-const SIMPLE_FEED_A_HASH = 'c26fae70ab34dd08230cf2ec30dbc4ed70d1f6616f38f7b3101e6618c9d43ebf';
-const SIMPLE_FEED_B_HASH = '5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703';
-const SIMPLE_FEED_C_HASH = '5128670188c99f2817fdef2293c0157d430e6b90324ee95a55dbb676e7d64d68';
+const SIMPLE_FEED_A_HASH =
+    'c26fae70ab34dd08230cf2ec30dbc4ed70d1f6616f38f7b3101e6618c9d43ebf';
+const SIMPLE_FEED_B_HASH =
+    '5b54fc816e7c9157d5e6948b6a60cca9ddbb92b81e8d41fd085f74a15645c703';
+const SIMPLE_FEED_C_HASH =
+    '5128670188c99f2817fdef2293c0157d430e6b90324ee95a55dbb676e7d64d68';
 
 const FEED_A_HASH = '9fab6ddd2a66a14b8b2ab6373fefa8987fabafb1';
 const FEED_B_HASH = '9fab6ddd2a66a14b8b2ab6373fefa8987fabafb2';
 
-
-function getExecutionOrder (bundle) {
+function getExecutionOrder(bundle) {
     const lines = bundle.split('\n').filter(Boolean);
     const lastLine = lines[lines.length - 1];
 
-    const order = lastLine.substring(lastLine.indexOf('['), lastLine.lastIndexOf(']') + 1);
+    const order = lastLine.substring(
+        lastLine.indexOf('['),
+        lastLine.lastIndexOf(']') + 1
+    );
 
     return JSON.parse(order);
 }
@@ -56,7 +61,6 @@ test('should concat 2 files', async () => {
     expect(executionOrder).toEqual([FEED_A_HASH, FEED_B_HASH]);
     expect(prettier.format(content)).toMatchSnapshot();
 });
-
 
 test('should concat 1 file', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
@@ -96,13 +100,15 @@ test('code reach 3 entry point', async () => {
                 id: 'a',
                 source: 'spy("a");',
             },
-        ], [
+        ],
+        [
             {
                 entry: true,
                 id: 'b',
                 source: 'spy("b");',
             },
-        ], [
+        ],
+        [
             {
                 entry: true,
                 id: 'c',
@@ -130,7 +136,8 @@ test('should exclude/dedupe common modules', async () => {
                 source: 'spy("c");',
                 deps: {},
             },
-        ], [
+        ],
+        [
             {
                 entry: true,
                 id: 'b',
@@ -155,7 +162,5 @@ test('should error if no feed content', async () => {
     expect(bundleJS()).rejects.toMatchSnapshot();
     expect(bundleJS([])).rejects.toMatchSnapshot();
     expect(bundleJS([[]])).rejects.toMatchSnapshot();
-    expect(bundleJS([[
-        {},
-    ]])).rejects.toMatchSnapshot();
+    expect(bundleJS([[{}]])).rejects.toMatchSnapshot();
 });
