@@ -164,3 +164,14 @@ test('should error if no feed content', async () => {
     expect(bundleJS([[]])).rejects.toMatchSnapshot();
     expect(bundleJS([[{}]])).rejects.toMatchSnapshot();
 });
+
+test('when deps dont match, should not dedupe', async () => {
+    const SinkFs = require('@asset-pipe/sink-fs');
+    const sink = new SinkFs({ path: `${__dirname}/mock` });
+    const feedC = JSON.parse(await sink.get('feed.c.json'));
+    const feedD = JSON.parse(await sink.get('feed.d.json'));
+
+    const bundle = await bundleJS([feedC, feedD]);
+
+    expect(bundle.match(/my module/g)).toHaveLength(2);
+});

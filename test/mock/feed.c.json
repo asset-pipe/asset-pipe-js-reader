@@ -1,0 +1,28 @@
+[
+  {
+    "entry": true,
+    "expose": false,
+    "file":
+      "/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/mock/podletA/entrypoint.js",
+    "id": "3c4ca5444d554f82cb15c2437ed545b2ea6f6a6e98476ec372b21b6cf7d8085a",
+    "order": 0,
+    "source":
+      "'use strict';\n\nvar _index = require('./lib/index');\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log('my module');\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVudHJ5cG9pbnQuanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7Ozs7O0FBRUFBLFFBQVFDLEdBQVIsQ0FBWSxXQUFaIiwiZmlsZSI6ImVudHJ5cG9pbnQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZGVwIGZyb20gJy4vbGliL2luZGV4JztcblxuY29uc29sZS5sb2coJ215IG1vZHVsZScpO1xuIl19",
+    "deps": {
+      "./lib/index":
+        "94def8251ca7023be6c5aeda886a4055d4d47fd62238228def5888398bbdf318"
+    },
+    "index": 1,
+    "indexDeps": { "./lib/index": 2 }
+  },
+  {
+    "id": "94def8251ca7023be6c5aeda886a4055d4d47fd62238228def5888398bbdf318",
+    "source":
+      "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nexports.default = function () {\n    console.log('one');\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7OztrQkFBZSxZQUFXO0FBQ3RCQSxZQUFRQyxHQUFSLENBQVksS0FBWjtBQUNILEMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbigpIHtcbiAgICBjb25zb2xlLmxvZygnb25lJyk7XG59XG4iXX0=",
+    "deps": {},
+    "file":
+      "/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/mock/podletA/lib/index.js",
+    "index": 2,
+    "indexDeps": {}
+  }
+]
