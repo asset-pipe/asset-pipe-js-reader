@@ -4,7 +4,8 @@
   "extends": [
     "plugin:import/recommended",
     "finn",
-    "finn/node"
+    "finn/node",
+    "finn-prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 2017,
@@ -24,7 +25,8 @@
     {
       "files": "test/**/*",
       "env": {
-        "jest": true
+        "jest": true,
+        "node": true
       },
       "rules": {
         "import/no-extraneous-dependencies": [

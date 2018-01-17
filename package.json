@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git@github.com:asset-pipe/asset-pipe-js-reader.git"
   },
-  "keywords": [
-    "assets",
-    "javascript"
-  ],
+  "keywords": ["assets", "javascript"],
   "contributors": [
     {
       "name": "Trygve Lie",
@@ -31,15 +28,27 @@
   },
   "devDependencies": {
     "@asset-pipe/sink-fs": "^1.1.0",
-    "eslint": "^4.1.1",
+    "@commitlint/cli": "^6.0.2",
+    "@commitlint/config-conventional": "^6.0.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.15.0",
     "eslint-config-finn": "^3.0.0",
+    "eslint-config-finn-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.8.0",
-    "jest": "^22.0.4",
-    "prettier": "1.10.2"
+    "husky": "^0.14.3",
+    "jest": "^22.1.1",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0"
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "lint:format": "eslint --fix .",
+    "lint:commit": "commitlint --from=HEAD~1",
+    "precommit": "lint-staged",
+    "cm": "git-cz"
   },
   "engines": {
     "node": ">=8"
@@ -47,14 +56,50 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "jest": {
     "clearMocks": true,
-    "coveragePathIgnorePatterns": [
-      "mock"
-    ],
-    "testEnvironment": "node"
+    "coveragePathIgnorePatterns": ["mock"],
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "tabWidth": 2
+        }
+      },
+      {
+        "files": ".eslintrc",
+        "options": {
+          "parser": "json",
+          "tabWidth": 2
+        }
+      }
+    ]
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix --config ./.eslintrc", "git add"],
+    "{*.json,*.md,.eslintrc}": ["prettier --write", "git add"]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
