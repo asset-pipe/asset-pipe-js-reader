@@ -1,6 +1,6 @@
 {
   "name": "@asset-pipe/js-reader",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": {
     "name": "Trygve Lie",
     "email": "post@trygve-lie.com"
@@ -9,7 +9,7 @@
   "main": "./lib/reader.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:asset-pipe/asset-pipe-js-reader.git"
+    "url": "https://github.com/asset-pipe/asset-pipe-js-reader"
   },
   "keywords": ["assets", "javascript"],
   "contributors": [
@@ -40,7 +40,9 @@
     "jest": "^22.1.1",
     "lint-staged": "^6.0.0",
     "prettier": "^1.10.2",
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "semantic-release": "^12.2.2",
+    "travis-deploy-once": "^4.3.1"
   },
   "scripts": {
     "lint": "eslint .",
@@ -48,7 +50,9 @@
     "lint:format": "eslint --fix .",
     "lint:commit": "commitlint --from=HEAD~1",
     "precommit": "lint-staged",
-    "cm": "git-cz"
+    "cm": "git-cz",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "engines": {
     "node": ">=8"
