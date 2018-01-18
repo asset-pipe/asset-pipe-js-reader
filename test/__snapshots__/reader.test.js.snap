@@ -58086,17 +58086,19 @@ exports[`should error if no feed content 3`] = `[AssertionError [ERR_ASSERTION]:
 exports[`should error if no feed content 4`] = `[AssertionError [ERR_ASSERTION]: Expected feed entry to have an id, got "undefined"]`;
 
 exports[`should exclude/dedupe common modules 1`] = `
-Array [
-  Array [
-    "c",
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "c",
+    ],
+    Array [
+      "a",
+    ],
+    Array [
+      "b",
+    ],
   ],
-  Array [
-    "a",
-  ],
-  Array [
-    "b",
-  ],
-]
+}
 `;
 
 exports[`should exclude/dedupe common modules 2`] = `
