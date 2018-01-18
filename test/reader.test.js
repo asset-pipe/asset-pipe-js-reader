@@ -141,20 +141,20 @@ test('should exclude/dedupe common modules', async () => {
             {
                 entry: true,
                 id: 'b',
-                source: 'spy("b");',
+                source: 'require("./c");spy("b");',
+                deps: { './c': 'c' },
             },
             {
                 id: 'c',
-                source: 'require("./c");spy("c");',
-                deps: { './c': 'c' },
+                source: 'spy("c");',
+                deps: {},
             },
         ],
     ]);
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(spy).toHaveBeenCalledTimes(3);
-    expect(spy.mock.calls).toMatchSnapshot();
+    expect(spy).toMatchSnapshot();
     expect(prettier.format(result)).toMatchSnapshot();
 });
 
@@ -165,7 +165,7 @@ test('should error if no feed content', async () => {
     expect(bundleJS([[{}]])).rejects.toMatchSnapshot();
 });
 
-test('when deps dont match, should not dedupe', async () => {
+test.skip('when deps dont match, should not dedupe', async () => {
     const SinkFs = require('@asset-pipe/sink-fs');
     const sink = new SinkFs({ path: `${__dirname}/mock` });
     const feedC = JSON.parse(await sink.get('feed.c.json'));
@@ -174,4 +174,15 @@ test('when deps dont match, should not dedupe', async () => {
     const bundle = await bundleJS([feedC, feedD]);
 
     expect(bundle.match(/my module/g)).toHaveLength(2);
+});
+
+test('when deps do match, should dedupe', async () => {
+    const SinkFs = require('@asset-pipe/sink-fs');
+    const sink = new SinkFs({ path: `${__dirname}/mock` });
+    const feedE = JSON.parse(await sink.get('feed.e.json'));
+    const feedF = JSON.parse(await sink.get('feed.f.json'));
+
+    const bundle = await bundleJS([feedE, feedF]);
+
+    expect(bundle.match(/my module/g)).toHaveLength(1);
 });
