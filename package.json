@@ -27,7 +27,9 @@
   "license": "MIT",
   "dependencies": {
     "browser-pack": "6.0.3",
-    "get-stream": "^3.0.0"
+    "deps-sort": "^2.0.0",
+    "get-stream": "^3.0.0",
+    "readable-stream": "^2.3.3"
   },
   "devDependencies": {
     "@asset-pipe/sink-fs": "^1.1.2",

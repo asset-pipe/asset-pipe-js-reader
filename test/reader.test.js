@@ -36,6 +36,7 @@ test('should concat 3 files', async () => {
     const feedC = JSON.parse(await sink.get('simple.c.json'));
 
     const content = await bundleJS([feedA, feedB, feedC]);
+    console.log(content);
     const executionOrder = getExecutionOrder(content);
 
     expect(executionOrder).toHaveLength(3);
@@ -47,7 +48,7 @@ test('should concat 3 files', async () => {
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
-test('should concat 2 files', async () => {
+test.skip('should concat 2 files', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
     const feedA = JSON.parse(await sink.get('feed.a.json'));
@@ -122,7 +123,7 @@ test('code reach 3 entry point', async () => {
     expect(spy.mock.calls).toMatchSnapshot();
 });
 
-test('should exclude/dedupe common modules', async () => {
+test.skip('should exclude/dedupe common modules', async () => {
     const result = await bundleJS([
         [
             {
@@ -174,4 +175,15 @@ test('when deps dont match, should not dedupe', async () => {
     const bundle = await bundleJS([feedC, feedD]);
 
     expect(bundle.match(/my module/g)).toHaveLength(2);
+});
+
+test.only('when deps do match, should dedupe', async () => {
+    const SinkFs = require('@asset-pipe/sink-fs');
+    const sink = new SinkFs({ path: `${__dirname}/mock` });
+    const feedE = JSON.parse(await sink.get('feed.e.json'));
+    const feedF = JSON.parse(await sink.get('feed.f.json'));
+
+    const bundle = await bundleJS([feedE, feedF]);
+
+    expect(bundle.match(/my module/g)).toHaveLength(1);
 });
