@@ -2,10 +2,37 @@
 
 const feedEntrypoint = require('../lib/feed-entrypoint');
 
-test('should error if no feed content', async () => {
-    const feed = require('./mock/feed.c.json');
+test('determines entrypoint for simple feed', async () => {
+    const feed = [{ id: 1, file: '', source: '', deps: {}, entry: true }];
 
-    expect(feedEntrypoint(feed).id).toBe(
-        '3c4ca5444d554f82cb15c2437ed545b2ea6f6a6e98476ec372b21b6cf7d8085a'
-    );
+    expect(feedEntrypoint(feed).id).toBe(1);
+});
+
+test('determines entrypoint for feed', async () => {
+    const feed = [
+        { id: 1, file: '', source: '', deps: {} },
+        { id: 2, file: '', source: '', deps: {} },
+        { id: 3, file: '', source: '', deps: {}, entry: true },
+        { id: 4, file: '', source: '', deps: {} },
+    ];
+
+    expect(feedEntrypoint(feed).id).toBe(3);
+});
+
+test('determines entrypoint for feed with multiple entrypoints', async () => {
+    const feed = [
+        { id: 1, file: '', source: '', deps: {}, entry: true },
+        { id: 2, file: '', source: '', deps: {}, entry: true },
+    ];
+
+    expect(feedEntrypoint(feed).id).toBe(1);
+});
+
+test('determines entrypoint for feed with falsey entrypoint', async () => {
+    const feed = [
+        { id: 1, file: '', source: '', deps: {}, entry: null },
+        { id: 2, file: '', source: '', deps: {}, entry: true },
+    ];
+
+    expect(feedEntrypoint(feed).id).toBe(2);
 });

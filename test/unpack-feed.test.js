@@ -15,3 +15,11 @@ test('unpack folder successfully created', async () => {
 
     expect(await pathExists(FOLDER)).toBeTruthy();
 });
+
+test('files created in temp folder', async () => {
+    const feed = require('./mock/feed.c.json');
+
+    await unpackFeed(FOLDER, feed);
+
+    expect(await pathExists(join(FOLDER, feed[0].file))).toBeTruthy();
+});
