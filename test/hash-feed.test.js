@@ -2,7 +2,7 @@
 
 const hashFeed = require('../lib/hash-feed');
 
-test('should error if no feed content', async () => {
+test('returns hash of feeds ids', async () => {
     const feed = require('./mock/feed.c.json');
 
     expect(await hashFeed(feed)).toBe(
