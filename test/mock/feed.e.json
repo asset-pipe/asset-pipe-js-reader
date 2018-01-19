@@ -18,7 +18,7 @@
   {
     "id": "94def8251ca7023be6c5aeda886a4055d4d47fd62238228def5888398bbdf318",
     "source":
-      "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nexports.default = function () {\n    console.log('same');\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7OztrQkFBZSxZQUFXO0FBQ3RCQSxZQUFRQyxHQUFSLENBQVksS0FBWjtBQUNILEMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbigpIHtcbiAgICBjb25zb2xlLmxvZygnb25lJyk7XG59XG4iXX0=",
+      "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nexports.default = function () {\n    console.log('same');\n};\n",
     "deps": {},
     "file":
       "/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/mock/podletA/lib/index.js",
