@@ -26,9 +26,12 @@
   },
   "license": "MIT",
   "dependencies": {
+    "asset-pipe-common": "^1.0.0-beta.6",
     "browser-pack": "6.0.3",
+    "browserify": "^15.2.0",
     "deep-equal": "^1.0.1",
     "deps-sort": "^2.0.0",
+    "fs-extra": "^5.0.0",
     "get-stream": "^3.0.0",
     "readable-stream": "^2.3.3"
   },
@@ -82,7 +85,11 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "watchPathIgnorePatterns": [
+      "<rootDir>/test/test-assets-reader",
+      "<rootDir>/test/test-assets-unpack-feed"
+    ]
   },
   "prettier": {
     "singleQuote": true,

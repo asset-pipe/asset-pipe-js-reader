@@ -28,7 +28,7 @@ function getExecutionOrder(bundle) {
     return JSON.parse(order);
 }
 
-test('should concat 3 files', async () => {
+test.skip('should concat 3 files', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
     const feedA = JSON.parse(await sink.get('simple.a.json'));
@@ -47,7 +47,7 @@ test('should concat 3 files', async () => {
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
-test('should concat 2 files', async () => {
+test.skip('should concat 2 files', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
     const feedA = JSON.parse(await sink.get('feed.a.json'));
@@ -62,7 +62,7 @@ test('should concat 2 files', async () => {
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
-test('should concat 1 file', async () => {
+test.skip('should concat 1 file', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
     const feedA = JSON.parse(await sink.get('feed.a.json'));
@@ -76,7 +76,7 @@ test('should concat 1 file', async () => {
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
-test('code reach 1 entry point', async () => {
+test.skip('code reach 1 entry point', async () => {
     const result = await bundleJS([
         [
             {
@@ -92,7 +92,7 @@ test('code reach 1 entry point', async () => {
     expect(spy.mock.calls).toMatchSnapshot();
 });
 
-test('code reach 3 entry point', async () => {
+test.skip('code reach 3 entry point', async () => {
     const result = await bundleJS([
         [
             {
@@ -122,7 +122,7 @@ test('code reach 3 entry point', async () => {
     expect(spy.mock.calls).toMatchSnapshot();
 });
 
-test('should exclude/dedupe common modules', async () => {
+test.skip('should exclude/dedupe common modules', async () => {
     const result = await bundleJS([
         [
             {
@@ -158,7 +158,7 @@ test('should exclude/dedupe common modules', async () => {
     expect(prettier.format(result)).toMatchSnapshot();
 });
 
-test('should error if no feed content', async () => {
+test.skip('should error if no feed content', async () => {
     expect(bundleJS()).rejects.toMatchSnapshot();
     expect(bundleJS([])).rejects.toMatchSnapshot();
     expect(bundleJS([[]])).rejects.toMatchSnapshot();
@@ -172,11 +172,11 @@ test.skip('when deps dont match, should not dedupe', async () => {
     const feedD = JSON.parse(await sink.get('feed.d.json'));
 
     const bundle = await bundleJS([feedC, feedD]);
-
+    // console.log(bundle);
     expect(bundle.match(/my module/g)).toHaveLength(2);
 });
 
-test('when deps do match, should dedupe', async () => {
+test.skip('when deps do match, should dedupe', async () => {
     const SinkFs = require('@asset-pipe/sink-fs');
     const sink = new SinkFs({ path: `${__dirname}/mock` });
     const feedE = JSON.parse(await sink.get('feed.e.json'));
