@@ -7,6 +7,19 @@ const prettier = require('prettier');
 const { join } = require('path');
 const { remove } = require('fs-extra');
 const FOLDER = join(__dirname, 'test-assets-reader');
+const vm = require('vm');
+
+function getExecutionOrder(bundle) {
+    const lines = bundle.split('\n').filter(Boolean);
+    const lastLine = lines[lines.length - 1];
+
+    const order = lastLine.substring(
+        lastLine.indexOf('['),
+        lastLine.lastIndexOf(']') + 1
+    );
+
+    return JSON.parse(order);
+}
 
 beforeEach(() => remove(FOLDER));
 afterAll(() => remove(FOLDER));
@@ -49,4 +62,140 @@ test('should handle node_modules dependencies', async () => {
     });
 
     expect(prettier.format(content)).toMatchSnapshot();
+});
+
+test('should concat 3 files', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('simple.a.json'));
+    const feedB = JSON.parse(await sink.get('simple.b.json'));
+    const feedC = JSON.parse(await sink.get('simple.c.json'));
+
+    const content = await bundleJS([feedA, feedB, feedC], {
+        directory: FOLDER,
+    });
+    const executionOrder = getExecutionOrder(content);
+
+    expect(executionOrder).toHaveLength(3);
+    expect(executionOrder).toEqual([10, 4, 19]);
+    expect(prettier.format(content)).toMatchSnapshot();
+});
+
+test('code reach 1 entry point', async () => {
+    const result = await bundleJS(
+        [
+            [
+                {
+                    entry: true,
+                    id: 'a',
+                    file: '',
+                    source: 'spy(1234);',
+                    deps: {},
+                },
+            ],
+        ],
+        {
+            directory: FOLDER,
+        }
+    );
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toMatchSnapshot();
+});
+
+test('should error if no feed content', async () => {
+    expect(bundleJS()).rejects.toMatchSnapshot();
+    expect(bundleJS([])).rejects.toMatchSnapshot();
+    expect(bundleJS([[]])).rejects.toMatchSnapshot();
+});
+
+test('code reaches 3 entry points', async () => {
+    const result = await bundleJS(
+        [
+            [
+                {
+                    entry: true,
+                    id: 'a',
+                    source: 'spy("a");',
+                    file: '',
+                    deps: {},
+                },
+            ],
+            [
+                {
+                    entry: true,
+                    id: 'b',
+                    source: 'spy("b");',
+                    file: '',
+                    deps: {},
+                },
+            ],
+            [
+                {
+                    entry: true,
+                    id: 'c',
+                    source: 'spy("c");',
+                    file: '',
+                    deps: {},
+                },
+            ],
+        ],
+        {
+            directory: FOLDER,
+        }
+    );
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+
+    expect(prettier.format(result)).toMatchSnapshot();
+    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy).toMatchSnapshot();
+});
+
+test('bundling dedupes common modules', async () => {
+    const result = await bundleJS(
+        [
+            [
+                {
+                    entry: true,
+                    id: 'a',
+                    source: 'require("./c"); spy("a");',
+                    deps: { './c': 'c' },
+                    file: './a.js',
+                },
+                {
+                    id: 'c',
+                    source: 'spy("c");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+            [
+                {
+                    entry: true,
+                    id: 'b',
+                    source: 'require("./c"); spy("b");',
+                    deps: { './c': 'c' },
+                    file: './b.js',
+                },
+                {
+                    id: 'c',
+                    source: 'spy("c");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+        ],
+        {
+            directory: FOLDER,
+        }
+    );
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+
+    expect(prettier.format(result)).toMatchSnapshot();
+    expect(spy).toMatchSnapshot();
+    expect(spy).toHaveBeenCalledTimes(4);
+    expect(prettier.format(result)).toMatchSnapshot();
 });
