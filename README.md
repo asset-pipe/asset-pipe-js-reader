@@ -4,37 +4,33 @@
 
 This is an internal module intended for use by other modules in the [asset-pipe project][asset-pipe].
 
-This module can take one or multiple asset feeds, as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produced an executable javascript bundle for the browser.
-
-
+This takes one or more asset feeds, as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produces an executable javascript bundle for the browser.
 
 ## Data format
 
-What we refere to as an asset feed is the internal data format used in [Browserify][browserify]. We
-use the exact same data format as Browserify in the [asset-pipe project][asset-pipe].
+What we refer to as asset feeds are arrays of objects in the internal data format used by [Browserify][browserify]. We
+use this exact same data format throughout the [asset-pipe project][asset-pipe].
 
 When Browserify resolves [CommonJS modules][commonjs] each dependency will be read and transformed
 into an object which looks something like this:
 
 ```json
 {
-    "id":"c645cf572a8f5acf8716e4846b408d3b1ca45c58",
-    "source":"\"use strict\";module.exports.world=function(){return\"world\"};",
-    "deps":{},
-    "file":"./assets/js/bar.js"
+    "id": "c645cf572a8f5acf8716e4846b408d3b1ca45c58",
+    "source":
+        "\"use strict\";module.exports.world=function(){return\"world\"};",
+    "deps": {},
+    "file": "./assets/js/bar.js"
 }
 ```
 
-Each such object is emitted on a stream for each dependency. This is the asset feed.
-
-
+Each object is emitted on a stream for each dependency. This is the asset feed.
 
 ## Installation
 
 ```bash
 $ npm install @asset-pipe/js-reader
 ```
-
 
 ## Usage
 
@@ -57,20 +53,19 @@ try {
 }
 ```
 
-
-
 ## API
 
 This module have the following API:
 
-### function(feeds)
+### function(feeds, [options])
 
 Supported arguments are:
 
- * `feeds` - Array - An Array of feeds.
+* `feeds` - Array - An Array of feeds.
+* `options` - Object - configuration. Currently only `directory` option is supported.
+    * `options.directory` { directory: '/path/to/temp/directory' } Directory to use when unpacking feed files.
 
 Returns a `string` of JavaScript code.
-
 
 ## License
 
@@ -95,8 +90,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
 
 [commonjs]: https://nodejs.org/docs/latest/api/modules.html
 [asset-pipe]: https://github.com/asset-pipe
