@@ -33,6 +33,7 @@
     "deps-sort": "^2.0.0",
     "fs-extra": "^5.0.0",
     "get-stream": "^3.0.0",
+    "parcel-bundler": "^1.4.1",
     "readable-stream": "^2.3.3",
     "tmp": "0.0.33"
   },
