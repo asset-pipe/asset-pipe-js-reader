@@ -4,7 +4,7 @@
 
 This is an internal module intended for use by other modules in the [asset-pipe project][asset-pipe].
 
-This takes one or more asset feeds, as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produces an executable javascript bundle for the browser.
+This takes one or more asset feeds, as produced by the [asset-pipe-js-writer][asset-pipe-js-writer], and produces an executable JavaScript bundle for the browser.
 
 ## Data format
 
