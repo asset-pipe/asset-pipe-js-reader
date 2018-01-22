@@ -28,6 +28,20 @@ function clean(content) {
 beforeEach(() => remove(FOLDER));
 afterAll(() => remove(FOLDER));
 
+test('should provide source maps in debug', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('feed.c.json'));
+    const feedB = JSON.parse(await sink.get('feed.d.json'));
+
+    const content = await bundleJS([feedA, feedB], {
+        directory: FOLDER,
+        debug: true,
+    });
+
+    expect(clean(prettier.format(content))).toMatchSnapshot();
+});
+
 test('should successfully bundle 2 feeds', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
