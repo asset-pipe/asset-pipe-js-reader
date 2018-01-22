@@ -11,7 +11,10 @@
     "type": "git",
     "url": "https://github.com/asset-pipe/asset-pipe-js-reader"
   },
-  "keywords": ["assets", "javascript"],
+  "keywords": [
+    "assets",
+    "javascript"
+  ],
   "contributors": [
     {
       "name": "Trygve Lie",
@@ -23,11 +26,19 @@
   },
   "license": "MIT",
   "dependencies": {
+    "asset-pipe-common": "^1.0.0-beta.6",
     "browser-pack": "6.0.3",
-    "get-stream": "^3.0.0"
+    "browserify": "^15.2.0",
+    "deep-equal": "^1.0.1",
+    "deps-sort": "^2.0.0",
+    "fs-extra": "^5.0.0",
+    "get-stream": "^3.0.0",
+    "parcel-bundler": "^1.4.1",
+    "readable-stream": "^2.3.3",
+    "tmp": "0.0.33"
   },
   "devDependencies": {
-    "@asset-pipe/sink-fs": "^1.1.0",
+    "@asset-pipe/sink-fs": "^1.1.2",
     "@commitlint/cli": "^6.0.2",
     "@commitlint/config-conventional": "^6.0.2",
     "commitizen": "^2.9.6",
@@ -60,10 +71,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "jest": {
     "clearMocks": true,
-    "coveragePathIgnorePatterns": ["mock"],
+    "coveragePathIgnorePatterns": [
+      "mock"
+    ],
     "testEnvironment": "node",
     "coverageThreshold": {
       "global": {
@@ -72,7 +87,11 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "watchPathIgnorePatterns": [
+      "<rootDir>/test/test-assets-reader",
+      "<rootDir>/test/test-assets-unpack-feed"
+    ]
   },
   "prettier": {
     "singleQuote": true,
@@ -95,8 +114,14 @@
     ]
   },
   "lint-staged": {
-    "*.js": ["eslint --fix --config ./.eslintrc", "git add"],
-    "{*.json,*.md,.eslintrc}": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix --config ./.eslintrc",
+      "git add"
+    ],
+    "{*.json,*.md,.eslintrc}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
@@ -104,6 +129,8 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
