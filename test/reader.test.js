@@ -21,6 +21,10 @@ function getExecutionOrder(bundle) {
     return JSON.parse(order);
 }
 
+function clean(content) {
+    return content.replace(/"\/.*\/asset-pipe-js-reader\//g, '"/');
+}
+
 beforeEach(() => remove(FOLDER));
 afterAll(() => remove(FOLDER));
 
@@ -34,7 +38,18 @@ test('should successfully bundle 2 feeds', async () => {
         directory: FOLDER,
     });
 
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
+});
+
+test('should successfully bundle 2 feeds using automatic temp directory', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('feed.c.json'));
+    const feedB = JSON.parse(await sink.get('feed.d.json'));
+
+    const content = await bundleJS([feedA, feedB]);
+
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
 test('should dedupe', async () => {
@@ -47,7 +62,7 @@ test('should dedupe', async () => {
         directory: FOLDER,
     });
 
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
 test('should handle node_modules dependencies', async () => {
@@ -61,7 +76,7 @@ test('should handle node_modules dependencies', async () => {
         directory: FOLDER,
     });
 
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
 test('should concat 3 files', async () => {
@@ -78,7 +93,7 @@ test('should concat 3 files', async () => {
 
     expect(executionOrder).toHaveLength(3);
     expect(executionOrder).toEqual([10, 4, 19]);
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
 test('should concat 2 files', async () => {
@@ -95,7 +110,7 @@ test('should concat 2 files', async () => {
 
     expect(executionOrder).toHaveLength(2);
     expect(executionOrder).toEqual([3, 9]);
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
 test('should concat 1 file', async () => {
@@ -111,10 +126,10 @@ test('should concat 1 file', async () => {
 
     expect(executionOrder).toHaveLength(1);
     expect(executionOrder).toEqual([3]);
-    expect(prettier.format(content)).toMatchSnapshot();
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
-test('code reach 1 entry point', async () => {
+test('code reaches single entry point', async () => {
     const result = await bundleJS(
         [
             [
@@ -181,7 +196,7 @@ test('code reaches 3 entry points', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(prettier.format(result)).toMatchSnapshot();
+    expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(3);
     expect(spy).toMatchSnapshot();
 });
@@ -227,8 +242,8 @@ test('bundling dedupes common modules', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(prettier.format(result)).toMatchSnapshot();
+    expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
-    expect(prettier.format(result)).toMatchSnapshot();
+    expect(clean(prettier.format(result))).toMatchSnapshot();
 });

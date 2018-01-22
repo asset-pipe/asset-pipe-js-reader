@@ -151,16 +151,6 @@ exports[`bundling dedupes common modules 3`] = `
 "
 `;
 
-exports[`code reach 1 entry point 1`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      1234,
-    ],
-  ],
-}
-`;
-
 exports[`code reaches 3 entry points 1`] = `
 "(function e(t, n, r) {
   function s(o, u) {
@@ -230,6 +220,16 @@ exports[`code reaches 3 entry points 2`] = `
     ],
     Array [
       "c",
+    ],
+  ],
+}
+`;
+
+exports[`code reaches single entry point 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      1234,
     ],
   ],
 }
@@ -306,16 +306,16 @@ exports[`should concat 1 file 1`] = `
 
         var foo = require(\\"./foo.js\\"),
           bar = require(\\"./bar.js\\"),
-          d3 = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
-          bb = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
+          d3 = require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
+          bb = require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
 
         console.log(\\"server-micro-b:\\", foo.helloworld());
       },
       {
         \\"./bar.js\\": 1,
         \\"./foo.js\\": 2,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 4,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 5
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 4,
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 5
       }
     ],
     4: [
@@ -7594,7 +7594,7 @@ exports[`should concat 1 file 1`] = `
             }
           }.call(
             this,
-            require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
+            require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
             typeof global !== \\"undefined\\"
               ? global
               : typeof self !== \\"undefined\\"
@@ -7611,7 +7611,7 @@ exports[`should concat 1 file 1`] = `
         ));
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 6
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 6
       }
     ],
     5: [
@@ -28092,16 +28092,16 @@ exports[`should concat 2 files 1`] = `
 
         var foo = require(\\"./foo.js\\"),
           bar = require(\\"./bar.js\\"),
-          d3 = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
-          bb = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
+          d3 = require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
+          bb = require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
 
         console.log(\\"server-micro-b:\\", foo.helloworld());
       },
       {
         \\"./bar.js\\": 1,
         \\"./foo.js\\": 2,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 4,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 5
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 4,
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 5
       }
     ],
     4: [
@@ -35380,7 +35380,7 @@ exports[`should concat 2 files 1`] = `
             }
           }.call(
             this,
-            require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
+            require(\\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
             typeof global !== \\"undefined\\"
               ? global
               : typeof self !== \\"undefined\\"
@@ -35397,7 +35397,7 @@ exports[`should concat 2 files 1`] = `
         ));
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 6
+        \\"/test/test-assets-reader/07a109ac983bc28d7f393215ca409e2d759e1fda9dc034e48338a5ef1aa92d6c/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 6
       }
     ],
     5: [
@@ -55820,16 +55820,16 @@ exports[`should concat 2 files 1`] = `
 
         var foo = require(\\"./foo.js\\"),
           bar = require(\\"./bar.js\\"),
-          d3 = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
-          bb = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
+          d3 = require(\\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\"),
+          bb = require(\\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\");
 
         console.log(\\"server-micro-b:\\", foo.helloworld());
       },
       {
         \\"./bar.js\\": 7,
         \\"./foo.js\\": 8,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 10,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 11
+        \\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/bluebird/js/browser/bluebird.js\\": 10,
+        \\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/d3/build/d3.js\\": 11
       }
     ],
     10: [
@@ -63108,7 +63108,7 @@ exports[`should concat 2 files 1`] = `
             }
           }.call(
             this,
-            require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
+            require(\\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\"),
             typeof global !== \\"undefined\\"
               ? global
               : typeof self !== \\"undefined\\"
@@ -63125,7 +63125,7 @@ exports[`should concat 2 files 1`] = `
         ));
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 12
+        \\"/test/test-assets-reader/44fd58f6f49e31630a6dd3f0815d1e76b31800ee101dafb95d3883f843c7fbe8/home/trygve/Work/component-prototype/micro-b-server/node_modules/process/browser.js\\": 12
       }
     ],
     11: [
@@ -63739,9 +63739,9 @@ exports[`should concat 3 files 1`] = `
               );
             };
           })(),
-          el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
-          domready = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+          el = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+          domready = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           fetchRecommendations = require(\\"./recommendation-fetcher\\");
         domready(function() {
           []
@@ -63761,9 +63761,9 @@ exports[`should concat 3 files 1`] = `
       },
       {
         \\"./recommendation-fetcher\\": 5,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 1,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 3,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 6
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 1,
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 3,
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 6
       }
     ],
     5: [
@@ -63874,7 +63874,7 @@ exports[`should concat 3 files 1`] = `
           var a = document.getElementById(e);
           a && s(a);
         }
-        var domready = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+        var domready = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           lastSearches = require(\\"./last-searches.js\\"),
           savedSearches = require(\\"./saved-searches.js\\");
         domready(function() {
@@ -63885,7 +63885,7 @@ exports[`should concat 3 files 1`] = `
       {
         \\"./last-searches.js\\": 11,
         \\"./saved-searches.js\\": 12,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 13
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 13
       }
     ],
     11: [
@@ -64015,14 +64015,14 @@ exports[`should concat 3 files 1`] = `
             )
           );
         }
-        var el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+        var el = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         module.exports = lastSearchesBox;
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
       }
     ],
     12: [
@@ -64163,8 +64163,8 @@ exports[`should concat 3 files 1`] = `
             \\"For øyeblikket klarte vi ikke å hente dine lagrede søk\\"
           );
         }
-        var el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+        var el = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         (module.exports = savedSearchesBox),
           (module.exports.initialState = initialState),
@@ -64172,8 +64172,8 @@ exports[`should concat 3 files 1`] = `
           (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
       }
     ],
     13: [
@@ -64814,18 +64814,18 @@ exports[`should concat 3 files 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 }),
           (exports.default = search);
-        var _suggestionsDropdown = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\"),
+        var _suggestionsDropdown = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\"),
           _suggestionsDropdown2 = _interopRequireDefault(_suggestionsDropdown),
-          _createElement = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          _createElement = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
           _createElement2 = _interopRequireDefault(_createElement),
-          _analytics = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+          _analytics = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           _analytics2 = _interopRequireDefault(_analytics);
         module.exports = exports.default;
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 14,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\": 22
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 14,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\": 22
       }
     ],
     18: [
@@ -65020,8 +65020,8 @@ exports[`should concat 3 files 1`] = `
               })
             : search(e, t, l, \\"MFINN\\");
         }
-        var search = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\"),
-          domReady = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+        var search = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\"),
+          domReady = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           mobileModalWrapper = require(\\"./mobile-modal-wrapper\\");
         (module.exports.globalSearchMobile = function(e, r) {
           return globalSearch(e, r, !0);
@@ -65040,8 +65040,8 @@ exports[`should concat 3 files 1`] = `
       },
       {
         \\"./mobile-modal-wrapper\\": 20,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\": 17,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 23
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\": 17,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 23
       }
     ],
     20: [
@@ -65049,7 +65049,7 @@ exports[`should concat 3 files 1`] = `
         \\"use strict\\";
         var FullscreenDecorator = require(\\"./fullscreen-decorator.js\\"),
           ModalOverlay = require(\\"./modal-overlay.js\\"),
-          el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          el = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
           FullscreenModalOverlay = FullscreenDecorator(ModalOverlay);
         module.exports = function(e, t) {
           function n(e) {
@@ -65119,7 +65119,7 @@ exports[`should concat 3 files 1`] = `
       {
         \\"./fullscreen-decorator.js\\": 18,
         \\"./modal-overlay.js\\": 21,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16
       }
     ],
     21: [
@@ -66584,9 +66584,9 @@ exports[`should handle node_modules dependencies 1`] = `
               );
             };
           })(),
-          el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
-          domready = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+          el = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+          domready = require(\\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           fetchRecommendations = require(\\"./recommendation-fetcher\\");
         domready(function() {
           []
@@ -66606,9 +66606,9 @@ exports[`should handle node_modules dependencies 1`] = `
       },
       {
         \\"./recommendation-fetcher\\": 5,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 1,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 3,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 6
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 1,
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 3,
+        \\"/test/test-assets-reader/029a936c948856152a57998c9fbe86eea2f8550c4b7150ef85666bd0a71cfbda/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 6
       }
     ],
     5: [
@@ -66719,7 +66719,7 @@ exports[`should handle node_modules dependencies 1`] = `
           var a = document.getElementById(e);
           a && s(a);
         }
-        var domready = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+        var domready = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           lastSearches = require(\\"./last-searches.js\\"),
           savedSearches = require(\\"./saved-searches.js\\");
         domready(function() {
@@ -66730,7 +66730,7 @@ exports[`should handle node_modules dependencies 1`] = `
       {
         \\"./last-searches.js\\": 11,
         \\"./saved-searches.js\\": 12,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 13
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 13
       }
     ],
     11: [
@@ -66860,14 +66860,14 @@ exports[`should handle node_modules dependencies 1`] = `
             )
           );
         }
-        var el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+        var el = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         module.exports = lastSearchesBox;
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
       }
     ],
     12: [
@@ -67008,8 +67008,8 @@ exports[`should handle node_modules dependencies 1`] = `
             \\"For øyeblikket klarte vi ikke å hente dine lagrede søk\\"
           );
         }
-        var el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
-          tracking = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+        var el = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          tracking = require(\\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         (module.exports = savedSearchesBox),
           (module.exports.initialState = initialState),
@@ -67017,8 +67017,8 @@ exports[`should handle node_modules dependencies 1`] = `
           (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 7,
+        \\"/test/test-assets-reader/2e06971a7e01b51a07b3ad25c34156332098ba6c82ca1d6b74ca67066591b7aa/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 9
       }
     ],
     13: [
@@ -67659,18 +67659,18 @@ exports[`should handle node_modules dependencies 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 }),
           (exports.default = search);
-        var _suggestionsDropdown = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\"),
+        var _suggestionsDropdown = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\"),
           _suggestionsDropdown2 = _interopRequireDefault(_suggestionsDropdown),
-          _createElement = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          _createElement = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
           _createElement2 = _interopRequireDefault(_createElement),
-          _analytics = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
+          _analytics = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\"),
           _analytics2 = _interopRequireDefault(_analytics);
         module.exports = exports.default;
       },
       {
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 14,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\": 22
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/analytics/lib/client/index.js\\": 14,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/suggestions-dropdown/index.js\\": 22
       }
     ],
     18: [
@@ -67865,8 +67865,8 @@ exports[`should handle node_modules dependencies 1`] = `
               })
             : search(e, t, l, \\"MFINN\\");
         }
-        var search = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\"),
-          domReady = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
+        var search = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\"),
+          domReady = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\"),
           mobileModalWrapper = require(\\"./mobile-modal-wrapper\\");
         (module.exports.globalSearchMobile = function(e, r) {
           return globalSearch(e, r, !0);
@@ -67885,8 +67885,8 @@ exports[`should handle node_modules dependencies 1`] = `
       },
       {
         \\"./mobile-modal-wrapper\\": 20,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\": 17,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 23
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/frontpage-search/index.js\\": 17,
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/domready/ready.js\\": 23
       }
     ],
     20: [
@@ -67894,7 +67894,7 @@ exports[`should handle node_modules dependencies 1`] = `
         \\"use strict\\";
         var FullscreenDecorator = require(\\"./fullscreen-decorator.js\\"),
           ModalOverlay = require(\\"./modal-overlay.js\\"),
-          el = require(\\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
+          el = require(\\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\"),
           FullscreenModalOverlay = FullscreenDecorator(ModalOverlay);
         module.exports = function(e, t) {
           function n(e) {
@@ -67964,7 +67964,7 @@ exports[`should handle node_modules dependencies 1`] = `
       {
         \\"./fullscreen-decorator.js\\": 18,
         \\"./modal-overlay.js\\": 21,
-        \\"/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16
+        \\"/test/test-assets-reader/7f540519f0de1c55221fb2f8560730e5fa8dc0ed24a83387cd7368b837ef53e1/Users/simbekkh/repos/podium/apps/podlet-server/node_modules/@finn-no/create-element/index.js\\": 16
       }
     ],
     21: [
@@ -68835,6 +68835,96 @@ exports[`should successfully bundle 2 feeds 1`] = `
   },
   {},
   [1, 3]
+);
+"
+`;
+
+exports[`should successfully bundle 2 feeds using automatic temp directory 1`] = `
+"(function e(t, n, r) {
+  function s(o, u) {
+    if (!n[o]) {
+      if (!t[o]) {
+        var a = typeof require == \\"function\\" && require;
+        if (!u && a) return a(o, !0);
+        if (i) return i(o, !0);
+        var f = new Error(\\"Cannot find module '\\" + o + \\"'\\");
+        throw ((f.code = \\"MODULE_NOT_FOUND\\"), f);
+      }
+      var l = (n[o] = { exports: {} });
+      t[o][0].call(
+        l.exports,
+        function(e) {
+          var n = t[o][1][e];
+          return s(n ? n : e);
+        },
+        l,
+        l.exports,
+        e,
+        t,
+        n,
+        r
+      );
+    }
+    return n[o].exports;
+  }
+  var i = typeof require == \\"function\\" && require;
+  for (var o = 0; o < r.length; o++) s(r[o]);
+  return s;
+})(
+  {
+    1: [
+      function(require, module, exports) {
+        \\"use strict\\";
+
+        Object.defineProperty(exports, \\"__esModule\\", {
+          value: true
+        });
+
+        exports.default = function() {
+          console.log(\\"one\\");
+        };
+      },
+      {}
+    ],
+    2: [
+      function(require, module, exports) {
+        \\"use strict\\";
+
+        Object.defineProperty(exports, \\"__esModule\\", {
+          value: true
+        });
+
+        exports.default = function() {
+          console.log(\\"two\\");
+        };
+      },
+      {}
+    ],
+    3: [
+      function(require, module, exports) {
+        \\"use strict\\";
+
+        var _index = require(\\"./lib/index\\");
+
+        var _index2 = _interopRequireDefault(_index);
+
+        function _interopRequireDefault(obj) {
+          return obj && obj.__esModule ? obj : { default: obj };
+        }
+
+        console.log(\\"my module\\");
+      },
+      { \\"./lib/index\\": 1 }
+    ],
+    4: [
+      function(require, module, exports) {
+        arguments[4][3][0].apply(exports, arguments);
+      },
+      { \\"./lib/index\\": 2, dup: 3 }
+    ]
+  },
+  {},
+  [3, 4]
 );
 "
 `;
