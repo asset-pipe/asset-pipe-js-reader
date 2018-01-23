@@ -27,9 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "asset-pipe-common": "^1.0.0-beta.6",
-    "browser-pack": "6.0.3",
     "browserify": "^15.2.0",
-    "deps-sort": "^2.0.0",
     "fs-extra": "^5.0.0",
     "readable-stream": "^2.3.3",
     "tempy": "^0.2.1"
