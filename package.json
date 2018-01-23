@@ -31,7 +31,6 @@
     "browserify": "^15.2.0",
     "deps-sort": "^2.0.0",
     "fs-extra": "^5.0.0",
-    "get-stream": "^3.0.0",
     "readable-stream": "^2.3.3",
     "tempy": "^0.2.1"
   },
