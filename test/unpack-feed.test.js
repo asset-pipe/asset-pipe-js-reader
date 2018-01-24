@@ -5,7 +5,10 @@ const { join } = require('path');
 const { remove, pathExists } = require('fs-extra');
 const FOLDER = join(__dirname, 'test-assets-unpack-feeds');
 
-beforeEach(() => remove(FOLDER));
+beforeEach(() => {
+    jest.setTimeout(10000);
+    return remove(FOLDER);
+});
 afterAll(() => remove(FOLDER));
 
 test('unpack folder successfully created', async () => {
