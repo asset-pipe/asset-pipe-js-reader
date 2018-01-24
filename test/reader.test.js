@@ -25,7 +25,10 @@ function clean(content) {
     return content.replace(/"\/.*\/asset-pipe-js-reader\//g, '"/');
 }
 
-beforeEach(() => remove(FOLDER));
+beforeEach(() => {
+    jest.setTimeout(10000);
+    return remove(FOLDER);
+});
 afterAll(() => remove(FOLDER));
 
 test('should provide source maps in debug', async () => {
@@ -89,7 +92,6 @@ test('should handle node_modules dependencies', async () => {
     const content = await bundleJS([feedA, feedB, feedC], {
         directory: FOLDER,
     });
-
     expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
@@ -150,7 +152,7 @@ test('code reaches single entry point', async () => {
                 {
                     entry: true,
                     id: 'a',
-                    file: '',
+                    file: 'asdas.js',
                     source: 'spy(1234);',
                     deps: {},
                 },
@@ -167,9 +169,35 @@ test('code reaches single entry point', async () => {
 });
 
 test('should error if no feed content', async () => {
-    expect(bundleJS()).rejects.toMatchSnapshot();
-    expect(bundleJS([])).rejects.toMatchSnapshot();
-    expect(bundleJS([[]])).rejects.toMatchSnapshot();
+    await expect(bundleJS()).rejects.toThrowErrorMatchingSnapshot();
+    await expect(bundleJS([])).rejects.toThrowErrorMatchingSnapshot();
+    await expect(bundleJS([[]])).rejects.toThrowErrorMatchingSnapshot();
+});
+
+test('should error if feed content is non object', async () => {
+    await expect(
+        bundleJS(['s1df3s1f2d3s1d2f3s.json'])
+    ).rejects.toThrowErrorMatchingSnapshot();
+});
+
+test('should error if any feed content keys are missing', async () => {
+    await expect(bundleJS([{}])).rejects.toThrowErrorMatchingSnapshot();
+    await expect(
+        bundleJS([{ file: 'asd', deps: {}, id: 'a', entry: true }])
+    ).rejects.toThrowErrorMatchingSnapshot();
+});
+
+test('should error if feed content does not contain at least 1 entrypoint', async () => {
+    await expect(
+        bundleJS([
+            {
+                id: 'a',
+                file: 'asdas.js',
+                source: 'spy(1234);',
+                deps: {},
+            },
+        ])
+    ).rejects.toThrowErrorMatchingSnapshot();
 });
 
 test('code reaches 3 entry points', async () => {
@@ -180,7 +208,7 @@ test('code reaches 3 entry points', async () => {
                     entry: true,
                     id: 'a',
                     source: 'spy("a");',
-                    file: '',
+                    file: 'asdas.js',
                     deps: {},
                 },
             ],
@@ -189,7 +217,7 @@ test('code reaches 3 entry points', async () => {
                     entry: true,
                     id: 'b',
                     source: 'spy("b");',
-                    file: '',
+                    file: 'asdas.js',
                     deps: {},
                 },
             ],
@@ -198,7 +226,7 @@ test('code reaches 3 entry points', async () => {
                     entry: true,
                     id: 'c',
                     source: 'spy("c");',
-                    file: '',
+                    file: 'asdas.js',
                     deps: {},
                 },
             ],
