@@ -31,7 +31,7 @@ beforeEach(() => {
 });
 afterAll(() => remove(FOLDER));
 
-test('should provide source maps in debug', async () => {
+test('source maps as an option', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
     const feedA = JSON.parse(await sink.get('feed.c.json'));
@@ -39,7 +39,7 @@ test('should provide source maps in debug', async () => {
 
     const content = await bundleJS([feedA, feedB], {
         directory: FOLDER,
-        debug: true,
+        sourceMaps: true,
     });
 
     expect(clean(prettier.format(content))).toMatchSnapshot();
