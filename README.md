@@ -55,17 +55,19 @@ try {
 
 ## API
 
-This module have the following API:
+This module has the following API:
 
 ### function(feeds, [options])
 
 Supported arguments are:
 
 * `feeds` - Array - An Array of feeds.
-* `options` - Object - configuration. Currently only `directory` option is supported.
+* `options` - Object - configuration.
     * `options.directory` { directory: '/path/to/temp/directory' } Directory to use when unpacking feed files.
+    * `options.sourceMaps` (default: false) Specify whether to include source maps.
+    * `options.minify` (default: false) Specify whether to minify code using uglify.
 
-Returns a `string` of JavaScript code.
+Returns a promise that resolves to a `string` of JavaScript code.
 
 ## License
 
