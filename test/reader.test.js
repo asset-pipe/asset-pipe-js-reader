@@ -45,6 +45,35 @@ test('source maps as an option', async () => {
     expect(clean(prettier.format(content))).toMatchSnapshot();
 });
 
+test('minification with uglify as an option', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('feed.c.json'));
+    const feedB = JSON.parse(await sink.get('feed.d.json'));
+
+    const content = await bundleJS([feedA, feedB], {
+        directory: FOLDER,
+        minify: true,
+    });
+
+    expect(clean(prettier.format(content))).toMatchSnapshot();
+});
+
+test('minification with uglify and sourceMaps as options', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const feedA = JSON.parse(await sink.get('feed.c.json'));
+    const feedB = JSON.parse(await sink.get('feed.d.json'));
+
+    const content = await bundleJS([feedA, feedB], {
+        directory: FOLDER,
+        minify: true,
+        sourceMaps: true,
+    });
+
+    expect(clean(prettier.format(content))).toMatchSnapshot();
+});
+
 test('should successfully bundle 2 feeds', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
 
@@ -284,6 +313,53 @@ test('bundling dedupes common modules', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
+    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(spy).toMatchSnapshot();
+    expect(spy).toHaveBeenCalledTimes(4);
+    expect(clean(prettier.format(result))).toMatchSnapshot();
+});
+
+test('minified code runs as expected', async () => {
+    const result = await bundleJS(
+        [
+            [
+                {
+                    entry: true,
+                    id: 'a',
+                    source: 'require("./c"); spy("a");',
+                    deps: { './c': 'c' },
+                    file: './a.js',
+                },
+                {
+                    id: 'c',
+                    source: 'spy("c");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+            [
+                {
+                    entry: true,
+                    id: 'b',
+                    source: 'require("./c"); spy("b");',
+                    deps: { './c': 'c' },
+                    file: './b.js',
+                },
+                {
+                    id: 'c',
+                    source: 'spy("c");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+        ],
+        {
+            directory: FOLDER,
+            minify: true,
+        }
+    );
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
     expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
