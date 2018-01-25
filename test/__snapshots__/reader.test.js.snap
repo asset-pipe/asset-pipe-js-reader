@@ -235,6 +235,330 @@ exports[`code reaches single entry point 1`] = `
 }
 `;
 
+exports[`minification with uglify and sourceMaps as options 1`] = `
+"!(function e(o, n, r) {
+  function t(i, l) {
+    if (!n[i]) {
+      if (!o[i]) {
+        var c = \\"function\\" == typeof require && require;
+        if (!l && c) return c(i, !0);
+        if (u) return u(i, !0);
+        var f = new Error(\\"Cannot find module '\\" + i + \\"'\\");
+        throw ((f.code = \\"MODULE_NOT_FOUND\\"), f);
+      }
+      var s = (n[i] = { exports: {} });
+      o[i][0].call(
+        s.exports,
+        function(e) {
+          var n = o[i][1][e];
+          return t(n || e);
+        },
+        s,
+        s.exports,
+        e,
+        o,
+        n,
+        r
+      );
+    }
+    return n[i].exports;
+  }
+  for (
+    var u = \\"function\\" == typeof require && require, i = 0;
+    i < r.length;
+    i++
+  )
+    t(r[i]);
+  return t;
+})(
+  {
+    1: [
+      function(e, o, n) {
+        \\"use strict\\";
+        var r,
+          t = e(\\"./lib/index\\");
+        (r = t) && r.__esModule;
+        console.log(\\"my module\\");
+      },
+      { \\"./lib/index\\": 2 }
+    ],
+    2: [
+      function(e, o, n) {
+        \\"use strict\\";
+        Object.defineProperty(n, \\"__esModule\\", { value: !0 }),
+          (n.default = function() {
+            console.log(\\"one\\");
+          });
+      },
+      {}
+    ],
+    3: [
+      function(e, o, n) {
+        \\"use strict\\";
+        var r,
+          t = e(\\"./lib/index\\");
+        (r = t) && r.__esModule;
+        console.log(\\"my module\\");
+      },
+      { \\"./lib/index\\": 4 }
+    ],
+    4: [
+      function(e, o, n) {
+        \\"use strict\\";
+        Object.defineProperty(n, \\"__esModule\\", { value: !0 }),
+          (n.default = function() {
+            console.log(\\"two\\");
+          });
+      },
+      {}
+    ]
+  },
+  {},
+  [1, 3]
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIjAiXSwibmFtZXMiOlsiZSIsInQiLCJuIiwiciIsInMiLCJvIiwidSIsImEiLCJyZXF1aXJlIiwiaSIsImYiLCJFcnJvciIsImNvZGUiLCJsIiwiZXhwb3J0cyIsImNhbGwiLCJsZW5ndGgiLCIxIiwibW9kdWxlIiwiX2luZGV4IiwiX19lc01vZHVsZSIsImNvbnNvbGUiLCJsb2ciLCIuL2xpYi9pbmRleCIsIjIiLCJPYmplY3QiLCJkZWZpbmVQcm9wZXJ0eSIsInZhbHVlIiwiZGVmYXVsdCIsIjMiLCI0Il0sIm1hcHBpbmdzIjoiQ0FBQSxTQUFVQSxFQUFFQyxFQUFFQyxFQUFFQyxHQUFHLFNBQVNDLEVBQUVDLEVBQUVDLEdBQUcsSUFBSUosRUFBRUcsR0FBRyxDQUFDLElBQUlKLEVBQUVJLEdBQUcsQ0FBQyxJQUFJRSxFQUFrQixtQkFBVEMsU0FBcUJBLFFBQVEsSUFBSUYsR0FBR0MsRUFBRSxPQUFPQSxFQUFFRixHQUFFLEdBQUksR0FBR0ksRUFBRSxPQUFPQSxFQUFFSixHQUFFLEdBQUksSUFBSUssRUFBRSxJQUFJQyxNQUFNLHVCQUF1Qk4sRUFBRSxLQUFLLE1BQU1LLEVBQUVFLEtBQUssbUJBQW1CRixFQUFFLElBQUlHLEVBQUVYLEVBQUVHLElBQUlTLFlBQVliLEVBQUVJLEdBQUcsR0FBR1UsS0FBS0YsRUFBRUMsUUFBUSxTQUFTZCxHQUFHLElBQUlFLEVBQUVELEVBQUVJLEdBQUcsR0FBR0wsR0FBRyxPQUFPSSxFQUFFRixHQUFJRixJQUFJYSxFQUFFQSxFQUFFQyxRQUFRZCxFQUFFQyxFQUFFQyxFQUFFQyxHQUFHLE9BQU9ELEVBQUVHLEdBQUdTLFFBQWtELElBQTFDLElBQUlMLEVBQWtCLG1CQUFURCxTQUFxQkEsUUFBZ0JILEVBQUUsRUFBRUEsRUFBRUYsRUFBRWEsT0FBT1gsSUFBSUQsRUFBRUQsRUFBRUUsSUFBSSxPQUFPRCxFQUF2YixFQUE0YmEsR0FBRyxTQUFTVCxFQUFRVSxFQUFPSixHQUN2ZCxhQUFhLElBQXlHZCxFQUFyR21CLEVBQU9YLEVBQVEsZ0JBQXNGUixFQUF4Q21CLElBQXFEbkIsRUFBRW9CLFdBQXlCQyxRQUFRQyxJQUFJLGVBRXZLQyxjQUFjLElBQUlDLEdBQUcsU0FBU2hCLEVBQVFVLEVBQU9KLEdBQ2hELGFBQWFXLE9BQU9DLGVBQWVaLEVBQVEsY0FBY2EsT0FBTSxJQUFLYixFQUFRYyxRQUFRLFdBQVdQLFFBQVFDLElBQUksYUFFckdPLEdBQUcsU0FBU3JCLEVBQVFVLEVBQU9KLEdBQ2pDLGFBQWEsSUFBeUdkLEVBQXJHbUIsRUFBT1gsRUFBUSxnQkFBc0ZSLEVBQXhDbUIsSUFBcURuQixFQUFFb0IsV0FBeUJDLFFBQVFDLElBQUksZUFFdktDLGNBQWMsSUFBSU8sR0FBRyxTQUFTdEIsRUFBUVUsRUFBT0osR0FDaEQsYUFBYVcsT0FBT0MsZUFBZVosRUFBUSxjQUFjYSxPQUFNLElBQUtiLEVBQVFjLFFBQVEsV0FBV1AsUUFBUUMsSUFBSSxrQkFFaEcsRUFBRSJ9
+"
+`;
+
+exports[`minification with uglify as an option 1`] = `
+"!(function e(o, n, r) {
+  function t(i, l) {
+    if (!n[i]) {
+      if (!o[i]) {
+        var c = \\"function\\" == typeof require && require;
+        if (!l && c) return c(i, !0);
+        if (u) return u(i, !0);
+        var f = new Error(\\"Cannot find module '\\" + i + \\"'\\");
+        throw ((f.code = \\"MODULE_NOT_FOUND\\"), f);
+      }
+      var s = (n[i] = { exports: {} });
+      o[i][0].call(
+        s.exports,
+        function(e) {
+          var n = o[i][1][e];
+          return t(n || e);
+        },
+        s,
+        s.exports,
+        e,
+        o,
+        n,
+        r
+      );
+    }
+    return n[i].exports;
+  }
+  for (
+    var u = \\"function\\" == typeof require && require, i = 0;
+    i < r.length;
+    i++
+  )
+    t(r[i]);
+  return t;
+})(
+  {
+    1: [
+      function(e, o, n) {
+        \\"use strict\\";
+        var r,
+          t = e(\\"./lib/index\\");
+        (r = t) && r.__esModule;
+        console.log(\\"my module\\");
+      },
+      { \\"./lib/index\\": 2 }
+    ],
+    2: [
+      function(e, o, n) {
+        \\"use strict\\";
+        Object.defineProperty(n, \\"__esModule\\", { value: !0 }),
+          (n.default = function() {
+            console.log(\\"one\\");
+          });
+      },
+      {}
+    ],
+    3: [
+      function(e, o, n) {
+        \\"use strict\\";
+        var r,
+          t = e(\\"./lib/index\\");
+        (r = t) && r.__esModule;
+        console.log(\\"my module\\");
+      },
+      { \\"./lib/index\\": 4 }
+    ],
+    4: [
+      function(e, o, n) {
+        \\"use strict\\";
+        Object.defineProperty(n, \\"__esModule\\", { value: !0 }),
+          (n.default = function() {
+            console.log(\\"two\\");
+          });
+      },
+      {}
+    ]
+  },
+  {},
+  [1, 3]
+);
+"
+`;
+
+exports[`minified code runs as expected 1`] = `
+"!(function r(n, e, t) {
+  function o(i, c) {
+    if (!e[i]) {
+      if (!n[i]) {
+        var f = \\"function\\" == typeof require && require;
+        if (!c && f) return f(i, !0);
+        if (u) return u(i, !0);
+        var p = new Error(\\"Cannot find module '\\" + i + \\"'\\");
+        throw ((p.code = \\"MODULE_NOT_FOUND\\"), p);
+      }
+      var a = (e[i] = { exports: {} });
+      n[i][0].call(
+        a.exports,
+        function(r) {
+          var e = n[i][1][r];
+          return o(e || r);
+        },
+        a,
+        a.exports,
+        r,
+        n,
+        e,
+        t
+      );
+    }
+    return e[i].exports;
+  }
+  for (
+    var u = \\"function\\" == typeof require && require, i = 0;
+    i < t.length;
+    i++
+  )
+    o(t[i]);
+  return o;
+})(
+  {
+    1: [
+      function(r, n, e) {
+        r(\\"./c\\"), spy(\\"b\\");
+      },
+      { \\"./c\\": 2 }
+    ],
+    2: [
+      function(r, n, e) {
+        spy(\\"c\\");
+      },
+      {}
+    ],
+    3: [
+      function(r, n, e) {
+        r(\\"./c\\"), spy(\\"a\\");
+      },
+      { \\"./c\\": 4 }
+    ],
+    4: [
+      function(r, n, e) {
+        spy(\\"c\\");
+      },
+      {}
+    ]
+  },
+  {},
+  [3, 1]
+);
+"
+`;
+
+exports[`minified code runs as expected 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "c",
+    ],
+    Array [
+      "a",
+    ],
+    Array [
+      "c",
+    ],
+    Array [
+      "b",
+    ],
+  ],
+}
+`;
+
+exports[`minified code runs as expected 3`] = `
+"!(function r(n, e, t) {
+  function o(i, c) {
+    if (!e[i]) {
+      if (!n[i]) {
+        var f = \\"function\\" == typeof require && require;
+        if (!c && f) return f(i, !0);
+        if (u) return u(i, !0);
+        var p = new Error(\\"Cannot find module '\\" + i + \\"'\\");
+        throw ((p.code = \\"MODULE_NOT_FOUND\\"), p);
+      }
+      var a = (e[i] = { exports: {} });
+      n[i][0].call(
+        a.exports,
+        function(r) {
+          var e = n[i][1][r];
+          return o(e || r);
+        },
+        a,
+        a.exports,
+        r,
+        n,
+        e,
+        t
+      );
+    }
+    return e[i].exports;
+  }
+  for (
+    var u = \\"function\\" == typeof require && require, i = 0;
+    i < t.length;
+    i++
+  )
+    o(t[i]);
+  return o;
+})(
+  {
+    1: [
+      function(r, n, e) {
+        r(\\"./c\\"), spy(\\"b\\");
+      },
+      { \\"./c\\": 2 }
+    ],
+    2: [
+      function(r, n, e) {
+        spy(\\"c\\");
+      },
+      {}
+    ],
+    3: [
+      function(r, n, e) {
+        r(\\"./c\\"), spy(\\"a\\");
+      },
+      { \\"./c\\": 4 }
+    ],
+    4: [
+      function(r, n, e) {
+        spy(\\"c\\");
+      },
+      {}
+    ]
+  },
+  {},
+  [3, 1]
+);
+"
+`;
+
 exports[`should concat 1 file 1`] = `
 "(function e(t, n, r) {
   function s(o, u) {
