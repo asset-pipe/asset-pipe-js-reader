@@ -363,5 +363,4 @@ test('minified code runs as expected', async () => {
     expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
-    expect(clean(prettier.format(result))).toMatchSnapshot();
 });
