@@ -28,13 +28,11 @@
   "dependencies": {
     "asset-pipe-common": "^1.0.0-beta.6",
     "browserify": "^15.2.0",
-    "envify": "^4.1.0",
     "fs-extra": "^5.0.0",
     "joi": "^13.1.1",
     "readable-stream": "^2.3.3",
     "tempy": "^0.2.1",
-    "uglify-es": "^3.3.8",
-    "uglifyify": "^4.0.5"
+    "uglify-es": "^3.3.8"
   },
   "devDependencies": {
     "@asset-pipe/sink-fs": "^1.1.2",
