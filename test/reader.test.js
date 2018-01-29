@@ -316,7 +316,6 @@ test('bundling dedupes common modules', async () => {
     expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
-    expect(clean(prettier.format(result))).toMatchSnapshot();
 });
 
 test('minified code runs as expected', async () => {
@@ -360,6 +359,54 @@ test('minified code runs as expected', async () => {
     );
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
+    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(spy).toMatchSnapshot();
+    expect(spy).toHaveBeenCalledTimes(4);
+});
+
+test('multiple entrypoints in same feed supported', async () => {
+    const result = await bundleJS(
+        [
+            [
+                {
+                    entry: true,
+                    id: 'a',
+                    source: 'spy("a");',
+                    deps: {},
+                    file: './a.js',
+                },
+                {
+                    entry: true,
+                    id: 'b',
+                    source: 'spy("b");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+            [
+                {
+                    entry: true,
+                    id: 'c',
+                    source: 'spy("c");',
+                    deps: {},
+                    file: './b.js',
+                },
+                {
+                    entry: true,
+                    id: 'd',
+                    source: 'spy("d");',
+                    deps: {},
+                    file: './c.js',
+                },
+            ],
+        ],
+        {
+            directory: FOLDER,
+        }
+    );
+    const spy = jest.fn();
+    vm.runInNewContext(result, { spy });
+
     expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
