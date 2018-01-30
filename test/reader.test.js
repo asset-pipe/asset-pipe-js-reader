@@ -29,7 +29,6 @@ beforeEach(() => {
     jest.setTimeout(10000);
     return remove(FOLDER);
 });
-afterAll(() => remove(FOLDER));
 
 test('source maps as an option', async () => {
     const sink = new Sink({ path: path.join(__dirname, 'mock') });
@@ -410,4 +409,19 @@ test('multiple entrypoints in same feed supported', async () => {
     expect(clean(prettier.format(result))).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
+});
+
+test.only('yo', async () => {
+    const sink = new Sink({ path: path.join(__dirname, 'mock') });
+
+    const other = JSON.parse(await sink.get('otherFeed.json'));
+
+    const content = await bundleJS([other], {
+        directory: FOLDER,
+    });
+    const executionOrder = getExecutionOrder(content);
+
+    expect(executionOrder).toHaveLength(3);
+    expect(executionOrder).toEqual([10, 4, 19]);
+    expect(clean(prettier.format(content))).toMatchSnapshot();
 });
