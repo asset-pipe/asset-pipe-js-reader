@@ -571,14 +571,14 @@ exports[`should concat 1 file 1`] = `
 
         var foo = require(\\"./foo.js\\"),
           bar = require(\\"./bar.js\\"),
-          d3 = require(\\"../../node_modules/d3/build/d3.js\\"),
-          bb = require(\\"../../node_modules/bluebird/js/browser/bluebird.js\\");
+          d3 = require(\\"./../../node_modules/d3/build/d3.js\\"),
+          bb = require(\\"./../../node_modules/bluebird/js/browser/bluebird.js\\");
 
         console.log(\\"server-micro-b:\\", foo.helloworld());
       },
       {
-        \\"../../node_modules/bluebird/js/browser/bluebird.js\\": 4,
-        \\"../../node_modules/d3/build/d3.js\\": 5,
+        \\"./../../node_modules/bluebird/js/browser/bluebird.js\\": 4,
+        \\"./../../node_modules/d3/build/d3.js\\": 5,
         \\"./bar.js\\": 1,
         \\"./foo.js\\": 2
       }
@@ -7859,7 +7859,7 @@ exports[`should concat 1 file 1`] = `
             }
           }.call(
             this,
-            require(\\"../../../process/browser.js\\"),
+            require(\\"./../../../process/browser.js\\"),
             typeof global !== \\"undefined\\"
               ? global
               : typeof self !== \\"undefined\\"
@@ -7875,7 +7875,7 @@ exports[`should concat 1 file 1`] = `
               : typeof window !== \\"undefined\\" ? window : {}
         ));
       },
-      { \\"../../../process/browser.js\\": 6 }
+      { \\"./../../../process/browser.js\\": 6 }
     ],
     5: [
       function(require, module, exports) {
@@ -28355,14 +28355,14 @@ exports[`should concat 2 files 1`] = `
 
         var foo = require(\\"./foo.js\\"),
           bar = require(\\"./bar.js\\"),
-          d3 = require(\\"../../node_modules/d3/build/d3.js\\"),
-          bb = require(\\"../../node_modules/bluebird/js/browser/bluebird.js\\");
+          d3 = require(\\"./../../node_modules/d3/build/d3.js\\"),
+          bb = require(\\"./../../node_modules/bluebird/js/browser/bluebird.js\\");
 
         console.log(\\"server-micro-b:\\", foo.helloworld());
       },
       {
-        \\"../../node_modules/bluebird/js/browser/bluebird.js\\": 4,
-        \\"../../node_modules/d3/build/d3.js\\": 5,
+        \\"./../../node_modules/bluebird/js/browser/bluebird.js\\": 4,
+        \\"./../../node_modules/d3/build/d3.js\\": 5,
         \\"./bar.js\\": 1,
         \\"./foo.js\\": 2
       }
@@ -35643,7 +35643,7 @@ exports[`should concat 2 files 1`] = `
             }
           }.call(
             this,
-            require(\\"../../../process/browser.js\\"),
+            require(\\"./../../../process/browser.js\\"),
             typeof global !== \\"undefined\\"
               ? global
               : typeof self !== \\"undefined\\"
@@ -35659,7 +35659,7 @@ exports[`should concat 2 files 1`] = `
               : typeof window !== \\"undefined\\" ? window : {}
         ));
       },
-      { \\"../../../process/browser.js\\": 6 }
+      { \\"./../../../process/browser.js\\": 6 }
     ],
     5: [
       function(require, module, exports) {
@@ -56078,8 +56078,8 @@ exports[`should concat 2 files 1`] = `
         arguments[4][3][0].apply(exports, arguments);
       },
       {
-        \\"../../node_modules/bluebird/js/browser/bluebird.js\\": 10,
-        \\"../../node_modules/d3/build/d3.js\\": 11,
+        \\"./../../node_modules/bluebird/js/browser/bluebird.js\\": 10,
+        \\"./../../node_modules/d3/build/d3.js\\": 11,
         \\"./bar.js\\": 7,
         \\"./foo.js\\": 8,
         dup: 3
@@ -56089,7 +56089,7 @@ exports[`should concat 2 files 1`] = `
       function(require, module, exports) {
         arguments[4][4][0].apply(exports, arguments);
       },
-      { \\"../../../process/browser.js\\": 12, dup: 4 }
+      { \\"./../../../process/browser.js\\": 12, dup: 4 }
     ],
     11: [
       function(require, module, exports) {
@@ -56702,9 +56702,9 @@ exports[`should concat 3 files 1`] = `
               );
             };
           })(),
-          el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
-          domready = require(\\"../../../../domready/ready.js\\"),
+          el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
+          domready = require(\\"./../../../../domready/ready.js\\"),
           fetchRecommendations = require(\\"./recommendation-fetcher\\");
         domready(function() {
           []
@@ -56723,9 +56723,9 @@ exports[`should concat 3 files 1`] = `
         });
       },
       {
-        \\"../../../../domready/ready.js\\": 6,
-        \\"../../../analytics/lib/client/index.js\\": 1,
-        \\"../../../create-element/index.js\\": 3,
+        \\"./../../../../domready/ready.js\\": 6,
+        \\"./../../../analytics/lib/client/index.js\\": 1,
+        \\"./../../../create-element/index.js\\": 3,
         \\"./recommendation-fetcher\\": 5
       }
     ],
@@ -56837,7 +56837,7 @@ exports[`should concat 3 files 1`] = `
           var a = document.getElementById(e);
           a && s(a);
         }
-        var domready = require(\\"../../../../domready/ready.js\\"),
+        var domready = require(\\"./../../../../domready/ready.js\\"),
           lastSearches = require(\\"./last-searches.js\\"),
           savedSearches = require(\\"./saved-searches.js\\");
         domready(function() {
@@ -56846,7 +56846,7 @@ exports[`should concat 3 files 1`] = `
         });
       },
       {
-        \\"../../../../domready/ready.js\\": 13,
+        \\"./../../../../domready/ready.js\\": 13,
         \\"./last-searches.js\\": 11,
         \\"./saved-searches.js\\": 12
       }
@@ -56978,14 +56978,14 @@ exports[`should concat 3 files 1`] = `
             )
           );
         }
-        var el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
+        var el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         module.exports = lastSearchesBox;
       },
       {
-        \\"../../../analytics/lib/client/index.js\\": 7,
-        \\"../../../create-element/index.js\\": 9
+        \\"./../../../analytics/lib/client/index.js\\": 7,
+        \\"./../../../create-element/index.js\\": 9
       }
     ],
     12: [
@@ -57126,8 +57126,8 @@ exports[`should concat 3 files 1`] = `
             \\"For øyeblikket klarte vi ikke å hente dine lagrede søk\\"
           );
         }
-        var el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
+        var el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         (module.exports = savedSearchesBox),
           (module.exports.initialState = initialState),
@@ -57135,8 +57135,8 @@ exports[`should concat 3 files 1`] = `
           (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"../../../analytics/lib/client/index.js\\": 7,
-        \\"../../../create-element/index.js\\": 9
+        \\"./../../../analytics/lib/client/index.js\\": 7,
+        \\"./../../../create-element/index.js\\": 9
       }
     ],
     13: [
@@ -57777,18 +57777,18 @@ exports[`should concat 3 files 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 }),
           (exports.default = search);
-        var _suggestionsDropdown = require(\\"../suggestions-dropdown/index.js\\"),
+        var _suggestionsDropdown = require(\\"./../suggestions-dropdown/index.js\\"),
           _suggestionsDropdown2 = _interopRequireDefault(_suggestionsDropdown),
-          _createElement = require(\\"../create-element/index.js\\"),
+          _createElement = require(\\"./../create-element/index.js\\"),
           _createElement2 = _interopRequireDefault(_createElement),
-          _analytics = require(\\"../analytics/lib/client/index.js\\"),
+          _analytics = require(\\"./../analytics/lib/client/index.js\\"),
           _analytics2 = _interopRequireDefault(_analytics);
         module.exports = exports.default;
       },
       {
-        \\"../analytics/lib/client/index.js\\": 14,
-        \\"../create-element/index.js\\": 16,
-        \\"../suggestions-dropdown/index.js\\": 22
+        \\"./../analytics/lib/client/index.js\\": 14,
+        \\"./../create-element/index.js\\": 16,
+        \\"./../suggestions-dropdown/index.js\\": 22
       }
     ],
     18: [
@@ -57983,8 +57983,8 @@ exports[`should concat 3 files 1`] = `
               })
             : search(e, t, l, \\"MFINN\\");
         }
-        var search = require(\\"../../../frontpage-search/index.js\\"),
-          domReady = require(\\"../../../../domready/ready.js\\"),
+        var search = require(\\"./../../../frontpage-search/index.js\\"),
+          domReady = require(\\"./../../../../domready/ready.js\\"),
           mobileModalWrapper = require(\\"./mobile-modal-wrapper\\");
         (module.exports.globalSearchMobile = function(e, r) {
           return globalSearch(e, r, !0);
@@ -58002,8 +58002,8 @@ exports[`should concat 3 files 1`] = `
           });
       },
       {
-        \\"../../../../domready/ready.js\\": 23,
-        \\"../../../frontpage-search/index.js\\": 17,
+        \\"./../../../../domready/ready.js\\": 23,
+        \\"./../../../frontpage-search/index.js\\": 17,
         \\"./mobile-modal-wrapper\\": 20
       }
     ],
@@ -58012,7 +58012,7 @@ exports[`should concat 3 files 1`] = `
         \\"use strict\\";
         var FullscreenDecorator = require(\\"./fullscreen-decorator.js\\"),
           ModalOverlay = require(\\"./modal-overlay.js\\"),
-          el = require(\\"../../../create-element/index.js\\"),
+          el = require(\\"./../../../create-element/index.js\\"),
           FullscreenModalOverlay = FullscreenDecorator(ModalOverlay);
         module.exports = function(e, t) {
           function n(e) {
@@ -58080,7 +58080,7 @@ exports[`should concat 3 files 1`] = `
         };
       },
       {
-        \\"../../../create-element/index.js\\": 16,
+        \\"./../../../create-element/index.js\\": 16,
         \\"./fullscreen-decorator.js\\": 18,
         \\"./modal-overlay.js\\": 21
       }
@@ -59599,9 +59599,9 @@ exports[`should handle node_modules dependencies 1`] = `
               );
             };
           })(),
-          el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
-          domready = require(\\"../../../../domready/ready.js\\"),
+          el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
+          domready = require(\\"./../../../../domready/ready.js\\"),
           fetchRecommendations = require(\\"./recommendation-fetcher\\");
         domready(function() {
           []
@@ -59620,9 +59620,9 @@ exports[`should handle node_modules dependencies 1`] = `
         });
       },
       {
-        \\"../../../../domready/ready.js\\": 6,
-        \\"../../../analytics/lib/client/index.js\\": 1,
-        \\"../../../create-element/index.js\\": 3,
+        \\"./../../../../domready/ready.js\\": 6,
+        \\"./../../../analytics/lib/client/index.js\\": 1,
+        \\"./../../../create-element/index.js\\": 3,
         \\"./recommendation-fetcher\\": 5
       }
     ],
@@ -59734,7 +59734,7 @@ exports[`should handle node_modules dependencies 1`] = `
           var a = document.getElementById(e);
           a && s(a);
         }
-        var domready = require(\\"../../../../domready/ready.js\\"),
+        var domready = require(\\"./../../../../domready/ready.js\\"),
           lastSearches = require(\\"./last-searches.js\\"),
           savedSearches = require(\\"./saved-searches.js\\");
         domready(function() {
@@ -59743,7 +59743,7 @@ exports[`should handle node_modules dependencies 1`] = `
         });
       },
       {
-        \\"../../../../domready/ready.js\\": 13,
+        \\"./../../../../domready/ready.js\\": 13,
         \\"./last-searches.js\\": 11,
         \\"./saved-searches.js\\": 12
       }
@@ -59875,14 +59875,14 @@ exports[`should handle node_modules dependencies 1`] = `
             )
           );
         }
-        var el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
+        var el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         module.exports = lastSearchesBox;
       },
       {
-        \\"../../../analytics/lib/client/index.js\\": 7,
-        \\"../../../create-element/index.js\\": 9
+        \\"./../../../analytics/lib/client/index.js\\": 7,
+        \\"./../../../create-element/index.js\\": 9
       }
     ],
     12: [
@@ -60023,8 +60023,8 @@ exports[`should handle node_modules dependencies 1`] = `
             \\"For øyeblikket klarte vi ikke å hente dine lagrede søk\\"
           );
         }
-        var el = require(\\"../../../create-element/index.js\\"),
-          tracking = require(\\"../../../analytics/lib/client/index.js\\"),
+        var el = require(\\"./../../../create-element/index.js\\"),
+          tracking = require(\\"./../../../analytics/lib/client/index.js\\"),
           trackJsIfAvailable = console.error.bind(console);
         (module.exports = savedSearchesBox),
           (module.exports.initialState = initialState),
@@ -60032,8 +60032,8 @@ exports[`should handle node_modules dependencies 1`] = `
           (module.exports.updateStateFromResponse = updateStateFromResponse);
       },
       {
-        \\"../../../analytics/lib/client/index.js\\": 7,
-        \\"../../../create-element/index.js\\": 9
+        \\"./../../../analytics/lib/client/index.js\\": 7,
+        \\"./../../../create-element/index.js\\": 9
       }
     ],
     13: [
@@ -60674,18 +60674,18 @@ exports[`should handle node_modules dependencies 1`] = `
         }
         Object.defineProperty(exports, \\"__esModule\\", { value: !0 }),
           (exports.default = search);
-        var _suggestionsDropdown = require(\\"../suggestions-dropdown/index.js\\"),
+        var _suggestionsDropdown = require(\\"./../suggestions-dropdown/index.js\\"),
           _suggestionsDropdown2 = _interopRequireDefault(_suggestionsDropdown),
-          _createElement = require(\\"../create-element/index.js\\"),
+          _createElement = require(\\"./../create-element/index.js\\"),
           _createElement2 = _interopRequireDefault(_createElement),
-          _analytics = require(\\"../analytics/lib/client/index.js\\"),
+          _analytics = require(\\"./../analytics/lib/client/index.js\\"),
           _analytics2 = _interopRequireDefault(_analytics);
         module.exports = exports.default;
       },
       {
-        \\"../analytics/lib/client/index.js\\": 14,
-        \\"../create-element/index.js\\": 16,
-        \\"../suggestions-dropdown/index.js\\": 22
+        \\"./../analytics/lib/client/index.js\\": 14,
+        \\"./../create-element/index.js\\": 16,
+        \\"./../suggestions-dropdown/index.js\\": 22
       }
     ],
     18: [
@@ -60880,8 +60880,8 @@ exports[`should handle node_modules dependencies 1`] = `
               })
             : search(e, t, l, \\"MFINN\\");
         }
-        var search = require(\\"../../../frontpage-search/index.js\\"),
-          domReady = require(\\"../../../../domready/ready.js\\"),
+        var search = require(\\"./../../../frontpage-search/index.js\\"),
+          domReady = require(\\"./../../../../domready/ready.js\\"),
           mobileModalWrapper = require(\\"./mobile-modal-wrapper\\");
         (module.exports.globalSearchMobile = function(e, r) {
           return globalSearch(e, r, !0);
@@ -60899,8 +60899,8 @@ exports[`should handle node_modules dependencies 1`] = `
           });
       },
       {
-        \\"../../../../domready/ready.js\\": 23,
-        \\"../../../frontpage-search/index.js\\": 17,
+        \\"./../../../../domready/ready.js\\": 23,
+        \\"./../../../frontpage-search/index.js\\": 17,
         \\"./mobile-modal-wrapper\\": 20
       }
     ],
@@ -60909,7 +60909,7 @@ exports[`should handle node_modules dependencies 1`] = `
         \\"use strict\\";
         var FullscreenDecorator = require(\\"./fullscreen-decorator.js\\"),
           ModalOverlay = require(\\"./modal-overlay.js\\"),
-          el = require(\\"../../../create-element/index.js\\"),
+          el = require(\\"./../../../create-element/index.js\\"),
           FullscreenModalOverlay = FullscreenDecorator(ModalOverlay);
         module.exports = function(e, t) {
           function n(e) {
@@ -60977,7 +60977,7 @@ exports[`should handle node_modules dependencies 1`] = `
         };
       },
       {
-        \\"../../../create-element/index.js\\": 16,
+        \\"./../../../create-element/index.js\\": 16,
         \\"./fullscreen-decorator.js\\": 18,
         \\"./modal-overlay.js\\": 21
       }
