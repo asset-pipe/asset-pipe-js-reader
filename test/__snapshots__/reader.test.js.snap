@@ -58949,9 +58949,9 @@ exports[`should dedupe 1`] = `
 "
 `;
 
-exports[`should error if any feed content keys are missing 1`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
+exports[`should error if any feed content keys are missing 1`] = `"Expected every item in argument 'feeds' (array) to be a valid feed (object).: child \\"id\\" fails because [\\"id\\" is required]"`;
 
-exports[`should error if any feed content keys are missing 2`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
+exports[`should error if any feed content keys are missing 2`] = `"Expected every item in argument 'feeds' (array) to be a valid feed (object).: child \\"source\\" fails because [\\"source\\" is required]"`;
 
 exports[`should error if feed content does not contain at least 1 entrypoint 1`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
 

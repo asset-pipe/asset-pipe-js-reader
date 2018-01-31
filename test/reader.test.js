@@ -210,10 +210,27 @@ test('should error if feed content is non object', async () => {
 });
 
 test('should error if any feed content keys are missing', async () => {
-    await expect(bundleJS([{}])).rejects.toThrowErrorMatchingSnapshot();
+    await expect(bundleJS([[{}]])).rejects.toThrowErrorMatchingSnapshot();
     await expect(
-        bundleJS([{ file: 'asd', deps: {}, id: 'a', entry: true }])
+        bundleJS([[{ file: 'asd', deps: {}, id: 'a', entry: true }]])
     ).rejects.toThrowErrorMatchingSnapshot();
+});
+
+test('should not error if any feed contains extra content keys', async () => {
+    await expect(
+        bundleJS([
+            [
+                {
+                    file: 'asd',
+                    deps: {},
+                    id: 'a',
+                    entry: true,
+                    source: '"use strict";',
+                    somethingWeird: true,
+                },
+            ],
+        ])
+    ).resolves.toBeDefined();
 });
 
 test('should error if feed content does not contain at least 1 entrypoint', async () => {
