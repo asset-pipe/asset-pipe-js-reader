@@ -13,7 +13,7 @@ test('require statements correctly replaced - divergent paths', () => {
     };
 
     const result = replaceDependencies(depMap, item);
-    expect(result).toBe("require('../my-dep/index.js');");
+    expect(result).toBe("require('./../my-dep/index.js');");
 });
 
 test('require statements correctly replaced - nested dependency path', () => {
@@ -41,5 +41,5 @@ test('require statements correctly replaced - nested path -> parent path', () =>
     };
 
     const result = replaceDependencies(depMap, item);
-    expect(result).toBe("require('../../../index.js');");
+    expect(result).toBe("require('./../../../index.js');");
 });
