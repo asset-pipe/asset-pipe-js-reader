@@ -58949,63 +58949,19 @@ exports[`should dedupe 1`] = `
 "
 `;
 
-exports[`should error if any feed content keys are missing 1`] = `
-"Expected argument 'feeds' to be an array of feeds. [
-  {}
-]
-[31m
-[1] \\"feeds\\" must be an array[0m"
-`;
+exports[`should error if any feed content keys are missing 1`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
 
-exports[`should error if any feed content keys are missing 2`] = `
-"Expected argument 'feeds' to be an array of feeds. [
-  {
-    \\"file\\": \\"asd\\",
-    \\"deps\\": {},
-    \\"id\\": \\"a\\",
-    \\"entry\\": true
-  }
-]
-[31m
-[1] \\"feeds\\" must be an array[0m"
-`;
+exports[`should error if any feed content keys are missing 2`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
 
-exports[`should error if feed content does not contain at least 1 entrypoint 1`] = `
-"Expected argument 'feeds' to be an array of feeds. [
-  {
-    \\"id\\": \\"a\\",
-    \\"file\\": \\"asdas.js\\",
-    \\"source\\": \\"spy(1234);\\",
-    \\"deps\\": {}
-  }
-]
-[31m
-[1] \\"feeds\\" must be an array[0m"
-`;
+exports[`should error if feed content does not contain at least 1 entrypoint 1`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
 
-exports[`should error if feed content is non object 1`] = `
-"Expected argument 'feeds' to be an array of feeds. [
-  \\"s1df3s1f2d3s1d2f3s.json\\"
-]
-[31m
-[1] \\"feeds\\" must be an array[0m"
-`;
+exports[`should error if feed content is non object 1`] = `"Expected every item in argument 'feeds' (array) to be a valid feed (object).: \\"feed item\\" must be an object"`;
 
-exports[`should error if no feed content 1`] = `"Expected argument 'feeds' to be an array of feeds. \\"value\\" is required"`;
+exports[`should error if no feed content 1`] = `"Expected argument 'feeds' to be an array (of feed arrays)."`;
 
-exports[`should error if no feed content 2`] = `
-"Expected argument 'feeds' to be an array of feeds. []
-[31m
-[1] \\"value\\" does not contain [feeds][0m"
-`;
+exports[`should error if no feed content 2`] = `"Expected argument 'feeds' (array) to be contain at least 1 feed (array)."`;
 
-exports[`should error if no feed content 3`] = `
-"Expected argument 'feeds' to be an array of feeds. [
-  []
-]
-[31m
-[1] \\"feeds\\" does not contain [feed][0m"
-`;
+exports[`should error if no feed content 3`] = `"Expected at least 1 feed (array) to have more than one entry (object)."`;
 
 exports[`should handle node_modules dependencies 1`] = `
 "(function e(t, n, r) {

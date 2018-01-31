@@ -27,6 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "asset-pipe-common": "^1.0.0-beta.6",
+    "boom": "^7.1.1",
     "browserify": "^15.2.0",
     "fs-extra": "^5.0.0",
     "joi": "^13.1.1",
