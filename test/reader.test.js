@@ -21,10 +21,6 @@ function getExecutionOrder(bundle) {
     return JSON.parse(order);
 }
 
-function clean(content) {
-    return content.replace(/"\/.*\/asset-pipe-js-reader\//g, '"/');
-}
-
 beforeEach(() => {
     jest.setTimeout(10000);
     return remove(FOLDER);
@@ -42,7 +38,7 @@ test('source maps as an option', async () => {
         sourceMaps: true,
     });
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('minification with uglify as an option', async () => {
@@ -56,7 +52,7 @@ test('minification with uglify as an option', async () => {
         minify: true,
     });
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('minification with uglify and sourceMaps as options', async () => {
@@ -71,7 +67,7 @@ test('minification with uglify and sourceMaps as options', async () => {
         sourceMaps: true,
     });
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should successfully bundle 2 feeds', async () => {
@@ -84,7 +80,7 @@ test('should successfully bundle 2 feeds', async () => {
         directory: FOLDER,
     });
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should successfully bundle 2 feeds when temp directory is used', async () => {
@@ -95,7 +91,7 @@ test('should successfully bundle 2 feeds when temp directory is used', async () 
 
     const content = await bundleJS([feedA, feedB]);
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should dedupe', async () => {
@@ -108,7 +104,7 @@ test('should dedupe', async () => {
         directory: FOLDER,
     });
 
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should handle node_modules dependencies', async () => {
@@ -121,7 +117,7 @@ test('should handle node_modules dependencies', async () => {
     const content = await bundleJS([feedA, feedB, feedC], {
         directory: FOLDER,
     });
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should concat 3 files', async () => {
@@ -138,7 +134,7 @@ test('should concat 3 files', async () => {
 
     expect(executionOrder).toHaveLength(3);
     expect(executionOrder).toEqual([10, 4, 19]);
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should concat 2 files', async () => {
@@ -155,7 +151,7 @@ test('should concat 2 files', async () => {
 
     expect(executionOrder).toHaveLength(2);
     expect(executionOrder).toEqual([3, 9]);
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('should concat 1 file', async () => {
@@ -171,7 +167,7 @@ test('should concat 1 file', async () => {
 
     expect(executionOrder).toHaveLength(1);
     expect(executionOrder).toEqual([3]);
-    expect(clean(prettier.format(content))).toMatchSnapshot();
+    expect(prettier.format(content)).toMatchSnapshot();
 });
 
 test('code reaches single entry point', async () => {
@@ -284,7 +280,7 @@ test('code reaches 3 entry points', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(prettier.format(result)).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(3);
     expect(spy).toMatchSnapshot();
 });
@@ -330,7 +326,7 @@ test('bundling dedupes common modules', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(prettier.format(result)).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
 });
@@ -376,7 +372,7 @@ test('minified code runs as expected', async () => {
     );
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
-    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(prettier.format(result)).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
 });
@@ -424,7 +420,7 @@ test('multiple entrypoints in same feed supported', async () => {
     const spy = jest.fn();
     vm.runInNewContext(result, { spy });
 
-    expect(clean(prettier.format(result))).toMatchSnapshot();
+    expect(prettier.format(result)).toMatchSnapshot();
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
 });
