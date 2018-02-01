@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns map of feed ids -> feed file paths 1`] = `
+Array [
+  Array [
+    "3c4ca5444d554f82cb15c2437ed545b2ea6f6a6e98476ec372b21b6cf7d8085a",
+    "/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/mock/podletA/entrypoint.js",
+  ],
+  Array [
+    "94def8251ca7023be6c5aeda886a4055d4d47fd62238228def5888398bbdf318",
+    "/Users/ricwalke/src/asset-pipe/asset-pipe-js-reader/test/mock/podletA/lib/index.js",
+  ],
+]
+`;
