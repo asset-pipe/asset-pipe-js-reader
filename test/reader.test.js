@@ -427,6 +427,8 @@ test('multiple entrypoints in same feed supported', async () => {
 
 test('should replace NODE_ENV with default of "development"', async () => {
     expect.hasAssertions();
+    const env = process.env.NODE_ENV;
+    delete process.env.NODE_ENV;
     const result = await bundleJS([
         [
             {
@@ -438,8 +440,9 @@ test('should replace NODE_ENV with default of "development"', async () => {
             },
         ],
     ]);
-    expect(result).toMatch('test');
+    expect(result).toMatch('development');
     expect(prettier.format(result)).toMatchSnapshot();
+    process.env.NODE_ENV = env;
 });
 
 test('should replace NODE_ENV with process.env.NODE_ENV', async () => {
