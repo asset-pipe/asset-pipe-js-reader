@@ -424,3 +424,60 @@ test('multiple entrypoints in same feed supported', async () => {
     expect(spy).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(4);
 });
+
+test('should replace NODE_ENV with default of "development"', async () => {
+    expect.hasAssertions();
+    const result = await bundleJS([
+        [
+            {
+                id: 'a',
+                entry: true,
+                file: './asdas.js',
+                source: 'console.log(process.env.NODE_ENV)',
+                deps: {},
+            },
+        ],
+    ]);
+    expect(result).toMatch('test');
+    expect(prettier.format(result)).toMatchSnapshot();
+});
+
+test('should replace NODE_ENV with process.env.NODE_ENV', async () => {
+    expect.hasAssertions();
+    const env = process.env.NODE_ENV;
+    process.env.NODE_ENV = 'production';
+    const result = await bundleJS([
+        [
+            {
+                id: 'a',
+                entry: true,
+                file: './asdas.js',
+                source: 'console.log(process.env.NODE_ENV)',
+                deps: {},
+            },
+        ],
+    ]);
+    expect(result).toMatch('production');
+    expect(prettier.format(result)).toMatchSnapshot();
+    process.env.NODE_ENV = env;
+});
+
+test('should replace NODE_ENV with given value', async () => {
+    expect.hasAssertions();
+    const result = await bundleJS(
+        [
+            [
+                {
+                    id: 'a',
+                    entry: true,
+                    file: './asdas.js',
+                    source: 'console.log(process.env.NODE_ENV)',
+                    deps: {},
+                },
+            ],
+        ],
+        { env: 'production' }
+    );
+    expect(result).toMatch('production');
+    expect(prettier.format(result)).toMatchSnapshot();
+});
