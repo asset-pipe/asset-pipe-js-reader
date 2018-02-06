@@ -66,6 +66,7 @@ Supported arguments are:
     * `options.directory` { directory: '/path/to/temp/directory' } Directory to use when unpacking feed files.
     * `options.sourceMaps` (default: false) Specify whether to include source maps.
     * `options.minify` (default: false) Specify whether to minify code using uglify.
+    * `options.env` (default: `process.env.NODE_ENV || 'development'`) Specfies environment which is used to replace any usages of process.env.NODE_ENV with this value. This then enables dead code path elimination during bundling.
 
 Returns a promise that resolves to a `string` of JavaScript code.
 
