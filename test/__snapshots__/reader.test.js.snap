@@ -61755,7 +61755,7 @@ exports[`should replace NODE_ENV with default of "development" 1`] = `
   {
     1: [
       function(require, module, exports) {
-        console.log(\\"test\\");
+        console.log(\\"development\\");
       },
       {}
     ]
