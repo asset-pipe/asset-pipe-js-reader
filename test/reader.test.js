@@ -229,6 +229,23 @@ test('should not error if any feed contains extra content keys', async () => {
     ).resolves.toBeDefined();
 });
 
+test('should not error if feed source is an empty string', async () => {
+    await expect(
+        bundleJS([
+            [
+                {
+                    file: 'asd',
+                    deps: {},
+                    id: 'a',
+                    entry: true,
+                    source: '',
+                    somethingWeird: true,
+                },
+            ],
+        ])
+    ).resolves.toBeDefined();
+});
+
 test('should error if feed content does not contain at least 1 entrypoint', async () => {
     await expect(
         bundleJS([
