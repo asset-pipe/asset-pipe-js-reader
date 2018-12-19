@@ -150,7 +150,7 @@ test('should concat 2 files', async () => {
     const executionOrder = getExecutionOrder(content);
 
     expect(executionOrder).toHaveLength(2);
-    expect(executionOrder).toEqual([3, 9]);
+    expect(executionOrder).toEqual([5, 11]);
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
@@ -166,7 +166,7 @@ test('should concat 1 file', async () => {
     const executionOrder = getExecutionOrder(content);
 
     expect(executionOrder).toHaveLength(1);
-    expect(executionOrder).toEqual([3]);
+    expect(executionOrder).toEqual([5]);
     expect(prettier.format(content)).toMatchSnapshot();
 });
 
